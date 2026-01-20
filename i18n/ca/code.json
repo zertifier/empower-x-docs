@@ -1,6 +1,7 @@
 {
   "navbar.docs": { "message": "Documentació" },
   "navbar.cases": { "message": "Cases" },
+  "navbar.algoritmos": {"message": "Algorismes"},
   "navbar.videos": { "message": "Vídeos" },
   "navbar.contact": { "message": "Contacte" },
 

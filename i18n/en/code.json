@@ -7,6 +7,10 @@
     "message": "Cases",
     "description": "Navbar item for Cases"
   },
+  "navbar.algoritmos": {
+    "message": "Algorithms",
+    "description": "Navbar item for Algorithms"
+  },
   "navbar.videos": {
     "message": "Videos",
     "description": "Navbar item for Videos"

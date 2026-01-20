@@ -13,6 +13,17 @@ const config = {
   title: 'Mi Sitio',
   tagline: 'Los dinosaurios son geniales',
   favicon: 'img/favicon.ico',
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'algoritmos',
+        path: 'algoritmos',
+        routeBasePath: 'algoritmos',
+        sidebarPath: './sidebarsAlgoritmos.js',
+      },
+    ],
+  ],
   themes: [
     [
       '@easyops-cn/docusaurus-search-local',
@@ -107,6 +118,13 @@ const config = {
         items: [
           { type: 'doc', docId: 'about', label: 'Documentación', position: 'left' },
           { to: 'casos', label: 'Casos', position: 'left' },
+          {
+            type: 'docSidebar',
+            sidebarId: 'algoritmosSidebar',
+            docsPluginId: 'algoritmos',
+            label: 'Algoritmos',
+            position: 'left',
+          },
           { to: 'videos', label: 'Vídeos', position: 'left' },
           { to: 'contacto', label: 'Contacto', position: 'left' },
           {
