@@ -1,0 +1,157 @@
+---
+title: Análisis de Comunidades Energéticas
+description: Visión global agregada y anonimizada del consumo y la generación por comunidad.
+slug: /analisis-de-comunidades
+---
+
+import Link from '@docusaurus/Link';
+
+# Analizador de Comunidades Energéticas
+
+*(Community Energy Analytics Engine)*
+
+## Propósito del algoritmo
+
+Este algoritmo proporciona una herramienta **Compute-to-Data** fundamental para analizar el comportamiento energético agregado de una comunidad energética o conjunto de puntos de suministro. Su objetivo es ofrecer una visión global, fiable y rápida del consumo y la generación de energía, permitiendo evaluar el estado general de la comunidad y detectar oportunidades de optimización e inversión sin exponer datos individuales sensibles.
+
+El algoritmo no revela valores brutos por punto de suministro. En su lugar, genera **resúmenes agregados y anonimizados** que ayudan a analistas, gestores públicos y operadores privados a entender:
+
+- la dimensión energética de una comunidad
+- cómo se distribuyen el consumo y la generación
+- quiénes concentran los mayores consumos o excedentes
+- qué usuarios se sitúan en los extremos del comportamiento energético
+- si existen desequilibrios estructurales que requieren intervención
+
+Esto lo convierte en una herramienta ideal como **diagnóstico inicial** para comunidades energéticas, redes no intensivas y agrupaciones de suministros.
+
+---
+
+## Qué hace el algoritmo (visión general de alto nivel)
+
+### 1. Agrega consumo y generación a nivel comunitario
+
+El algoritmo procesa los datos de todos los puntos de suministro autorizados y calcula:
+
+- consumo total de la comunidad
+- generación total de energía
+- consumo y generación medios por punto
+- balance global entre consumo y excedentes
+
+Estos indicadores proporcionan una imagen clara del rendimiento energético colectivo, sin identificar a usuarios concretos.
+
+---
+
+### 2. Identifica a los mayores consumidores y generadores de excedentes
+
+A partir de los valores agregados, el algoritmo identifica:
+
+- los puntos de suministro con mayor consumo relativo
+- los puntos con mayor generación o excedentes
+- la contribución porcentual de estos extremos al total de la comunidad
+
+Esta información permite entender dónde se concentran las mayores cargas o capacidades de generación, clave para decisiones de reparto y planificación.
+
+---
+
+### 3. Detecta usuarios en los extremos de comportamiento (percentiles)
+
+El algoritmo clasifica los puntos de suministro según su comportamiento energético e identifica:
+
+- el 5 % con mayor consumo
+- el 5 % con menor consumo
+- rangos intermedios representativos
+
+Este enfoque facilita la detección de comportamientos atípicos, ineficiencias potenciales o casos ejemplares, siempre desde una perspectiva estadística y anónima.
+
+---
+
+### 4. Genera métricas seguras para optimización y planificación
+
+El informe resultante incluye únicamente:
+
+- totales y promedios
+- distribuciones y percentiles
+- rankings anonimizados
+- indicadores de equilibrio consumo–generación
+
+No se exponen datos individuales, ubicaciones exactas ni identificadores técnicos. Las salidas son adecuadas para:
+
+- estudios de dimensionamiento
+- planificación de almacenamiento energético
+- análisis de control de potencia y reactiva
+- informes para administraciones públicas
+- análisis preliminares de inversión
+
+---
+
+## Cómo este algoritmo soporta el modelo Compute-to-Data
+
+### 1. Los datos nunca salen del entorno seguro
+
+El algoritmo se ejecuta íntegramente dentro del entorno de cálculo autorizado. Solo se exportan resultados agregados y derivados, garantizando la confidencialidad de los datos energéticos.
+
+---
+
+### 2. Permite evaluar el estado de una comunidad antes de análisis avanzados
+
+Antes de aplicar modelos más complejos (optimización de reparto, simulaciones de almacenamiento, predicción de demanda), es fundamental responder a preguntas básicas como:
+
+- ¿Está equilibrada la comunidad en consumo y generación?
+- ¿Existen concentraciones anómalas de consumo?
+- ¿Qué dimensión energética tiene realmente el conjunto?
+
+Este algoritmo proporciona esas respuestas de forma rápida y segura.
+
+---
+
+### 3. Reduce riesgos técnicos y errores tempranos
+
+Al ofrecer una visión clara del comportamiento agregado, evita decisiones basadas en datos incompletos o mal interpretados, reduciendo riesgos en fases posteriores de planificación o inversión.
+
+---
+
+## Por qué este algoritmo es valioso para el sector energético
+
+### 1. Diagnóstico rápido y económico de comunidades energéticas
+
+Permite evaluar el estado de una comunidad sin necesidad de auditorías costosas o análisis intrusivos, facilitando la toma de decisiones tempranas.
+
+---
+
+### 2. Base para optimización inteligente del reparto energético
+
+Sienta las bases para diseñar estrategias de reparto óptimo de consumos y excedentes, esenciales para maximizar la eficiencia de comunidades energéticas modernas.
+
+---
+
+### 3. Apoyo a decisiones de inversión y ROI
+
+Los indicadores generados son directamente utilizables para:
+
+- dimensionamiento de sistemas de almacenamiento
+- evaluación de necesidades de refuerzo de red
+- justificación técnica de inversiones
+- análisis de retorno económico
+
+---
+
+### 4. Compatible con sector público y privado
+
+El enfoque agregado y anónimo lo hace especialmente adecuado para:
+
+- administraciones públicas
+- operadores de infraestructuras
+- retail y hostelería en fases iniciales
+- programas de eficiencia y sostenibilidad
+
+---
+
+## Resumen
+
+El Analizador de Comunidades Energéticas es un algoritmo Compute-to-Data esencial que proporciona una visión agregada, segura y fiable del consumo y la generación de energía en comunidades energéticas. Identifica totales, promedios, extremos de comportamiento y desequilibrios estructurales, permitiendo evaluar el estado del sistema y sentar las bases para optimización, inversión y mantenimiento preventivo, sin exponer nunca datos individuales sensibles.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:6f1a6a00fd9b5f1d9b941223f2c153ddf007347ead951d572a6163c44e575178" target="_blank" rel="noreferrer">Abrir en Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Volver a Algoritmos</Link>
+</div>

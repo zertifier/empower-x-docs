@@ -1,0 +1,148 @@
+---
+title: Profile Analysis
+description: Group supplies by usage typology and compare behavior within each profile.
+slug: /analisis-por-perfiles
+---
+
+import Link from '@docusaurus/Link';
+
+# Energy Usage Profile Analysis Engine
+
+## Algorithm purpose
+
+This **Compute-to-Data** algorithm analyzes and compares the energy behavior of supply points grouped by **usage typology** (e.g., public lighting, residential buildings, garages, public facilities, commercial installations, etc.).
+
+Its main goal is to identify deviations, inefficiencies, and anomalous behaviors **within each homogeneous group**, establishing clear references that support optimization processes, investment planning, and ROI assessment.
+
+The algorithm does not expose individually identifiable data. Instead, it provides **safe statistical comparisons** that show how each supply behaves relative to the standard of its profile.
+
+---
+
+## What the algorithm does (high-level overview)
+
+### 1. Classifies supply points by usage profile
+
+The algorithm groups supply points according to user-defined or case-specific criteria, for example:
+
+- installation type
+- supply function
+- expected operating pattern
+- other relevant contextual variables
+
+Each group represents a **comparable energy profile**, avoiding comparisons across non-equivalent uses.
+
+---
+
+### 2. Computes reference metrics per profile
+
+For each profile, the algorithm calculates aggregated indicators such as:
+
+- average consumption
+- typical consumption ranges
+- observed maximum and minimum values
+- the group’s statistical distribution
+
+These metrics define a **reference behavior** for each usage typology.
+
+---
+
+### 3. Measures point-level deviations relative to the profile
+
+Once the group standard is defined, the algorithm evaluates each supply point by calculating:
+
+- percentage deviation from the profile average
+- relative position within the group distribution
+- identification of out-of-norm behaviors
+
+This analysis helps detect inefficiencies, sizing issues, or unexpected uses without requiring direct inspection.
+
+---
+
+### 4. Produces safe, anonymized comparative outputs
+
+The output includes:
+
+- deviation indicators
+- band/range classifications
+- aggregated statistics per profile
+
+It does not expose sensitive absolute values, technical identifiers, or exact locations, making results suitable for sharing across multiple stakeholders.
+
+---
+
+## How this algorithm supports the Compute-to-Data model
+
+### 1. Comparison without exposing raw data
+
+All processing happens in the secure environment. Only relative and aggregated metrics are exported, preserving confidentiality.
+
+---
+
+### 2. Establishes standards before optimization
+
+Before investing in corrective measures or infrastructure, it is essential to answer questions such as:
+
+- What is considered “normal” consumption for this usage type?
+- Which supplies deviate significantly from the standard?
+- Where are improvements most likely with lower investment?
+
+This algorithm provides objective references.
+
+---
+
+### 3. Reduces decision-making errors
+
+It prevents incorrect comparisons between different uses and reduces the risk of decisions based on intuition or decontextualized data.
+
+---
+
+## Why this algorithm is valuable for the energy sector
+
+### 1. Basis for replicable optimization programs
+
+By defining clear profiles and standards, it supports optimization measures that can be replicated across many similar installations.
+
+---
+
+### 2. Direct support for investment and ROI assessment
+
+Detected deviations help:
+
+- prioritize actions
+- justify energy investments
+- estimate potential savings
+- evaluate expected economic return
+
+---
+
+### 3. Applicable to public and private sector contexts
+
+It is especially useful for:
+
+- public administrations (lighting, municipal buildings)
+- infrastructure managers
+- retail and hospitality chains
+- operators of non-intensive networks
+
+---
+
+### 4. Preparation for advanced analytics
+
+Defined profiles serve as a foundation for subsequent algorithms such as:
+
+- energy optimization
+- advanced anomaly detection
+- scenario simulation
+- strategic planning
+
+---
+
+## Summary
+
+The Energy Usage Profile Analysis Engine is a Compute-to-Data algorithm that classifies supply points by usage typology and compares their behavior against aggregated group standards. It securely identifies deviations and out-of-norm behaviors, supporting energy optimization and investment decision-making without exposing sensitive information.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:345eb27f21a4bf0ac617e17015e5d8a8cf92a7904adfe380647a6d2241a5dbc5" target="_blank" rel="noreferrer">Open in Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Back to Algorithms</Link>
+</div>

@@ -1,0 +1,150 @@
+---
+title: Análisis por Perfiles de Consumo Energético
+description: Comparación segura por tipología de uso y detección de desviaciones dentro de cada perfil.
+slug: /analisis-por-perfiles
+---
+
+import Link from '@docusaurus/Link';
+
+# Analizador por Perfiles de Consumo Energético
+
+*(Energy Usage Profile Analysis Engine)*
+
+## Propósito del algoritmo
+
+Este algoritmo proporciona una herramienta **Compute-to-Data** diseñada para analizar y comparar el comportamiento energético de puntos de suministro agrupados por **tipología de uso** (por ejemplo: alumbrado público, edificios residenciales, garajes, equipamientos públicos, instalaciones comerciales, etc.).
+
+Su objetivo principal es identificar desviaciones, ineficiencias y comportamientos anómalos **dentro de cada grupo homogéneo**, estableciendo referencias claras que sirvan como base para procesos de optimización, planificación de inversiones y evaluación de su retorno económico (ROI).
+
+El algoritmo no expone datos individuales identificables. En su lugar, genera **comparaciones estadísticas seguras** que permiten entender cómo se comporta cada suministro respecto al estándar de su perfil.
+
+---
+
+## Qué hace el algoritmo (visión general de alto nivel)
+
+### 1. Clasifica los puntos de suministro por perfil de uso
+
+El algoritmo agrupa los puntos de suministro según criterios definidos por el usuario o el caso de estudio, como por ejemplo:
+
+- tipo de instalación
+- función del suministro
+- patrón operativo esperado
+- otras variables relevantes del contexto
+
+Cada grupo representa un **perfil energético comparable**, evitando comparaciones entre usos no equivalentes.
+
+---
+
+### 2. Calcula métricas de referencia por perfil
+
+Para cada perfil, el algoritmo calcula indicadores agregados como:
+
+- consumo medio
+- rangos de consumo habituales
+- valores máximos y mínimos
+- distribución estadística del grupo
+
+Estas métricas definen un **comportamiento de referencia** para cada tipología de uso.
+
+---
+
+### 3. Mide desviaciones individuales respecto al perfil
+
+Una vez definido el estándar del grupo, el algoritmo evalúa cada punto de suministro calculando:
+
+- desviación porcentual respecto al promedio del perfil
+- posición relativa dentro de la distribución del grupo
+- identificación de comportamientos fuera de la norma
+
+Este análisis permite detectar ineficiencias, errores de dimensionamiento o usos no previstos sin necesidad de inspección directa.
+
+---
+
+### 4. Genera resultados comparativos seguros y anonimizados
+
+El resultado del algoritmo incluye:
+
+- indicadores de desviación
+- clasificaciones por rangos
+- estadísticas agregadas por perfil
+
+No se exponen valores absolutos sensibles, identificadores técnicos ni ubicaciones exactas, lo que hace que las salidas sean aptas para análisis compartidos entre múltiples actores.
+
+---
+
+## Cómo este algoritmo soporta el modelo Compute-to-Data
+
+### 1. Comparación sin exposición de datos brutos
+
+Todo el procesamiento se realiza dentro del entorno seguro. Solo se exportan métricas relativas y agregadas, preservando la confidencialidad de cada punto de suministro.
+
+---
+
+### 2. Permite definir estándares antes de optimizar
+
+Antes de invertir en medidas correctivas o infraestructuras, es esencial responder preguntas como:
+
+- ¿Qué se considera un consumo “normal” para este tipo de uso?
+- ¿Qué suministros se desvían significativamente del estándar?
+- ¿Dónde es más probable obtener mejoras con menor inversión?
+
+Este algoritmo establece esas referencias de forma objetiva.
+
+---
+
+### 3. Reduce errores en la toma de decisiones
+
+Evita comparaciones incorrectas entre usos distintos y reduce el riesgo de decisiones basadas en intuiciones o datos no contextualizados.
+
+---
+
+## Por qué este algoritmo es valioso para el sector energético
+
+### 1. Base para programas de optimización replicables
+
+Al definir perfiles y estándares claros, permite diseñar medidas de optimización que pueden replicarse en múltiples instalaciones similares.
+
+---
+
+### 2. Apoyo directo a la valoración de inversiones y ROI
+
+Las desviaciones detectadas ayudan a:
+
+- priorizar actuaciones
+- justificar inversiones energéticas
+- estimar ahorros potenciales
+- evaluar el retorno económico esperado
+
+---
+
+### 3. Aplicable a sector público y privado
+
+Es especialmente útil para:
+
+- administraciones públicas (alumbrado, edificios municipales)
+- gestores de infraestructuras
+- cadenas de retail y hostelería
+- operadores de redes no intensivas
+
+---
+
+### 4. Preparación para analítica avanzada
+
+Los perfiles definidos sirven como base para algoritmos posteriores de:
+
+- optimización energética
+- detección avanzada de anomalías
+- simulación de escenarios
+- planificación estratégica
+
+---
+
+## Resumen
+
+El Analizador por Perfiles de Consumo Energético es un algoritmo Compute-to-Data que clasifica puntos de suministro por tipología de uso y compara su comportamiento frente a estándares agregados del grupo. Identifica desviaciones y comportamientos fuera de la norma de forma segura y anónima, sentando las bases para optimización energética, evaluación de inversiones y toma de decisiones basada en datos, sin exponer nunca información sensible.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:345eb27f21a4bf0ac617e17015e5d8a8cf92a7904adfe380647a6d2241a5dbc5" target="_blank" rel="noreferrer">Abrir en Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Volver a Algoritmos</Link>
+</div>

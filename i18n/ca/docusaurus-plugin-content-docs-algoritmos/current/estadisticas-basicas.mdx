@@ -1,0 +1,151 @@
+---
+title: Estadístiques Bàsiques
+description: Resum executiu ràpid del conjunt de dades.
+slug: /estadisticas-basicas
+---
+
+import Link from '@docusaurus/Link';
+
+# Estadístiques Bàsiques del Conjunt de Dades Energètiques
+
+*(Energy Dataset Baseline Statistics Engine)*
+
+## Propòsit de l’algoritme
+
+Aquest algoritme proporciona una eina **Compute-to-Data** dissenyada per oferir una **visió executiva immediata** de l’estat i la dimensió d’un conjunt de dades energètiques. L’objectiu és resumir, de manera clara i segura, la informació clau necessària per entendre ràpidament què s’està analitzant abans de fer estudis més complexos.
+
+L’algoritme no aprofundeix en patrons avançats ni en comportaments individuals. En el seu lloc, genera **estadístiques descriptives agregades** que permeten avaluar el volum, l’abast i el potencial del conjunt de dades, com a punt de partida per a processos d’anàlisi, valorització i presa de decisions.
+
+---
+
+## Què fa l’algoritme (visió general d’alt nivell)
+
+### 1. Compta punts de subministrament i registres analitzats
+
+L’algoritme processa el conjunt de dades autoritzat i calcula:
+
+- nombre total de punts de subministrament inclosos
+- nombre total de registres temporals analitzats
+- cobertura temporal del conjunt de dades
+
+Això permet dimensionar ràpidament l’abast real de l’anàlisi i la seva representativitat.
+
+---
+
+### 2. Calcula estadístiques bàsiques de consum i generació
+
+Per al conjunt complet, l’algoritme obté:
+
+- consum total agregat
+- generació total agregada
+- consum mitjà per punt de subministrament
+- valors màxims i mínims observats
+
+Aquestes mètriques proporcionen una primera lectura del comportament energètic global.
+
+---
+
+### 3. Resumeix la distribució general de les dades
+
+L’algoritme analitza la dispersió dels valors i genera indicadors simples que ajuden a entendre:
+
+- si els consums estan concentrats o distribuïts
+- la presència de valors extrems
+- la variabilitat general del conjunt
+
+Aquest resum permet anticipar la complexitat d’anàlisis posteriors.
+
+---
+
+### 4. Produeix un informe executiu segur i anonimitzat
+
+El resultat final inclou únicament:
+
+- totals
+- mitjanes
+- màxims i mínims
+- recomptes agregats
+
+No s’exposa cap valor individual, identificador tècnic ni informació sensible, i per tant les sortides són adequades per a:
+
+- informes executius
+- presentacions inicials
+- anàlisi preliminar d’oportunitat
+- documentació tècnica compartida
+
+---
+
+## Com aquest algoritme dona suport al model Compute-to-Data
+
+### 1. Anàlisi descriptiva sense extracció de dades
+
+Tot el processament es realitza dins l’entorn segur de càlcul. Només s’exporten mètriques agregades i derivades.
+
+---
+
+### 2. Valida la base de dades abans d’analítica avançada
+
+Abans d’aplicar models més complexos, és essencial respondre preguntes com:
+
+- El volum de dades és suficient?
+- El període analitzat és representatiu?
+- Hi ha valors extrems que s’hagin de tractar amb cura?
+
+Aquest algoritme respon aquestes preguntes de manera ràpida i fiable.
+
+---
+
+### 3. Redueix errors en etapes primerenques
+
+En proporcionar una visió clara del conjunt de dades, evita interpretacions errònies i anàlisis basades en supòsits incorrectes.
+
+---
+
+## Per què aquest algoritme és valuós per al sector energètic
+
+### 1. Punt d’entrada universal a l’analítica energètica
+
+És el primer algoritme a executar sobre qualsevol nou conjunt de dades energètiques, independentment del seu origen o complexitat.
+
+---
+
+### 2. Identificació primerenca del potencial de creació de valor
+
+Permet avaluar ràpidament:
+
+- l’escala del sistema analitzat
+- el volum d’energia gestionada
+- l’impacte potencial de futures optimitzacions
+
+---
+
+### 3. Suport a decisions estratègiques
+
+Les estadístiques bàsiques són essencials per a:
+
+- definir l’abast de projectes
+- prioritzar recursos analítics
+- decidir si cal avançar cap a anàlisis més sofisticades
+
+---
+
+### 4. Apte per a entorns públics i privats
+
+El seu enfocament simple, segur i comprensible el fa útil per a:
+
+- administracions públiques
+- gestors energètics
+- analistes tècnics
+- responsables de planificació
+
+---
+
+## Resum
+
+L’algoritme d’Estadístiques Bàsiques del Conjunt de Dades Energètiques proporciona un resum Compute-to-Data clar, segur i anonimitzat del volum, l’abast i el comportament general d’un conjunt de dades energètiques. Calcula totals, mitjanes i valors extrems, oferint una imatge immediata de l’estat del sistema i establint les bases per identificar oportunitats de creació de valor i construir anàlisis més avançades sense exposar informació sensible.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:989368b734ffca616158924fbffc2aee2437835271d447a4fb5958dd20295350" target="_blank" rel="noreferrer">Obrir al Marketplace</a>
+  <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+  <Link className="button button--secondary" to="/algoritmos/">Tornar a Algoritmes</Link>
+</div>

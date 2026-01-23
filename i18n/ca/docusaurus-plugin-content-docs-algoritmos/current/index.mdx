@@ -1,0 +1,99 @@
+---
+title: Algoritmes
+description: Descripció i accés als algoritmes disponibles.
+slug: /
+---
+
+import Link from '@docusaurus/Link';
+
+# Algoritmes
+
+Explora els algoritmes disponibles i accedeix a una descripció detallada de cadascun.
+
+<div className="container algoritmos-page">
+  <div className="row">
+    {/* Anàlisi de Comunitats */}
+    <div className="col col--12 margin-bottom--lg">
+      <div className="card">
+        <div className="card__header">
+          <h3>Anàlisi de Comunitats</h3>
+        </div>
+        <div className="card__body">
+          <p>
+            Proporciona una visió global del consum i la generació d’energia per comunitat. Resumeix totals i mitjanes, identifica els principals consumidors i generadors d’excedents, i assenyala els usuaris que es troben als extrems (el 5% amb més i menys consum).
+          </p>
+        </div>
+        <div className="card__footer">
+          <div className="button-group button-group--block">
+            <Link className="button button--primary" to="/algoritmos/analisis-de-comunidades">Veure detall</Link>
+            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:6f1a6a00fd9b5f1d9b941223f2c153ddf007347ead951d572a6163c44e575178" target="_blank" rel="noreferrer">Marketplace</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Anàlisi per Perfils */}
+    <div className="col col--12 margin-bottom--lg">
+      <div className="card">
+        <div className="card__header">
+          <h3>Anàlisi per Perfils</h3>
+        </div>
+        <div className="card__body">
+          <p>
+            Classifica l’ús d’energia segons el tipus d’instal·lació (per exemple, enllumenat públic). Permet comparar cada punt de subministrament amb la mitjana de la seva categoria, facilitant la detecció de desviacions inusuals i comportaments fora de la norma dins de cada grup.
+          </p>
+        </div>
+        <div className="card__footer">
+          <div className="button-group button-group--block">
+            <Link className="button button--primary" to="/algoritmos/analisis-por-perfiles">Veure detall</Link>
+            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:345eb27f21a4bf0ac617e17015e5d8a8cf92a7904adfe380647a6d2241a5dbc5" target="_blank" rel="noreferrer">Marketplace</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Estadístiques Bàsiques */}
+    <div className="col col--12 margin-bottom--lg">
+      <div className="card">
+        <div className="card__header">
+          <h3>Estadístiques Bàsiques</h3>
+        </div>
+        <div className="card__body">
+          <p>
+            Ofereix un resum executiu ràpid del conjunt de dades. Calcula totals, mitjanes i valors màxims/mínims d’energia consumida i produïda, i també informa sobre el volum total de punts de subministrament i registres analitzats.
+          </p>
+        </div>
+        <div className="card__footer">
+          <div className="button-group button-group--block">
+            <Link className="button button--primary" to="/algoritmos/estadisticas-basicas">Veure detall</Link>
+            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:989368b734ffca616158924fbffc2aee2437835271d447a4fb5958dd20295350" target="_blank" rel="noreferrer">Marketplace</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Detecció d’Anomalies */}
+    <div className="col col--12 margin-bottom--lg">
+      <div className="card">
+        <div className="card__header">
+          <h3>Detecció d’Anomalies</h3>
+        </div>
+        <div className="card__body">
+          <p>
+            Se centra a trobar problemes tècnics o comportaments crítics. Detecta pics de consum extrems, períodes d’inactivitat tècnica (sensors que deixen d’enviar dades) i esdeveniments inusuals d’exportació d’energia que podrien requerir revisió.
+          </p>
+        </div>
+        <div className="card__footer">
+          <div className="button-group button-group--block">
+            <Link className="button button--primary" to="/algoritmos/deteccion-de-anomalias">Veure detall</Link>
+            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:3a82eabeb40e416bbd5be654cd4e100f0af88483f7a424d310234d156f98e69f" target="_blank" rel="noreferrer">Marketplace</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

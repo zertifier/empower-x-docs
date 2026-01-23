@@ -1,0 +1,148 @@
+---
+title: Anomaly Detection
+description: Early detection of consumption spikes, technical inactivity, and unusual exports.
+slug: /deteccion-de-anomalias
+---
+
+import Link from '@docusaurus/Link';
+
+# Energy Anomaly Detection Engine
+
+## Algorithm purpose
+
+This **Compute-to-Data** algorithm is aimed at the **early detection of technical issues and critical behaviors** in energy datasets. Its purpose is to identify situations that may indicate operational failures, technical incidents, or imminent risks, enabling proactive action before they become major problems.
+
+It does not replace real-time monitoring systems. Instead, it serves as an **analytical diagnostic** on historical or quasi-historical data, generating clear, actionable signals without exposing sensitive information.
+
+---
+
+## What the algorithm does (high-level overview)
+
+### 1. Detects extreme consumption spikes
+
+The algorithm analyzes consumption time series and detects:
+
+- consumption spikes significantly above typical behavior
+- isolated events that break normal trends
+- concentrated consumption during critical periods
+
+These spikes may indicate equipment faults, operational errors, or unexpected usage.
+
+---
+
+### 2. Identifies periods of technical inactivity
+
+The algorithm identifies intervals where:
+
+- data is not received from certain supply points
+- sensors stop reporting values for abnormal durations
+- time gaps are inconsistent with expected operation
+
+These situations are often linked to communication issues, sensor failures, or technical interruptions.
+
+---
+
+### 3. Detects unusual energy exports
+
+In systems with distributed generation, it analyzes:
+
+- atypical energy export events
+- unexpected surpluses during certain periods
+- injection patterns that do not match the usual profile
+
+These signals may indicate configuration errors, metering issues, or conditions requiring technical review.
+
+---
+
+### 4. Produces secure, prioritized analytical alerts
+
+The output includes:
+
+- identification of anomalous events
+- classification by anomaly type
+- severity or recurrence indicators
+- temporal summaries of incidents
+
+All information is presented in an aggregated and anonymized way, without exposing individual values or sensitive data.
+
+---
+
+## How this algorithm supports the Compute-to-Data model
+
+### 1. Diagnostics without raw data extraction
+
+The analysis runs entirely inside the secure environment. Only derived events and alert metrics are exported.
+
+---
+
+### 2. Enables proactive and preventive maintenance
+
+Before critical failures occur, it is key to answer:
+
+- Where are recurrent incidents appearing?
+- Which events require immediate review?
+- Which assets show early signs of degradation?
+
+This algorithm provides structured answers.
+
+---
+
+### 3. Reduces operating costs and risk
+
+By detecting issues early, it helps:
+
+- avoid severe breakdowns
+- reduce downtime
+- plan technical interventions more efficiently
+
+---
+
+## Why this algorithm is valuable for the energy sector
+
+### 1. Key technical diagnostic tool
+
+It identifies current or potential problems quickly and data-driven, reducing reliance on constant inspections.
+
+---
+
+### 2. Foundation for preventive maintenance programs
+
+Detected anomalies help:
+
+- design maintenance schedules
+- prioritize critical assets
+- improve reliability of installations and non-intensive networks
+
+---
+
+### 3. Applicable across many energy contexts
+
+It is especially useful for:
+
+- energy communities
+- public installations
+- local and non-intensive networks
+- environments with distributed generation
+
+---
+
+### 4. Compatible with public and private sector use
+
+Its secure, aggregated approach makes it suitable for:
+
+- public administrations
+- infrastructure operators
+- energy managers
+- service companies
+
+---
+
+## Summary
+
+The Energy Anomaly Detection Engine is a Compute-to-Data algorithm designed to identify extreme consumption spikes, periods of technical inactivity, and unusual energy export events. It provides a secure and actionable early diagnostic that supports preventive maintenance strategies, reduces operational risk, and improves system reliability without exposing sensitive data.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:3a82eabeb40e416bbd5be654cd4e100f0af88483f7a424d310234d156f98e69f" target="_blank" rel="noreferrer">Open in Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Back to Algorithms</Link>
+</div>

@@ -1,0 +1,151 @@
+---
+title: Estadísticas Básicas
+description: Resumen ejecutivo inmediato del conjunto de datos energético.
+slug: /estadisticas-basicas
+---
+
+import Link from '@docusaurus/Link';
+
+# Estadísticas Básicas del Conjunto de Datos Energéticos
+
+*(Energy Dataset Baseline Statistics Engine)*
+
+## Propósito del algoritmo
+
+Este algoritmo proporciona una herramienta **Compute-to-Data** diseñada para ofrecer una **visión ejecutiva inmediata** del estado y la dimensión de un conjunto de datos energéticos. Su objetivo es resumir, de forma clara y segura, la información clave necesaria para comprender rápidamente qué se está analizando antes de realizar estudios más complejos.
+
+El algoritmo no profundiza en patrones avanzados ni en comportamientos individuales. En su lugar, genera **estadísticas descriptivas agregadas** que permiten evaluar el volumen, alcance y potencial del conjunto de datos, sirviendo como punto de partida para procesos de análisis, valorización y toma de decisiones.
+
+---
+
+## Qué hace el algoritmo (visión general de alto nivel)
+
+### 1. Cuenta puntos de suministro y registros analizados
+
+El algoritmo procesa el conjunto de datos autorizado y calcula:
+
+- número total de puntos de suministro incluidos
+- número total de registros temporales analizados
+- cobertura temporal del conjunto de datos
+
+Esto permite dimensionar rápidamente el alcance real del análisis y su representatividad.
+
+---
+
+### 2. Calcula estadísticas básicas de consumo y generación
+
+Para el conjunto completo, el algoritmo obtiene:
+
+- consumo total agregado
+- generación total agregada
+- consumo medio por punto de suministro
+- valores máximos y mínimos observados
+
+Estas métricas proporcionan una primera lectura del comportamiento energético global.
+
+---
+
+### 3. Resume la distribución general de los datos
+
+El algoritmo analiza la dispersión de los valores y genera indicadores simples que ayudan a entender:
+
+- si los consumos están concentrados o distribuidos
+- la presencia de valores extremos
+- la variabilidad general del conjunto
+
+Este resumen permite anticipar la complejidad de análisis posteriores.
+
+---
+
+### 4. Produce un informe ejecutivo seguro y anonimizado
+
+El resultado final incluye únicamente:
+
+- totales
+- promedios
+- máximos y mínimos
+- conteos agregados
+
+No se expone ningún valor individual, identificador técnico ni información sensible, haciendo que las salidas sean adecuadas para:
+
+- informes ejecutivos
+- presentaciones iniciales
+- análisis preliminares de oportunidad
+- documentación técnica compartida
+
+---
+
+## Cómo este algoritmo soporta el modelo Compute-to-Data
+
+### 1. Análisis descriptivo sin extracción de datos
+
+Todo el procesamiento se realiza dentro del entorno seguro de cómputo. Solo se exportan métricas agregadas y derivadas, garantizando la confidencialidad de los datos energéticos.
+
+---
+
+### 2. Valida la base de datos antes de análisis avanzados
+
+Antes de aplicar modelos más complejos, es esencial responder a preguntas como:
+
+- ¿El volumen de datos es suficiente?
+- ¿El periodo analizado es representativo?
+- ¿Existen valores extremos que deban tratarse con cuidado?
+
+Este algoritmo responde a estas preguntas de forma rápida y fiable.
+
+---
+
+### 3. Reduce errores en etapas tempranas
+
+Al proporcionar una visión clara del conjunto de datos, evita interpretaciones erróneas y análisis basados en suposiciones incorrectas.
+
+---
+
+## Por qué este algoritmo es valioso para el sector energético
+
+### 1. Punto de entrada universal al análisis energético
+
+Es el primer algoritmo a ejecutar sobre cualquier nuevo conjunto de datos energético, independientemente de su origen o complejidad.
+
+---
+
+### 2. Identificación temprana del potencial de creación de valor
+
+Permite evaluar rápidamente:
+
+- la escala del sistema analizado
+- el volumen de energía gestionado
+- el impacto potencial de futuras optimizaciones
+
+---
+
+### 3. Soporte a decisiones estratégicas
+
+Las estadísticas básicas son esenciales para:
+
+- definir el alcance de proyectos
+- priorizar recursos analíticos
+- decidir si avanzar hacia análisis más sofisticados
+
+---
+
+### 4. Apto para entornos públicos y privados
+
+Su enfoque simple, seguro y comprensible lo hace útil para:
+
+- administraciones públicas
+- gestores energéticos
+- analistas técnicos
+- responsables de planificación
+
+---
+
+## Resumen
+
+El algoritmo de Estadísticas Básicas del Conjunto de Datos Energéticos proporciona un resumen Compute-to-Data claro, seguro y anonimizado del volumen, alcance y comportamiento general de un conjunto de datos energético. Calcula totales, promedios y valores extremos, ofreciendo una imagen inmediata del estado del sistema y sentando las bases para identificar oportunidades de creación de valor y construir análisis más avanzados sin exponer información sensible.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:989368b734ffca616158924fbffc2aee2437835271d447a4fb5958dd20295350" target="_blank" rel="noreferrer">Abrir en Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Volver a Algoritmos</Link>
+</div>

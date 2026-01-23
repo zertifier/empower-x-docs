@@ -1,0 +1,150 @@
+---
+title: Anàlisi per Perfils
+description: Classificació de l'ús d'energia per tipus d'instal·lació.
+slug: /analisis-por-perfiles
+---
+
+import Link from '@docusaurus/Link';
+
+# Analitzador per Perfils de Consum Energètic
+
+*(Energy Usage Profile Analysis Engine)*
+
+## Propòsit de l’algoritme
+
+Aquest algoritme proporciona una eina **Compute-to-Data** dissenyada per analitzar i comparar el comportament energètic de punts de subministrament agrupats per **tipologia d’ús** (per exemple: enllumenat públic, edificis residencials, garatges, equipaments públics, instal·lacions comercials, etc.).
+
+L’objectiu principal és identificar desviacions, ineficiències i comportaments anòmals **dins de cada grup homogeni**, establint referències clares que serveixin de base per a processos d’optimització, planificació d’inversions i avaluació del seu retorn econòmic (ROI).
+
+L’algoritme no exposa dades individuals identificables. En el seu lloc, genera **comparacions estadístiques segures** que permeten entendre com es comporta cada subministrament respecte de l’estàndard del seu perfil.
+
+---
+
+## Què fa l’algoritme (visió general d’alt nivell)
+
+### 1. Classifica els punts de subministrament per perfil d’ús
+
+L’algoritme agrupa els punts de subministrament segons criteris definits per l’usuari o pel cas d’estudi, com ara:
+
+- tipus d’instal·lació
+- funció del subministrament
+- patró operatiu esperat
+- altres variables rellevants del context
+
+Cada grup representa un **perfil energètic comparable**, evitant comparacions entre usos no equivalents.
+
+---
+
+### 2. Calcula mètriques de referència per perfil
+
+Per a cada perfil, l’algoritme calcula indicadors agregats com:
+
+- consum mitjà
+- rangs de consum habituals
+- valors màxims i mínims
+- distribució estadística del grup
+
+Aquestes mètriques defineixen un **comportament de referència** per a cada tipologia d’ús.
+
+---
+
+### 3. Mesura desviacions individuals respecte del perfil
+
+Un cop definit l’estàndard del grup, l’algoritme avalua cada punt de subministrament calculant:
+
+- desviació percentual respecte de la mitjana del perfil
+- posició relativa dins la distribució del grup
+- identificació de comportaments fora de la norma
+
+Aquesta anàlisi permet detectar ineficiències, errors de dimensionament o usos no previstos sense necessitat d’inspecció directa.
+
+---
+
+### 4. Genera resultats comparatius segurs i anonimitzats
+
+El resultat de l’algoritme inclou:
+
+- indicadors de desviació
+- classificacions per rangs
+- estadístiques agregades per perfil
+
+No s’exposen valors absoluts sensibles, identificadors tècnics ni ubicacions exactes, fet que fa que les sortides siguin aptes per a anàlisi compartida entre múltiples actors.
+
+---
+
+## Com aquest algoritme dona suport al model Compute-to-Data
+
+### 1. Comparació sense exposició de dades brutes
+
+Tot el processament es realitza dins l’entorn segur. Només s’exporten mètriques relatives i agregades, preservant la confidencialitat de cada punt de subministrament.
+
+---
+
+### 2. Permet definir estàndards abans d’optimitzar
+
+Abans d’invertir en mesures correctives o infraestructures, és essencial respondre preguntes com:
+
+- Què es considera un consum “normal” per a aquest tipus d’ús?
+- Quins subministraments es desvien significativament de l’estàndard?
+- On és més probable obtenir millores amb menys inversió?
+
+Aquest algoritme estableix aquestes referències de manera objectiva.
+
+---
+
+### 3. Redueix errors en la presa de decisions
+
+Evita comparacions incorrectes entre usos diferents i redueix el risc de decisions basades en intuïcions o dades sense context.
+
+---
+
+## Per què aquest algoritme és valuós per al sector energètic
+
+### 1. Base per a programes d’optimització replicables
+
+En definir perfils i estàndards clars, permet dissenyar mesures d’optimització replicables en múltiples instal·lacions similars.
+
+---
+
+### 2. Suport directe a la valoració d’inversions i ROI
+
+Les desviacions detectades ajuden a:
+
+- prioritzar actuacions
+- justificar inversions energètiques
+- estimar estalvis potencials
+- avaluar el retorn econòmic esperat
+
+---
+
+### 3. Aplicable al sector públic i privat
+
+És especialment útil per a:
+
+- administracions públiques (enllumenat, edificis municipals)
+- gestors d’infraestructures
+- cadenes de retail i hostaleria
+- operadors de xarxes no intensives
+
+---
+
+### 4. Preparació per a analítica avançada
+
+Els perfils definits serveixen de base per a algoritmes posteriors de:
+
+- optimització energètica
+- detecció avançada d’anomalies
+- simulació d’escenaris
+- planificació estratègica
+
+---
+
+## Resum
+
+L’Analitzador per Perfils de Consum Energètic és un algoritme Compute-to-Data que classifica punts de subministrament per tipologia d’ús i compara el seu comportament amb estàndards agregats del grup. Identifica desviacions i comportaments fora de la norma de manera segura i anònima, assenyalant les bases per a l’optimització energètica, l’avaluació d’inversions i la presa de decisions basada en dades, sense exposar mai informació sensible.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:345eb27f21a4bf0ac617e17015e5d8a8cf92a7904adfe380647a6d2241a5dbc5" target="_blank" rel="noreferrer">Obrir al Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Tornar a Algoritmes</Link>
+</div>

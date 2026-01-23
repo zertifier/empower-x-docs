@@ -1,0 +1,150 @@
+---
+title: Detección de Anomalías Energéticas
+description: Detección temprana de picos, inactividad técnica y exportaciones inusuales.
+slug: /deteccion-de-anomalias
+---
+
+import Link from '@docusaurus/Link';
+
+# Detección de Anomalías Energéticas
+
+*(Energy Anomaly Detection Engine)*
+
+## Propósito del algoritmo
+
+Este algoritmo proporciona una herramienta **Compute-to-Data** orientada a la **detección temprana de problemas técnicos y comportamientos críticos** en conjuntos de datos energéticos. Su objetivo es identificar situaciones que puedan indicar fallos operativos, incidencias técnicas o riesgos inminentes, permitiendo una actuación proactiva antes de que se conviertan en problemas mayores.
+
+El algoritmo no sustituye a sistemas de monitorización en tiempo real, sino que actúa como un **diagnóstico analítico** sobre datos históricos o cuasi-históricos, generando señales claras y accionables sin exponer información sensible.
+
+---
+
+## Qué hace el algoritmo (visión general de alto nivel)
+
+### 1. Detecta picos de consumo extremos
+
+El algoritmo analiza las series temporales de consumo y detecta:
+
+- picos de consumo significativamente superiores al comportamiento habitual
+- eventos puntuales que rompen la tendencia normal
+- concentraciones de consumo en periodos críticos
+
+Estos picos pueden indicar fallos de equipos, errores de operación o usos no previstos.
+
+---
+
+### 2. Identifica periodos de inactividad técnica
+
+El algoritmo identifica intervalos en los que:
+
+- no se reciben datos de determinados puntos de suministro
+- los sensores dejan de reportar valores durante periodos anómalos
+- existen lagunas temporales inconsistentes con el funcionamiento esperado
+
+Estas situaciones suelen estar asociadas a problemas de comunicación, fallos de sensores o interrupciones técnicas.
+
+---
+
+### 3. Detecta exportaciones de energía inusuales
+
+En sistemas con generación distribuida, el algoritmo analiza:
+
+- eventos de exportación de energía atípicos
+- excedentes inesperados en determinados periodos
+- patrones de inyección que no corresponden al perfil habitual
+
+Estas señales pueden indicar errores de configuración, problemas de medición o situaciones que requieren revisión técnica.
+
+---
+
+### 4. Genera alertas analíticas seguras y priorizadas
+
+El resultado del algoritmo incluye:
+
+- identificación de eventos anómalos
+- clasificación por tipo de anomalía
+- indicadores de severidad o recurrencia
+- resúmenes temporales de incidencias
+
+Toda la información se presenta de forma agregada y anonimizada, sin exponer valores individuales ni datos sensibles.
+
+---
+
+## Cómo este algoritmo soporta el modelo Compute-to-Data
+
+### 1. Diagnóstico sin extracción de datos brutos
+
+El análisis se ejecuta íntegramente dentro del entorno seguro. Solo se exportan eventos derivados y métricas de alerta, preservando la confidencialidad de los datos energéticos.
+
+---
+
+### 2. Permite mantenimiento proactivo y preventivo
+
+Antes de que se produzcan fallos críticos, es clave responder a preguntas como:
+
+- ¿Dónde están apareciendo incidencias recurrentes?
+- ¿Qué eventos requieren revisión inmediata?
+- ¿Qué activos muestran señales tempranas de degradación?
+
+Este algoritmo proporciona esas respuestas de forma estructurada.
+
+---
+
+### 3. Reduce costes operativos y riesgos
+
+Al detectar problemas de manera anticipada, ayuda a:
+
+- evitar averías graves
+- reducir tiempos de inactividad
+- planificar intervenciones técnicas de forma eficiente
+
+---
+
+## Por qué este algoritmo es valioso para el sector energético
+
+### 1. Herramienta clave de diagnóstico técnico
+
+Permite identificar problemas actuales o potenciales de forma rápida y basada en datos, sin necesidad de inspecciones constantes.
+
+---
+
+### 2. Base para programas de mantenimiento preventivo
+
+Las anomalías detectadas sirven para:
+
+- diseñar calendarios de mantenimiento
+- priorizar activos críticos
+- mejorar la fiabilidad de instalaciones y redes no intensivas
+
+---
+
+### 3. Aplicable a múltiples contextos energéticos
+
+Es especialmente útil para:
+
+- comunidades energéticas
+- instalaciones públicas
+- redes locales y no intensivas
+- entornos con generación distribuida
+
+---
+
+### 4. Compatible con sector público y privado
+
+Su enfoque seguro y agregado lo hace apto para su uso por:
+
+- administraciones públicas
+- operadores de infraestructuras
+- gestores energéticos
+- empresas de servicios
+
+---
+
+## Resumen
+
+El algoritmo de Detección de Anomalías Energéticas es una herramienta Compute-to-Data diseñada para identificar picos de consumo extremos, periodos de inactividad técnica y eventos inusuales de exportación de energía. Proporciona un diagnóstico temprano, seguro y accionable que permite diseñar estrategias de mantenimiento preventivo, reducir riesgos operativos y mejorar la fiabilidad de sistemas energéticos sin exponer datos sensibles.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:3a82eabeb40e416bbd5be654cd4e100f0af88483f7a424d310234d156f98e69f" target="_blank" rel="noreferrer">Abrir en Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Volver a Algoritmos</Link>
+</div>

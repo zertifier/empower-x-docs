@@ -1,0 +1,155 @@
+---
+title: Community Analysis
+description: Secure, aggregated view of consumption and generation at community level.
+slug: /analisis-de-comunidades
+---
+
+import Link from '@docusaurus/Link';
+
+# Community Energy Analytics Engine
+
+## Algorithm purpose
+
+This algorithm provides a foundational **Compute-to-Data** capability to analyze the aggregated energy behavior of an energy community (or a set of supply points). Its goal is to offer a reliable and fast global view of consumption and generation, enabling analysts to assess the community’s overall status and detect optimization and investment opportunities **without exposing sensitive individual-level data**.
+
+It does not reveal raw values per supply point. Instead, it produces **aggregated and anonymized summaries** that help analysts, public managers, and private operators understand:
+
+- the energy scale of a community
+- how consumption and generation are distributed
+- which users concentrate the highest consumption or surpluses
+- which users sit at the extremes of energy behavior
+- whether there are structural imbalances that require intervention
+
+This makes it an ideal **initial diagnostic** tool for energy communities, non-intensive networks, and groups of supplies.
+
+---
+
+## What the algorithm does (high-level overview)
+
+### 1. Aggregates consumption and generation at community level
+
+The algorithm processes data from all authorized supply points and calculates:
+
+- total community consumption
+- total energy generation
+- average consumption and generation per point
+- overall balance between consumption and surpluses
+
+These indicators provide a clear picture of collective energy performance without identifying specific users.
+
+---
+
+### 2. Identifies top consumers and top surplus generators
+
+From aggregated values, the algorithm identifies:
+
+- supply points with the highest relative consumption
+- points with the highest generation or surpluses
+- the percentage contribution of these extremes to the community total
+
+This helps reveal where the largest loads or generation capacities are concentrated, supporting allocation and planning decisions.
+
+---
+
+### 3. Detects extreme behaviors (percentiles)
+
+The algorithm ranks supply points by energy behavior and identifies:
+
+- the top 5% by consumption
+- the bottom 5% by consumption
+- representative mid-range bands
+
+This approach makes it easier to spot atypical behaviors, potential inefficiencies, or exemplary cases, always from a statistical and anonymized perspective.
+
+---
+
+### 4. Produces safe metrics for optimization and planning
+
+The resulting report includes only:
+
+- totals and averages
+- distributions and percentiles
+- anonymized rankings
+- consumption–generation balance indicators
+
+No individual data, exact locations, or technical identifiers are exposed. Outputs are suitable for:
+
+- sizing studies
+- energy storage planning
+- power and reactive power control analysis
+- reports for public administrations
+- preliminary investment analysis
+
+---
+
+## How this algorithm supports the Compute-to-Data model
+
+### 1. Data never leaves the secure environment
+
+The algorithm runs entirely within the authorized compute environment. Only aggregated and derived results are exported, ensuring confidentiality of energy data.
+
+---
+
+### 2. Enables community assessment before advanced analytics
+
+Before applying more complex models (allocation optimization, storage simulations, demand forecasting), it is essential to answer basic questions such as:
+
+- Is the community balanced in consumption and generation?
+- Are there abnormal concentrations of consumption?
+- What is the actual energy scale of the group?
+
+This algorithm provides those answers quickly and safely.
+
+---
+
+### 3. Reduces technical risk and early-stage errors
+
+By providing a clear aggregated view, it prevents decisions based on incomplete or misinterpreted data and reduces risk in later planning and investment phases.
+
+---
+
+## Why this algorithm is valuable for the energy sector
+
+### 1. Fast and cost-effective diagnosis of energy communities
+
+It enables assessment without costly audits or intrusive analyses, supporting early decision-making.
+
+---
+
+### 2. Foundation for smart energy allocation optimization
+
+It lays the groundwork for designing optimal consumption and surplus allocation strategies to maximize efficiency in modern energy communities.
+
+---
+
+### 3. Supports investment and ROI decisions
+
+Generated indicators can be used directly for:
+
+- energy storage sizing
+- grid reinforcement needs assessment
+- technical justification of investments
+- economic return analysis
+
+---
+
+### 4. Compatible with public and private sector needs
+
+Its aggregated and anonymous approach is suitable for:
+
+- public administrations
+- infrastructure operators
+- retail and hospitality in early phases
+- efficiency and sustainability programs
+
+---
+
+## Summary
+
+The Community Energy Analytics Engine is an essential Compute-to-Data algorithm that delivers a secure, reliable aggregated view of energy consumption and generation in energy communities. It computes totals, averages, behavioral extremes, and structural imbalances, enabling diagnosis and supporting optimization and investment without ever exposing sensitive individual-level data.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:6f1a6a00fd9b5f1d9b941223f2c153ddf007347ead951d572a6163c44e575178" target="_blank" rel="noreferrer">Open in Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Back to Algorithms</Link>
+</div>

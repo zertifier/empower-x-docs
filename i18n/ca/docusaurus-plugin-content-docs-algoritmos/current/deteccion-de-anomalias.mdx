@@ -1,0 +1,150 @@
+---
+title: Detecció d'Anomalies
+description: Identificació de pics de consum, inactivitat tècnica i exportacions inusuals.
+slug: /deteccion-de-anomalias
+---
+
+import Link from '@docusaurus/Link';
+
+# Detecció d’Anomalies Energètiques
+
+*(Energy Anomaly Detection Engine)*
+
+## Propòsit de l’algoritme
+
+Aquest algoritme proporciona una eina **Compute-to-Data** orientada a la **detecció primerenca de problemes tècnics i comportaments crítics** en conjunts de dades energètiques. L’objectiu és identificar situacions que puguin indicar fallades operatives, incidències tècniques o riscos imminents, permetent una actuació proactiva abans que es converteixin en problemes més grans.
+
+L’algoritme no substitueix sistemes de monitorització en temps real, sinó que actua com un **diagnòstic analític** sobre dades històriques o quasi-històriques, generant senyals clars i accionables sense exposar informació sensible.
+
+---
+
+## Què fa l’algoritme (visió general d’alt nivell)
+
+### 1. Detecta pics de consum extrems
+
+L’algoritme analitza les sèries temporals de consum i detecta:
+
+- pics de consum significativament superiors al comportament habitual
+- esdeveniments puntuals que trenquen la tendència normal
+- concentracions de consum en períodes crítics
+
+Aquests pics poden indicar fallades d’equips, errors d’operació o usos no previstos.
+
+---
+
+### 2. Identifica períodes d’inactivitat tècnica
+
+L’algoritme identifica intervals en què:
+
+- no es reben dades de determinats punts de subministrament
+- els sensors deixen de reportar valors durant períodes anòmals
+- hi ha buits temporals inconsistents amb el funcionament esperat
+
+Aquestes situacions sovint estan associades a problemes de comunicació, fallades de sensors o interrupcions tècniques.
+
+---
+
+### 3. Detecta exportacions d’energia inusuals
+
+En sistemes amb generació distribuïda, l’algoritme analitza:
+
+- esdeveniments d’exportació d’energia atípics
+- excedents inesperats en determinats períodes
+- patrons d’injecció que no corresponen al perfil habitual
+
+Aquests senyals poden indicar errors de configuració, problemes de mesura o situacions que requereixen revisió tècnica.
+
+---
+
+### 4. Genera alertes analítiques segures i prioritzades
+
+El resultat de l’algoritme inclou:
+
+- identificació d’esdeveniments anòmals
+- classificació per tipus d’anomalia
+- indicadors de severitat o recurrència
+- resums temporals d’incidències
+
+Tota la informació es presenta de manera agregada i anonimitzada, sense exposar valors individuals ni dades sensibles.
+
+---
+
+## Com aquest algoritme dona suport al model Compute-to-Data
+
+### 1. Diagnòstic sense extracció de dades brutes
+
+L’anàlisi s’executa íntegrament dins l’entorn segur. Només s’exporten esdeveniments derivats i mètriques d’alerta, preservant la confidencialitat de les dades energètiques.
+
+---
+
+### 2. Permet manteniment proactiu i preventiu
+
+Abans que es produeixin fallades crítiques, és clau respondre preguntes com:
+
+- On estan apareixent incidències recurrents?
+- Quins esdeveniments requereixen revisió immediata?
+- Quins actius mostren senyals primerenques de degradació?
+
+Aquest algoritme proporciona aquestes respostes de manera estructurada.
+
+---
+
+### 3. Redueix costos operatius i riscos
+
+En detectar problemes de manera anticipada, ajuda a:
+
+- evitar avaries greus
+- reduir temps d’inactivitat
+- planificar intervencions tècniques de manera eficient
+
+---
+
+## Per què aquest algoritme és valuós per al sector energètic
+
+### 1. Eina clau de diagnòstic tècnic
+
+Permet identificar problemes actuals o potencials de manera ràpida i basada en dades, sense necessitat d’inspeccions constants.
+
+---
+
+### 2. Base per a programes de manteniment preventiu
+
+Les anomalies detectades serveixen per:
+
+- dissenyar calendaris de manteniment
+- prioritzar actius crítics
+- millorar la fiabilitat d’instal·lacions i xarxes no intensives
+
+---
+
+### 3. Aplicable a múltiples contextos energètics
+
+És especialment útil per a:
+
+- comunitats energètiques
+- instal·lacions públiques
+- xarxes locals i no intensives
+- entorns amb generació distribuïda
+
+---
+
+### 4. Compatible amb el sector públic i privat
+
+El seu enfocament segur i agregat el fa apte per a l’ús per part de:
+
+- administracions públiques
+- operadors d’infraestructures
+- gestors energètics
+- empreses de serveis
+
+---
+
+## Resum
+
+L’algoritme de Detecció d’Anomalies Energètiques és una eina Compute-to-Data dissenyada per identificar pics de consum extrems, períodes d’inactivitat tècnica i esdeveniments inusuals d’exportació d’energia. Proporciona un diagnòstic primerenc, segur i accionable que permet dissenyar estratègies de manteniment preventiu, reduir riscos operatius i millorar la fiabilitat de sistemes energètics sense exposar dades sensibles.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:3a82eabeb40e416bbd5be654cd4e100f0af88483f7a424d310234d156f98e69f" target="_blank" rel="noreferrer">Obrir al Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+  <Link className="button button--secondary" to="/algoritmos/">Tornar a Algoritmes</Link>
+</div>

@@ -85,6 +85,18 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'algoritmos',
+        path: 'algoritmos',
+        routeBasePath: 'algoritmos',
+        sidebarPath: './sidebarsAlgoritmos.js',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -107,6 +119,7 @@ const config = {
         items: [
           { type: 'doc', docId: 'about', label: 'Documentación', position: 'left' },
           { to: 'casos', label: 'Casos', position: 'left' },
+          { type: 'doc', docId: 'index', docsPluginId: 'algoritmos', label: 'Algoritmos', position: 'left' },
           { to: 'videos', label: 'Vídeos', position: 'left' },
           { to: 'contacto', label: 'Contacto', position: 'left' },
           {
@@ -132,6 +145,7 @@ const config = {
             items: [
               { label: 'Casos', to: 'casos' },
               { label: 'Vídeos', to: 'videos' },
+              { label: 'Algoritmos', to: 'algoritmos/' },
               { label: 'Contacto', to: 'contacto' },
             ],
           },

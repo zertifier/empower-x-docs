@@ -1,0 +1,157 @@
+---
+title: Anàlisi de Comunitats
+description: Visió global de consum i generació per comunitat.
+slug: /analisis-de-comunidades
+---
+
+import Link from '@docusaurus/Link';
+
+# Analitzador de Comunitats Energètiques
+
+*(Community Energy Analytics Engine)*
+
+## Propòsit de l’algoritme
+
+Aquest algoritme proporciona una eina **Compute-to-Data** fonamental per analitzar el comportament energètic agregat d’una comunitat energètica o d’un conjunt de punts de subministrament. L’objectiu és oferir una visió global, fiable i ràpida del consum i la generació d’energia, per avaluar l’estat general de la comunitat i detectar oportunitats d’optimització i inversió **sense exposar dades individuals sensibles**.
+
+L’algoritme no revela valors bruts per punt de subministrament. En el seu lloc, genera **resums agregats i anonimitzats** que ajuden analistes, gestors públics i operadors privats a entendre:
+
+- la dimensió energètica d’una comunitat
+- com es distribueixen el consum i la generació
+- qui concentra els consums o excedents més elevats
+- quins usuaris se situen als extrems del comportament energètic
+- si hi ha desequilibris estructurals que requereixin intervenció
+
+Això el converteix en una eina ideal com a **diagnosi inicial** per a comunitats energètiques, xarxes no intensives i agrupacions de subministraments.
+
+---
+
+## Què fa l’algoritme (visió general d’alt nivell)
+
+### 1. Agrega consum i generació a nivell comunitari
+
+L’algoritme processa les dades de tots els punts de subministrament autoritzats i calcula:
+
+- consum total de la comunitat
+- generació total d’energia
+- consum i generació mitjans per punt
+- balanç global entre consum i excedents
+
+Aquests indicadors ofereixen una imatge clara del rendiment energètic col·lectiu, sense identificar usuaris concrets.
+
+---
+
+### 2. Identifica els principals consumidors i generadors d’excedents
+
+A partir dels valors agregats, l’algoritme identifica:
+
+- els punts de subministrament amb més consum relatiu
+- els punts amb més generació o excedents
+- la contribució percentual d’aquests extrems al total de la comunitat
+
+Aquesta informació permet entendre on es concentren les càrregues més grans o les capacitats de generació, clau per a decisions de repartiment i planificació.
+
+---
+
+### 3. Detecta usuaris als extrems de comportament (percentils)
+
+L’algoritme classifica els punts de subministrament segons el seu comportament energètic i identifica:
+
+- el 5% amb més consum
+- el 5% amb menys consum
+- franges intermèdies representatives
+
+Aquest enfocament facilita la detecció de comportaments atípics, ineficiències potencials o casos exemplars, sempre des d’una perspectiva estadística i anonimitzada.
+
+---
+
+### 4. Genera mètriques segures per a l’optimització i la planificació
+
+L’informe resultant inclou únicament:
+
+- totals i mitjanes
+- distribucions i percentils
+- rànquings anonimitzats
+- indicadors d’equilibri consum–generació
+
+No s’exposen dades individuals, ubicacions exactes ni identificadors tècnics. Les sortides són adequades per a:
+
+- estudis de dimensionament
+- planificació d’emmagatzematge energètic
+- anàlisi de control de potència i reactiva
+- informes per a administracions públiques
+- anàlisi preliminar d’inversió
+
+---
+
+## Com aquest algoritme dona suport al model Compute-to-Data
+
+### 1. Les dades mai surten de l’entorn segur
+
+L’algoritme s’executa íntegrament dins l’entorn de càlcul autoritzat. Només s’exporten resultats agregats i derivats, garantint la confidencialitat de les dades energètiques.
+
+---
+
+### 2. Permet avaluar l’estat d’una comunitat abans d’analítica avançada
+
+Abans d’aplicar models més complexos (optimització de repartiment, simulacions d’emmagatzematge, predicció de demanda), és fonamental respondre preguntes bàsiques com:
+
+- La comunitat està equilibrada en consum i generació?
+- Hi ha concentracions anòmales de consum?
+- Quina dimensió energètica té realment el conjunt?
+
+Aquest algoritme proporciona aquestes respostes de manera ràpida i segura.
+
+---
+
+### 3. Redueix riscos tècnics i errors inicials
+
+En oferir una visió clara del comportament agregat, evita decisions basades en dades incompletes o mal interpretades i redueix riscos en fases posteriors de planificació o inversió.
+
+---
+
+## Per què aquest algoritme és valuós per al sector energètic
+
+### 1. Diagnosi ràpida i econòmica de comunitats energètiques
+
+Permet avaluar l’estat d’una comunitat sense auditories costoses ni anàlisis intrusives, facilitant la presa de decisions en fases inicials.
+
+---
+
+### 2. Base per a l’optimització intel·ligent del repartiment energètic
+
+Assenta les bases per dissenyar estratègies de repartiment òptim de consums i excedents, essencials per maximitzar l’eficiència de comunitats energètiques modernes.
+
+---
+
+### 3. Suport a decisions d’inversió i ROI
+
+Els indicadors generats són directament utilitzables per a:
+
+- dimensionament de sistemes d’emmagatzematge
+- avaluació de necessitats de reforç de xarxa
+- justificació tècnica d’inversions
+- anàlisi de retorn econòmic
+
+---
+
+### 4. Compatible amb el sector públic i privat
+
+L’enfocament agregat i anònim el fa especialment adequat per a:
+
+- administracions públiques
+- operadors d’infraestructures
+- retail i hostaleria en fases inicials
+- programes d’eficiència i sostenibilitat
+
+---
+
+## Resum
+
+L’Analitzador de Comunitats Energètiques és un algoritme Compute-to-Data essencial que proporciona una visió agregada, segura i fiable del consum i la generació d’energia en comunitats energètiques. Identifica totals, mitjanes, extrems de comportament i desequilibris estructurals, permetent avaluar l’estat del sistema i assentar les bases per a optimització, inversió i manteniment preventiu, sense exposar mai dades individuals sensibles.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:6f1a6a00fd9b5f1d9b941223f2c153ddf007347ead951d572a6163c44e575178" target="_blank" rel="noreferrer">Obrir al Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Tornar a Algoritmes</Link>
+</div>

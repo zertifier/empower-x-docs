@@ -1,0 +1,149 @@
+---
+title: Estadísticas Básicas
+description: Executive snapshot of the energy dataset (counts, coverage, totals, extremes).
+slug: /estadisticas-basicas
+---
+
+import Link from '@docusaurus/Link';
+
+# Energy Dataset Baseline Statistics Engine
+
+## Algorithm purpose
+
+This **Compute-to-Data** algorithm provides an **immediate executive snapshot** of the status and scale of an energy dataset. Its goal is to summarize, clearly and safely, the key information needed to quickly understand what is being analyzed before running more complex studies.
+
+It does not focus on advanced patterns or individual behaviors. Instead, it generates **aggregated descriptive statistics** that help assess the dataset’s volume, scope, and potential, serving as a starting point for analysis, valuation, and decision-making.
+
+---
+
+## What the algorithm does (high-level overview)
+
+### 1. Counts supply points and analyzed records
+
+The algorithm processes the authorized dataset and calculates:
+
+- total number of included supply points
+- total number of analyzed time records
+- temporal coverage of the dataset
+
+This quickly sizes the real scope of the analysis and its representativeness.
+
+---
+
+### 2. Computes basic consumption and generation statistics
+
+For the full dataset, it obtains:
+
+- total aggregated consumption
+- total aggregated generation
+- average consumption per supply point
+- observed maximum and minimum values
+
+These metrics provide a first reading of overall energy behavior.
+
+---
+
+### 3. Summarizes the overall distribution
+
+The algorithm analyzes dispersion and produces simple indicators to understand:
+
+- whether consumption is concentrated or distributed
+- the presence of extreme values
+- the dataset’s overall variability
+
+This helps anticipate the complexity of subsequent analyses.
+
+---
+
+### 4. Produces a secure, anonymized executive report
+
+The final output includes only:
+
+- totals
+- averages
+- maximums and minimums
+- aggregated counts
+
+No individual values, technical identifiers, or sensitive information are exposed, making outputs suitable for:
+
+- executive reports
+- initial presentations
+- preliminary opportunity assessments
+- shared technical documentation
+
+---
+
+## How this algorithm supports the Compute-to-Data model
+
+### 1. Descriptive analysis without data extraction
+
+All processing occurs within the secure compute environment. Only aggregated and derived metrics are exported.
+
+---
+
+### 2. Validates the dataset before advanced analytics
+
+Before running more complex models, it is essential to answer:
+
+- Is the data volume sufficient?
+- Is the analyzed period representative?
+- Are there extreme values that require careful handling?
+
+This algorithm provides quick, reliable answers.
+
+---
+
+### 3. Reduces early-stage errors
+
+By providing a clear view of the dataset, it avoids misinterpretations and analyses based on incorrect assumptions.
+
+---
+
+## Why this algorithm is valuable for the energy sector
+
+### 1. Universal entry point to energy analytics
+
+It is the first algorithm to run on any new energy dataset, regardless of origin or complexity.
+
+---
+
+### 2. Early identification of value-creation potential
+
+It enables fast evaluation of:
+
+- the scale of the analyzed system
+- the volume of managed energy
+- the potential impact of future optimizations
+
+---
+
+### 3. Support for strategic decisions
+
+Baseline statistics are essential to:
+
+- define project scope
+- prioritize analytical resources
+- decide whether to proceed with more sophisticated analyses
+
+---
+
+### 4. Suitable for public and private environments
+
+Its simple, secure, and understandable approach makes it useful for:
+
+- public administrations
+- energy managers
+- technical analysts
+- planning stakeholders
+
+---
+
+## Summary
+
+The Energy Dataset Baseline Statistics Engine provides a clear, secure, anonymized Compute-to-Data summary of the volume, scope, and general behavior of an energy dataset. It computes totals, averages, and extremes, offering an immediate picture of system status and enabling identification of value opportunities without exposing sensitive information.
+
+<div className="button-group">
+    <a className="button button--primary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:989368b734ffca616158924fbffc2aee2437835271d447a4fb5958dd20295350" target="_blank" rel="noreferrer">Open in Marketplace</a>
+    <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
+    <Link className="button button--secondary" to="/algoritmos/">Back to Algorithms</Link>
+</div>
