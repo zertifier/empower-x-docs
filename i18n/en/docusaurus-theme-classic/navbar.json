@@ -2,6 +2,7 @@
   "title": {"message": "", "description": "Top bar title"},
   "logo.alt": {"message": "Logo", "description": "Logo alt text in the top bar"},
   "item.label.Documentación": {"message": "Documentation", "description": "Navbar item: Documentation"},
+  "item.label.Algoritmos": {"message": "Algorithms", "description": "Navbar item: Algorithms"},
   "item.label.Casos": {"message": "Cases", "description": "Navbar item: Cases"},
   "item.label.Vídeos": {"message": "Videos", "description": "Navbar item: Videos"},
   "item.label.Algoritmos": {"message": "Algorithms", "description": "Navbar item: Algorithms"},

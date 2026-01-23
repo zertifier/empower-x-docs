@@ -2,6 +2,7 @@
   "title": {"message": "", "description": "Títol a la barra superior"},
   "logo.alt": {"message": "Logotip", "description": "Text alternatiu del logo a la barra superior"},
   "item.label.Documentación": {"message": "Documentació", "description": "Element de la barra: Documentació"},
+  "item.label.Algoritmos": {"message": "Algorismes", "description": "Element de la barra: Algoritmes"},
   "item.label.Casos": {"message": "Casos", "description": "Element de la barra: Casos"},
   "item.label.Vídeos": {"message": "Vídeos", "description": "Element de la barra: Vídeos"},
   "item.label.Algoritmos": {"message": "Algoritmes", "description": "Element de la barra: Algoritmes"},

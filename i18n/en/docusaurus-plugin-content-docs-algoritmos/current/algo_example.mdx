@@ -1,0 +1,33 @@
+---
+title: Algorithm example
+description: Example (placeholder) of how to document a C2D algorithm in Empower‑X.
+sidebar_position: 2
+---
+
+# Algorithm example (placeholder)
+
+This page is an **example** of how we will document a Compute-to-Data algorithm in Empower‑X.
+
+## Summary
+
+- **Name**: `algo_example`
+- **Goal**: illustrate the minimum documentation structure
+- **Inputs**: dataset + parameters (TBD)
+- **Outputs**: aggregated/anonymized metrics (TBD)
+
+## Interface (draft)
+
+| Field | Type | Description |
+|------|------|-------------|
+| `input` | `dataset` | Reference to the dataset inside the secure container |
+| `params` | `object` | Execution parameters (e.g., thresholds, filters) |
+| `result` | `object` | Aggregated results ready to be exported |
+
+## Privacy
+
+This algorithm runs **where the data lives** (C2D). The goal is to prevent raw data from leaving the protected environment.
+
+## Next steps
+
+- Replace this page with a real algorithm and its specification
+- Add execution and validation examples
