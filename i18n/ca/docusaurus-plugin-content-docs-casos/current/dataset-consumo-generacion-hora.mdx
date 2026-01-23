@@ -1,0 +1,147 @@
+---
+title: Dataset de consum i generació energètica per hora
+description: Vista horària i mensual optimitzada del consum i la generació energètica per a algoritmes Compute-to-Data.
+slug: /dataset-consumo-generacion-hora
+---
+
+# Dataset de consum i generació energètica per hora
+
+*(Hourly Energy Community Dataset)*
+
+## Propòsit del dataset
+
+Aquest dataset actua com a **servei de dades base** per a l'execució dels algoritmes d'anàlisi energètica (Anàlisi de Comunitats, Anàlisi per Perfils, Estadístiques Bàsiques i Detecció d'Anomalies).
+
+El seu objectiu és proporcionar una **imatge precisa, acotada i operativament eficient** del comportament energètic d'un conjunt de punts de subministrament, permetent anàlisis agregades, comparatives i diagnòstiques sense necessitat d'exposar grans volums de dades ni informació sensible.
+
+El dataset està dissenyat específicament per al seu ús en un **model Compute-to-Data**, on les dades romanen en un entorn segur i només són accessibles per algoritmes autoritzats.
+
+---
+
+## Abast i consideracions tècniques
+
+Atès que el volum històric de dades disponible és elevat (≈3 GB), el dataset **no retorna la totalitat de la informació**, sinó una vista optimitzada i filtrada que compleix els criteris següents:
+
+- Dades **filtrades per un mes concret**
+- Resolució **hora a hora**
+- Inclusió **exclusiva dels camps necessaris** per als algoritmes MVP
+- Sense exportació de dades innecessàries o no utilitzades en l'anàlisi
+
+Aquest enfocament redueix costos computacionals, millora els temps d'execució i minimitza els riscos d'exposició de dades.
+
+---
+
+## Tipus de dataset
+
+- **Dataset privat**
+- **No descarregable**
+- **Accessible únicament per algoritmes autoritzats**
+- Executat sota polítiques de **Compute-to-Data**
+
+L'accés humà directe al dataset no està permès; només es generen sortides derivades i agregades a través dels algoritmes.
+
+---
+
+## Contingut del dataset
+
+El dataset conté **dades energètiques per hora** associades a punts de subministrament elèctrics.
+
+### Tipus de dades incloses
+
+- Consum energètic horari
+- Generació energètica horària (quan aplica)
+- Exportació d'excedents (quan aplica)
+
+Cada registre representa el comportament energètic d'**un punt de subministrament en una hora concreta**.
+
+---
+
+## Identificació dels punts de subministrament
+
+Les dades estan associades a identificadors de punt de subministrament:
+
+- **CUPS** (Codi Universal de Punt de Subministrament)
+- Els CUPS poden estar **anonimitzats o pseudonimitzats** si el context ho requereix
+- No s'inclouen dades personals ni identificadors directes de titulars
+
+Això permet anàlisis comparatives i agregades sense comprometre la privacitat.
+
+---
+
+## Format del dataset
+
+El dataset s'estructura en un **format tabular**, optimitzat per a l'anàlisi algorítmica.
+
+### Estructura general (exemple conceptual)
+
+| Camp | Descripció |
+| --- | --- |
+| `cups_id` | Identificador del punt de subministrament (anonimitzat si aplica) |
+| `timestamp` | Data i hora del registre (resolució horària) |
+| `energy_consumed_kwh` | Energia consumida en aquesta hora (kWh) |
+| `energy_generated_kwh` | Energia generada en aquesta hora (kWh, si existeix) |
+| `energy_exported_kwh` | Energia exportada a xarxa (kWh, si existeix) |
+
+No tots els camps són obligatoris en tots els registres; el dataset admet valors nuls segons el tipus de subministrament.
+
+---
+
+## Què representa cada camp
+
+- **`cups_id`**  
+  Identifica de manera única un punt de subministrament dins del dataset. No permet identificar directament persones o entitats.
+
+- **`timestamp`**  
+  Marca temporal horària que permet anàlisi de sèries temporals, detecció de patrons i comparació entre períodes.
+
+- **`energy_consumed_kwh`**  
+  Quantitat d'energia consumida durant l'hora indicada.
+
+- **`energy_generated_kwh`**  
+  Quantitat d'energia generada localment (per exemple, fotovoltaica), si aplica.
+
+- **`energy_exported_kwh`**  
+  Part de l'energia generada que s'aboca a la xarxa com a excedent.
+
+---
+
+## Relació amb els algoritmes
+
+Aquest dataset està dissenyat **exclusivament** per alimentar els algoritmes:
+
+- **Anàlisi de Comunitats Energètiques**  
+  → agregació comunitària, percentils, balanços consum–generació
+
+- **Anàlisi per Perfils**  
+  → comparació de cada punt amb el seu grup de referència
+
+- **Estadístiques Bàsiques**  
+  → totals, mitjanes, màxims, mínims, dimensió del sistema
+
+- **Detecció d'Anomalies**  
+  → pics de consum, inactivitat tècnica, exportacions inusuals
+
+Cada algorisme consumeix **només els camps necessaris**, sense accedir a informació addicional.
+
+---
+
+## Seguretat i govern del dada
+
+- Les dades **no surten de l'entorn segur**
+- No es permet la descàrrega del dataset
+- Els algoritmes només retornen:
+  - mètriques agregades
+  - estadístiques
+  - indicadors derivats
+
+Aquest disseny garanteix el compliment amb:
+
+- principis de minimització de dades
+- governança de dades energètiques
+- requisits de privacitat i confidencialitat
+
+---
+
+## Resum
+
+Aquest dataset proporciona una **vista horària, mensual i optimitzada** del consum i la generació energètica associada a punts de subministrament. Està dissenyat com un **servei de dades privat** per a algoritmes Compute-to-Data, incloent només la informació necessària per a anàlisis agregades, comparatives i de diagnòstic. La seva estructura permet obtenir valor tècnic i operatiu de manera ràpida, segura i escalable, sense exposar dades sensibles ni grans volums d'informació.

@@ -1,0 +1,147 @@
+---
+title: Hourly Energy Consumption and Generation Dataset
+description: Hourly and monthly optimized view of energy consumption and generation for Compute-to-Data algorithms.
+slug: /dataset-consumo-generacion-hora
+---
+
+# Hourly Energy Consumption and Generation Dataset
+
+*(Hourly Energy Community Dataset)*
+
+## Dataset purpose
+
+This dataset acts as the **baseline data service** for running energy analysis algorithms (Community Analysis, Profile Analysis, Basic Statistics, and Anomaly Detection).
+
+Its goal is to provide a **precise, bounded, and operationally efficient snapshot** of the energy behavior of a set of supply points, enabling aggregated, comparative, and diagnostic analyses without exposing large volumes of data or sensitive information.
+
+The dataset is specifically designed for a **Compute-to-Data** model, where data remains in a secure environment and is only accessible by authorized algorithms.
+
+---
+
+## Scope and technical considerations
+
+Because the available historical volume is high (≈3 GB), the dataset **does not return the full information**, but an optimized and filtered view that meets the following criteria:
+
+- Data **filtered by a specific month**
+- **Hourly** resolution
+- **Only the fields required** for the MVP algorithms are included
+- No export of unnecessary data or data not used in the analysis
+
+This approach reduces computational costs, improves execution time, and minimizes data exposure risks.
+
+---
+
+## Dataset type
+
+- **Private dataset**
+- **Not downloadable**
+- **Accessible only by authorized algorithms**
+- Executed under **Compute-to-Data** policies
+
+Direct human access to the dataset is not allowed; only derived and aggregated outputs are generated through algorithms.
+
+---
+
+## Dataset contents
+
+The dataset contains **hourly energy data** associated with electrical supply points.
+
+### Included data types
+
+- Hourly energy consumption
+- Hourly energy generation (when applicable)
+- Surplus export (when applicable)
+
+Each record represents the energy behavior of **one supply point at one specific hour**.
+
+---
+
+## Supply point identification
+
+Data is associated with supply point identifiers:
+
+- **CUPS** (Universal Supply Point Code)
+- CUPS codes may be **anonymized or pseudonymized** if required by the context
+- No personal data or direct holder identifiers are included
+
+This enables comparative and aggregated analysis without compromising privacy.
+
+---
+
+## Dataset format
+
+The dataset is structured in a **tabular format**, optimized for algorithmic analysis.
+
+### General structure (conceptual example)
+
+| Field | Description |
+| --- | --- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Record date and time (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed during that hour (kWh) |
+| `energy_generated_kwh` | Energy generated during that hour (kWh, if available) |
+| `energy_exported_kwh` | Energy exported to the grid (kWh, if available) |
+
+Not all fields are mandatory for all records; the dataset supports null values depending on the supply type.
+
+---
+
+## What each field represents
+
+- **`cups_id`**  
+  Uniquely identifies a supply point within the dataset. It does not allow direct identification of people or entities.
+
+- **`timestamp`**  
+  Hourly timestamp enabling time-series analysis, pattern detection, and period comparison.
+
+- **`energy_consumed_kwh`**  
+  Amount of energy consumed during the indicated hour.
+
+- **`energy_generated_kwh`**  
+  Amount of locally generated energy (e.g., photovoltaic), when applicable.
+
+- **`energy_exported_kwh`**  
+  Portion of generated energy injected into the grid as surplus.
+
+---
+
+## Relationship with algorithms
+
+This dataset is designed **exclusively** to feed the following algorithms:
+
+- **Energy Community Analysis**  
+  → community-level aggregation, percentiles, consumption–generation balances
+
+- **Profile Analysis**  
+  → comparison of each point against its reference group
+
+- **Basic Statistics**  
+  → totals, averages, maxima, minima, system sizing
+
+- **Anomaly Detection**  
+  → consumption spikes, technical inactivity, unusual export events
+
+Each algorithm consumes **only the required fields**, without accessing additional information.
+
+---
+
+## Data security and governance
+
+- Data **never leaves the secure environment**
+- Dataset download is not allowed
+- Algorithms only return:
+  - aggregated metrics
+  - statistics
+  - derived indicators
+
+This design supports:
+
+- data minimization principles
+- energy data governance
+- privacy and confidentiality requirements
+
+---
+
+## Summary
+
+This dataset provides an **hourly, monthly, and optimized** view of energy consumption and generation associated with supply points. It is designed as a **private data service** for Compute-to-Data algorithms, including only the information needed for aggregated, comparative, and diagnostic analyses. Its structure enables fast, secure, and scalable technical and operational value without exposing sensitive data or large data volumes.
