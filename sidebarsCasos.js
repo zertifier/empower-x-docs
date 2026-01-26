@@ -5,9 +5,9 @@
 // Localize category labels at build time (same approach as `sidebarsAlgoritmos.js`).
 const locale = process.env.DOCUSAURUS_CURRENT_LOCALE || 'en';
 const detailsLabels = {
-  en: 'Details',
-  es: 'Detalles',
-  ca: 'Detalls',
+  en: 'PED Rubí',
+  es: 'PED Rubí',
+  ca: 'PED Rubí',
 };
 const detailsLabel = detailsLabels[locale] ?? detailsLabels.en;
 

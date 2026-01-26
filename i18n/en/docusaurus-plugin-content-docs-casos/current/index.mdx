@@ -13,24 +13,343 @@ In this section you will find the currently available use case in the Empower‑
 ## Featured cases
 
 <div className="container casos-page">
-  <div className="row">
-    <div className="col col--12 margin-bottom--lg">
-      <div className="card">
-        <div className="card__header">
-          <h3>Private energy data</h3>
+    <div className="row">
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Private energy data</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Private, non-downloadable dataset with hourly data (filtered by month) for consumption,
+                        generation, and exports, designed as the base input for Compute‑to‑Data algorithms.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <Link className="button button--primary" to="/casos/dataset-consumo-generacion-hora">View
+                            details</Link>
+                        <a className="button button--secondary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3"
+                           target="_blank" rel="noreferrer">Dataset</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="card__body">
-          <p>
-            Private, non-downloadable dataset with hourly data (filtered by month) for consumption, generation, and exports, designed as the base input for Compute‑to‑Data algorithms.
-          </p>
+
+        {/* Card 1 */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Rubí PED</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        This use case describes how the Rubí PED project plans flexibility, shared self-consumption,
+                        and 100% renewable charging by integrating public buildings, municipal photovoltaics,
+                        charging points, energy communities, and climate sensors. Through Empower-X, actors share
+                        data under common governance and execute algorithms via Compute-to-Data to enable real-time
+                        prediction, ZEAC calculation, digital twin simulation, surplus optimization, and coordinated
+                        flexibility management, with access to energy, climate, and mobility datasets, forecasting
+                        and certification algorithms, Web3 policies, and DLT auditing.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:028661478bb9c644cba4efc6c837a3115a883346c0066395fc09a84b7d5691af"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="card__footer">
-          <div className="button-group button-group--block">
-            <Link className="button button--primary" to="/casos/dataset-consumo-generacion-hora">View details</Link>
-            <a className="button button--secondary" href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:bab845f238ef9a7a80587d462eaa94fc185c20fdd31b817d7dec59903d58d6c3" target="_blank" rel="noreferrer">Dataset</a>
-          </div>
+
+        {/* Pumping stations */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Pumping stations and water-related infrastructure</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Monitor and optimize energy consumption of drinking water and wastewater pumping stations.
+                        Through Empower-X, municipal managers can integrate electrical consumption data, flow rates,
+                        and pressure metrics to analyze operational efficiency patterns. Using Compute-to-Data,
+                        predictive maintenance algorithms and anomaly detection are executed without exposing
+                        sensitive critical infrastructure data, ensuring data sovereignty while optimizing energy
+                        costs and preventing supply failures.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:9228471841c8e6724cacf90152699f2f1eae0dbfd7f2f801920efa3fb2bbf86a"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        {/* Waste containers */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Underground waste container systems</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Energy-efficient management of underground waste container systems through IoT sensor
+                        integration. Fill level, temperature, and location data are combined with collection route
+                        information to optimize vehicle fuel consumption and compaction energy. The Empower-X
+                        dataspace enables municipalities to share this data under granular access policies, ensuring
+                        data sovereignty while coordinating more efficient and sustainable cleaning services.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:1552505a2ff07d12d11c0cbcef8bf0d7d565a7103bb8c183515aaefd4336e574"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Cultural buildings */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Cultural buildings such as museums, heritage sites, and community centers</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Preserving heritage with smart energy management that balances strict conservation
+                        requirements with energy efficiency. Museums and historic buildings require precise climate
+                        control (temperature, humidity, lighting) to protect artworks and heritage structures.
+                        Empower-X enables integration of environmental data from multiple sensors with HVAC systems
+                        to optimize consumption without compromising conservation conditions, applying granular
+                        access policies that protect sensitive information about heritage security.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:4bc8e2566bdb41cbd295124d3b85ceb79ed9b1366820a71b7c52221a542a0475"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Educational facilities */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Educational facilities including schools and training centers</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Empowering sustainability in education through real-time tracking of energy usage in
+                        schools, high schools, and training centers. Electrical consumption, HVAC, and lighting data
+                        are analyzed to optimize operating schedules and detect energy waste. Additionally,
+                        Empower-X facilitates the publication of open and anonymized datasets for educational
+                        projects, allowing students to learn about energy efficiency with real data from their own
+                        facilities, fostering environmental awareness and STEM competencies.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:4c09bf210c10559183047313950b103dd2ed351d81b3f2a29a87bddd44a3395d"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Public street lighting */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Public street lighting points and lighting-related installations</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Smart public lighting networks that transform urban infrastructure into adaptive and
+                        efficient systems. Analysis of electrical consumption data, ambient luminosity, and
+                        pedestrian flow enables implementation of dynamic dimming strategies based on urban
+                        activity. Through predictive maintenance algorithms executed with Compute-to-Data, luminaire
+                        failures are anticipated and repair routes are optimized, significantly reducing operational
+                        costs and municipal carbon footprint while improving citizen safety.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:91bcf3ccf23f285928d4f2cafa3d3416c4e0a62024c93511eee9b6fdb295ae1d"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Sports facilities */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Sports facilities like gyms, fields, and athletic centers</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        High-performance energy management for sports facilities with intensive and variable
+                        demands. Sports centers, gyms, and athletic fields combine high-power lighting, large space
+                        climate control, heated pools, and specialized equipment. Empower-X integrates occupancy
+                        data, scheduled events, and weather conditions to optimize the operation of these systems,
+                        manage electrical peak loads, and coordinate local renewable energy use, reducing costs
+                        while maintaining sports service quality.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:c2756a4ae161e1d98827ae3b3e77472a74947461e6607ba4d69ad46d44547ec0"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Mixed-use buildings */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Mixed-use buildings with combined purposes</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Integrated energy profiles for mixed-use buildings that combine housing, offices, shops, and
+                        services in a single structure. The complexity of managing multiple consumption patterns
+                        with different schedules and needs requires advanced metering and allocation systems.
+                        Empower-X facilitates the implementation of local energy communities, enabling shared
+                        self-consumption of photovoltaic energy, community battery storage, and fair cost allocation
+                        based on transparent and auditable data through blockchain technology.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:3c99af824cbf653d175c06586801f1e4a128cc3c02e4df2cd520c8348dcf418d"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Office buildings */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Office buildings and administrative municipal spaces</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Efficient public administration through intelligent monitoring and control of energy use in
+                        municipal buildings, town halls, and administrative centers. Electrical consumption, HVAC,
+                        lighting, and IT equipment data are integrated into management dashboards that identify
+                        inefficiencies and verify compliance with sustainability goals. Automated AI analysis
+                        detects anomalous patterns and suggests corrective measures, reducing operational expenses
+                        while setting an example of environmental responsibility for citizens.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:f30156c3cdac64167acb3d0d240e7442655712066c7df63e78d25ac2e0ca715e"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Swimming pools */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Indoor and outdoor swimming pool facilities</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Thermal energy optimization for indoor and outdoor pool facilities, which represent one of
+                        the largest municipal energy consumptions. Integrated management of water heating, facility
+                        climate control, dehumidification, and filtration systems requires precise coordination.
+                        Through temperature, water quality, and occupancy sensors, Empower-X enables optimization of
+                        heating cycles, scheduling filtration during lower electricity cost periods, and integrating
+                        solar thermal energy, achieving significant savings without compromising service quality or
+                        sanitary safety.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:a4088e8fbe7151c836baf963176971025abf6f09d433d2a81c953b1b5f8fe298"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {/* Healthcare */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Healthcare and sanitary service buildings</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Reliability and efficiency in critical healthcare infrastructure requiring uninterrupted
+                        24-hour electrical supply. Health centers, outpatient clinics, and emergency services
+                        combine sensitive medical equipment, precise climate control, and energy backup systems.
+                        Empower-X enables secure sharing of operational data to audit UPS and generator status,
+                        optimize continuous base loads, and coordinate preventive maintenance without compromising
+                        healthcare data privacy, ensuring maximum reliability while improving energy efficiency.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:a1f43e58c583df97ab4a87fc72524f6ffe95a77d22822d27ea93a5b0589150de"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Traffic lights */}
+        <div className="col col--12 margin-bottom--lg">
+            <div className="card">
+                <div className="card__header">
+                    <h3>Traffic light and signaling system installations</h3>
+                </div>
+                <div className="card__body">
+                    <p>
+                        Urban flow efficiency through intelligent management of traffic lights and road signaling
+                        systems that operate continuously. Analysis of the constant energy load of these devices
+                        enables identification of opportunities for upgrading to low-consumption LED technology and
+                        evaluating return on investment. Additionally, integration of real-time traffic data with
+                        the municipal electrical system opens possibilities for coordinated smart city mobility
+                        management, synchronizing signaling with electric vehicle charging and optimizing traffic
+                        flows to reduce emissions.
+                    </p>
+                </div>
+                <div className="card__footer">
+                    <div className="button-group button-group--block">
+                        <a className="button button--primary"
+                           href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:f901a422259dfafc9710cd323aaae68bafbf2e9a5b34461b84becc4bf98a3078"
+                           target="_blank">Dataset</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
