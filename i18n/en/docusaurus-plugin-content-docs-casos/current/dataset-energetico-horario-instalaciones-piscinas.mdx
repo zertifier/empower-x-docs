@@ -1,0 +1,118 @@
+---
+title: Swimming Pool Facilities
+description: Base data service for algorithms oriented towards the energy optimization of indoor and outdoor swimming pool facilities.
+slug: /dataset-energetico-horario-instalaciones-piscinas
+---
+
+# Swimming Pool Facilities
+
+*(Swimming Pool Facilities – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms oriented towards the **energy optimization of indoor and outdoor swimming pool facilities**, which are among the largest municipal energy consumers.
+
+The dataset allows for analyzing energy consumption associated with water heating, enclosure climatization, dehumidification, filtration, and auxiliary systems, enabling algorithms for thermal cycle optimization, schedule management, and coordination with renewable sources, all within a **Compute-to-Data** environment that preserves data sovereignty.
+
+---
+
+## Scope and Technical Considerations
+
+Given the sanitary and operational criticality of these facilities, the dataset is designed to **maximize efficiency without compromising safety or service quality**:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No direct exposure of sanitary data, occupancy, or fine operational control
+
+This approach allows for consumption optimization while maintaining regulatory usage conditions.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under municipal energy and sanitary management policies
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users do not access the raw data directly.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering municipal pool facilities, both indoor and outdoor.
+
+Each record represents the energy consumption of **one supply point (CUPS) at a specific hour**, without revealing sensitive information about internal operation.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the rest of the ecosystem datasets.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+Generation and export fields may be null if there is no associated self-consumption.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with the pool facility, anonymizing the identity and specific location of the asset.
+
+*   **timestamp**
+    Allows for analysis of hourly patterns linked to water heating, filtration system operation, and facility usage.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by thermal systems, pumps, filtration, HVAC, and dehumidification during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (e.g., solar thermal or associated photovoltaic), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, in case of existing surplus local generation.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Optimization of water heating cycles**
+*   **Efficient filtration scheduling**
+*   **Integrated thermal energy management**
+*   **Reduction of electrical demand peaks**
+*   **Coordination with local renewable energy**
+*   **Energy efficiency analysis of aquatic facilities**
+
+Algorithms access only the fields necessary for each analysis.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access regulated by municipal policies
+*   Auditable executions
+*   Results always aggregated or derived
+
+This design guarantees operational confidentiality and compliance with sanitary and energy requirements.
+
+---
+
+## Summary
+
+The swimming pool facilities dataset provides a **secure, governed, and hourly view** of energy consumption associated with indoor and outdoor pools. Designed as a private data service for Compute-to-Data, it enables the execution of algorithms for thermal optimization, efficient scheduling, and coordination with renewables, achieving significant energy savings without compromising service quality or sanitary safety.

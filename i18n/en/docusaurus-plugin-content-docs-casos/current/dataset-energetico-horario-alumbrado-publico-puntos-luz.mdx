@@ -1,0 +1,118 @@
+---
+title: Public Lighting and Streetlights
+description: Base data service for algorithms oriented towards intelligent and efficient management of public lighting.
+slug: /dataset-energetico-horario-alumbrado-publico-puntos-luz
+---
+
+# Public Lighting and Streetlights
+
+*(Public Lighting and Streetlights – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms oriented towards the **intelligent and efficient management of public lighting**, allowing urban lighting networks to be transformed into adaptive, safe, and energy-optimized systems.
+
+The dataset allows for the analysis of energy consumption associated with streetlights and lighting panels, enabling dynamic dimming strategies, early fault detection, and predictive maintenance, all within a **Compute-to-Data** environment that preserves municipal data sovereignty.
+
+---
+
+## Scope and Technical Considerations
+
+Given the critical nature of public lighting for citizen security, the dataset is designed to **minimize operational and security risks**:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No direct exposure of precise location data or individual status of luminaries
+
+This approach allows for service optimization without compromising security or operational continuity.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under municipal access and operation policies
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users do not access the raw data directly.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering public lighting networks and sets of urban luminaries.
+
+Each record represents the energy consumption of **one supply point (CUPS) at a specific hour**, without revealing sensitive information about the infrastructure.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the rest of the ecosystem datasets.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+In lighting networks, generation and export fields are usually null.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with a public lighting network or panel, anonymizing the exact location and specific asset.
+
+*   **timestamp**
+    Allows for analysis of hourly patterns of switching on, dimming, and consumption linked to urban activity.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by luminaries and control systems during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (if associated self-consumption systems exist), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, in case of local generation.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Dynamic lighting optimization**
+*   **Detection of anomalous consumption**
+*   **Predictive maintenance of luminaries**
+*   **repair route planning**
+*   **Reduction of operational costs and carbon footprint**
+*   **Improvement of citizen security**
+
+Algorithms access only the fields necessary for each analysis.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access regulated by municipal policies
+*   Auditable executions
+*   Results always aggregated or derived
+
+This design guarantees urban data sovereignty and the protection of critical infrastructures.
+
+---
+
+## Summary
+
+The public lighting and streetlights dataset provides a **secure, governed, and hourly view** of the energy consumption of urban lighting networks. Designed as a private data service for Compute-to-Data, it enables the execution of algorithms for optimization, predictive maintenance, and efficient lighting management, reducing costs and emissions while improving service quality and citizen security.

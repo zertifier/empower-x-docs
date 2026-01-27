@@ -1,0 +1,118 @@
+---
+title: Estacions de Bombament i Infraestructura Hídrica
+description: Servei de dades base per a algoritmes de monitorització i optimització del consum energètic en estacions de bombament.
+slug: /dataset-energetico-horario-estaciones-bombeo-infraestructura-hidrica
+---
+
+# Estacions de Bombament i Infraestructura Hídrica
+
+*(Water Pumping Infrastructure Hourly Energy Dataset)*
+
+## Propòsit del Dataset
+
+Aquest dataset actua com a **servei de dades base** per als algoritmes aplicats a la monitorització i optimització del consum energètic en **estacions de bombament d'aigua potable i residual**, així com en altres infraestructures hídriques municipals.
+
+El dataset permet analitzar el comportament energètic dels actius de bombament de forma segura, habilitant algoritmes de detecció d'anomalies, predicció de manteniment i avaluació d'eficiència operativa, tot això dins d'un entorn **Compute-to-Data** que protegeix la informació crítica de la infraestructura.
+
+---
+
+## Abast i Consideracions Tècniques
+
+Donada la naturalesa crítica de la infraestructura hídrica, el dataset està dissenyat per **minimitzar l'exposició de dades sensibles** i complir amb requisits de seguretat operativa:
+
+*   Dades **filtrades per un període temporal concret** (dia, setmana o mes)
+*   Resolució **horària**
+*   Inclusió **exclusiva dels camps energètics necessaris**
+*   Sense devolució d'informació tècnica detallada de la infraestructura
+
+Aquest enfocament permet executar anàlisis avançades sense comprometre la seguretat ni la sobirania de la dada.
+
+---
+
+## Tipus de Dataset
+
+*   **Dataset privat**
+*   **No descarregable**
+*   **Accessible únicament per algoritmes autoritzats**
+*   Governat sota polítiques de dades municipals
+*   Executat mitjançant **Compute-to-Data sobre Empower-X**
+
+L'accés humà directe a les dades brutes no està permès.
+
+---
+
+## Contingut del Dataset
+
+El dataset conté **dades energètiques per hora** associades a punts de subministrament elèctrics que alimenten estacions de bombament i infraestructures hídriques.
+
+Cada registre representa el consum energètic d'**un punt de subministrament (CUPS) en una hora concreta**, sense exposar informació operativa sensible.
+
+---
+
+## Format del Dataset
+
+El dataset segueix un **format tabular fix**, comú a la resta de datasets de l'ecosistema.
+
+### Estructura del Dataset
+
+| Camp | Descripció |
+| ----- | ----- |
+| `cups_id` | Identificador del punt de subministrament (anonimitzat si aplica) |
+| `timestamp` | Data i hora del registre (resolució horària) |
+| `energy_consumed_kwh` | Energia consumida en aquesta hora (kWh) |
+| `energy_generated_kwh` | Energia generada en aquesta hora (kWh, si existeix) |
+| `energy_exported_kwh` | Energia exportada a la xarxa en aquesta hora (kWh, si existeix) |
+
+En la majoria d'estacions de bombament, els camps de generació i exportació poden ser nuls.
+
+---
+
+## Què Representa Cada Camp
+
+*   **cups\_id**
+    Identificador del punt de subministrament associat a una estació de bombament o infraestructura hídrica, anonimitzant la localització i l'actiu concret.
+
+*   **timestamp**
+    Permet analitzar patrons horaris, cicles operatius i correlacions temporals rellevants per a l'eficiència energètica i el manteniment.
+
+*   **energy\_consumed\_kwh**
+    Energia elèctrica consumida per l'estació de bombament durant l'hora indicada.
+
+*   **energy\_generated\_kwh**
+    Energia generada localment (per exemple, autoconsum en instal·lacions amb generació pròpia), si aplica.
+
+*   **energy\_exported\_kwh**
+    Energia exportada a la xarxa, quan existeixi generació associada.
+
+---
+
+## Relació amb els Algoritmes
+
+Aquest dataset alimenta algoritmes orientats a:
+
+*   **Detecció d'anomalies energètiques**
+*   **Predicció de manteniment**
+*   **Anàlisi d'eficiència operativa**
+*   **Identificació de patrons de consum anòmals**
+*   **Optimització de costos energètics**
+*   **Prevenció de fallades en el subministrament**
+
+Els algoritmes accedeixen únicament a les dades energètiques necessàries.
+
+---
+
+## Seguretat, Governança i Auditoria
+
+*   Les dades **no abandonen l'entorn segur**
+*   No es permet la descàrrega del dataset
+*   Accessos regulats per polítiques de governança municipals
+*   Execucions auditables
+*   Resultats sempre agregats o derivats
+
+Aquest enfocament protegeix infraestructures crítiques i garanteix el compliment amb normatives de seguretat i sobirania de la dada.
+
+---
+
+## Resum
+
+El dataset d'estacions de bombament i infraestructura hídrica proporciona una **vista horària, segura i governada** del consum energètic d'actius crítics d'aigua potable i residual. Dissenyat com un servei de dades privat per a Compute-to-Data, permet executar algoritmes de detecció d'anomalies i manteniment predictiu, optimitzant costos energètics i millorant la resiliència del servei sense exposar informació sensible de la infraestructura.

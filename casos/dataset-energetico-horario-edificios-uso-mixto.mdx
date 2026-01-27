@@ -1,0 +1,136 @@
+---
+title: Edificios de Uso Mixto
+description: Servicio de datos base para gestionar consumo y autoconsumo en edificios de uso mixto.
+slug: /dataset-energetico-horario-edificios-uso-mixto
+---
+
+# Edificios de Uso Mixto
+
+*(Mixed-Use Buildings – Hourly Energy Dataset)*
+
+## Propósito del Dataset
+
+Este dataset actúa como **servicio de datos base** para los algoritmos orientados a la gestión energética de **edificios de uso mixto** que combinan viviendas, oficinas, comercios y servicios en una misma estructura.
+
+El dataset permite analizar perfiles energéticos complejos con múltiples patrones de consumo y horarios, habilitando algoritmos para autoconsumo compartido, reparto de costes, optimización del uso de energía renovable y gestión de almacenamiento comunitario, todo ello dentro de un entorno **Compute-to-Data** que garantiza soberanía del dato y transparencia.
+
+---
+
+## Alcance y Consideraciones Técnicas
+
+Dada la heterogeneidad de usos y la sensibilidad de los datos residenciales y comerciales, el dataset está diseñado para **minimizar la exposición de información individual**:
+
+* Datos **filtrados por un periodo temporal concreto** (día, semana o mes)
+
+* Resolución **horaria**
+
+* Inclusión **exclusiva de los campos energéticos necesarios**
+
+* Sin exposición directa de información residencial, comercial o de ocupación
+
+Este enfoque permite gestionar la complejidad energética sin comprometer la privacidad.
+
+---
+
+## Tipo de Dataset
+
+* **Dataset privado**
+
+* **No descargable**
+
+* **Accesible únicamente por algoritmos autorizados**
+
+* Gobernado bajo reglas de comunidades energéticas locales
+
+* Ejecutado mediante **Compute-to-Data sobre Empower-X**
+
+Los usuarios no acceden directamente a los datos brutos.
+
+---
+
+## Contenido del Dataset
+
+El dataset contiene **datos energéticos por hora** asociados a puntos de suministro eléctricos que alimentan edificios de uso mixto y sus diferentes unidades funcionales.
+
+Cada registro representa el comportamiento energético de **un punto de suministro (CUPS) en una hora concreta**, sin revelar información sensible sobre los usuarios finales.
+
+---
+
+## Formato del Dataset
+
+El dataset sigue un **formato tabular fijo**, común al resto de datasets del ecosistema.
+
+### Estructura del Dataset
+
+| Campo | Descripción |
+| ----- | ----- |
+| `cups_id` | Identificador del punto de suministro (anonimizado si aplica) |
+| `timestamp` | Fecha y hora del registro (resolución horaria) |
+| `energy_consumed_kwh` | Energía consumida en esa hora (kWh) |
+| `energy_generated_kwh` | Energía generada en esa hora (kWh, si existe) |
+| `energy_exported_kwh` | Energía exportada a red en esa hora (kWh, si existe) |
+
+Los campos de generación y exportación pueden variar según el edificio y la existencia de autoconsumo compartido.
+
+---
+
+## Qué Representa Cada Campo
+
+* **cups\_id**  
+   Identificador del punto de suministro asociado a una unidad o subsistema del edificio de uso mixto, anonimizando la identidad de viviendas, oficinas o comercios.
+
+* **timestamp**  
+   Permite analizar patrones horarios diferenciados y solapados de consumo residencial, comercial y de servicios.
+
+* **energy\_consumed\_kwh**  
+   Energía eléctrica consumida por la unidad durante la hora indicada.
+
+* **energy\_generated\_kwh**  
+   Energía generada localmente (principalmente fotovoltaica comunitaria), cuando aplica.
+
+* **energy\_exported\_kwh**  
+   Energía excedentaria exportada a red, relevante para el reparto de autoconsumo y balances comunitarios.
+
+---
+
+## Relación con los Algoritmos
+
+Este dataset alimenta algoritmos orientados a:
+
+* **Análisis integrado de perfiles energéticos mixtos**
+
+* **Optimización del autoconsumo compartido**
+
+* **Reparto justo y transparente de costes energéticos**
+
+* **Gestión de almacenamiento comunitario**
+
+* **Detección de desequilibrios entre usos**
+
+* **Soporte a comunidades energéticas locales**
+
+Los algoritmos acceden únicamente a los campos necesarios para cada análisis.
+
+---
+
+## Seguridad, Gobernanza y Auditoría
+
+* Los datos **no abandonan el entorno seguro**
+
+* No se permite descarga del dataset
+
+* Accesos regulados por políticas de comunidades energéticas
+
+* Ejecuciones auditables
+
+* Resultados siempre agregados o derivados
+
+* Uso de registros verificables para reparto y trazabilidad
+
+Este diseño permite transparencia y confianza sin comprometer la privacidad.
+
+---
+
+## Resumen
+
+El dataset de edificios de uso mixto proporciona una **vista horaria, segura y gobernada** del consumo, la generación y los excedentes energéticos en estructuras con múltiples usos. Diseñado como un servicio de datos privado para Compute-to-Data, permite ejecutar algoritmos de autoconsumo compartido, reparto justo de costes y optimización energética comunitaria, habilitando comunidades energéticas locales eficientes y auditables sin exponer información sensible.

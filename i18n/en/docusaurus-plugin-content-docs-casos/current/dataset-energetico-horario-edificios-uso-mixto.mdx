@@ -1,0 +1,119 @@
+---
+title: Mixed-Use Buildings
+description: Base data service for algorithms oriented towards the energy management of mixed-use buildings.
+slug: /dataset-energetico-horario-edificios-uso-mixto
+---
+
+# Mixed-Use Buildings
+
+*(Mixed-Use Buildings – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms oriented towards the energy management of **mixed-use buildings** that combine housing, offices, shops, and services in the same structure.
+
+The dataset allows for the analysis of complex energy profiles with multiple consumption patterns and schedules, enabling algorithms for shared self-consumption, cost allocation, optimization of renewable energy use, and community storage management, all within a **Compute-to-Data** environment that guarantees data sovereignty and transparency.
+
+---
+
+## Scope and Technical Considerations
+
+Given the heterogeneity of uses and the sensitivity of residential and commercial data, the dataset is designed to **minimize the exposure of individual information**:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No direct exposure of residential, commercial, or occupancy information
+
+This approach allows for energy complexity management without compromising privacy.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under local energy community rules
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users do not access the raw data directly.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering mixed-use buildings and their different functional units.
+
+Each record represents the energy behavior of **one supply point (CUPS) at a specific hour**, without revealing sensitive information about end users.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the rest of the ecosystem datasets.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+Generation and export fields may vary depending on the building and the existence of shared self-consumption.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with a unit or subsystem of the mixed-use building, anonymizing the identity of homes, offices, or shops.
+
+*   **timestamp**
+    Allows for analysis of differentiated and overlapping hourly patterns of residential, commercial, and service consumption.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by the unit during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (mainly community photovoltaic), when applicable.
+
+*   **energy\_exported\_kwh**
+    Surplus energy exported to the grid, relevant for self-consumption allocation and community balances.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Integrated analysis of mixed energy profiles**
+*   **Optimization of shared self-consumption**
+*   **Fair and transparent allocation of energy costs**
+*   **Management of community storage**
+*   **Detection of imbalances between uses**
+*   **Support for local energy communities**
+
+Algorithms access only the fields necessary for each analysis.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access regulated by energy community policies
+*   Auditable executions
+*   Results always aggregated or derived
+*   Use of verifiable records for allocation and traceability
+
+This design allows for transparency and trust without compromising privacy.
+
+---
+
+## Summary
+
+The mixed-use buildings dataset provides a **secure, governed, and hourly view** of consumption, generation, and energy surpluses in structures with multiple uses. Designed as a private data service for Compute-to-Data, it enables the execution of algorithms for shared self-consumption, fair cost allocation, and community energy optimization, enabling efficient and auditable local energy communities without exposing sensitive information.

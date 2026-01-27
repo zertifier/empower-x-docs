@@ -1,0 +1,134 @@
+---
+title: Estaciones de Bombeo e Infraestructura Hídrica
+description: Servicio de datos base para monitorizar el consumo energético en estaciones de bombeo e infraestructuras hídricas.
+slug: /dataset-energetico-horario-estaciones-bombeo-infraestructura-hidrica
+---
+
+# Estaciones de Bombeo e Infraestructura Hídrica
+
+*(Water Pumping Infrastructure Hourly Energy Dataset)*
+
+## Propósito del Dataset
+
+Este dataset actúa como **servicio de datos base** para los algoritmos aplicados a la monitorización y optimización del consumo energético en **estaciones de bombeo de agua potable y residual**, así como en otras infraestructuras hídricas municipales.
+
+El dataset permite analizar el comportamiento energético de los activos de bombeo de forma segura, habilitando algoritmos de detección de anomalías, predicción de mantenimiento y evaluación de eficiencia operativa, todo ello dentro de un entorno **Compute-to-Data** que protege la información crítica de la infraestructura.
+
+---
+
+## Alcance y Consideraciones Técnicas
+
+Dada la naturaleza crítica de la infraestructura hídrica, el dataset está diseñado para **minimizar la exposición de datos sensibles** y cumplir con requisitos de seguridad operativa:
+
+* Datos **filtrados por un periodo temporal concreto** (día, semana o mes)
+
+* Resolución **horaria**
+
+* Inclusión **exclusiva de los campos energéticos necesarios**
+
+* Sin devolución de información técnica detallada de la infraestructura
+
+Este enfoque permite ejecutar análisis avanzados sin comprometer la seguridad ni la soberanía del dato.
+
+---
+
+## Tipo de Dataset
+
+* **Dataset privado**
+
+* **No descargable**
+
+* **Accesible únicamente por algoritmos autorizados**
+
+* Gobernado bajo políticas de datos municipales
+
+* Ejecutado mediante **Compute-to-Data sobre Empower-X**
+
+El acceso humano directo a los datos brutos no está permitido.
+
+---
+
+## Contenido del Dataset
+
+El dataset contiene **datos energéticos por hora** asociados a puntos de suministro eléctricos que alimentan estaciones de bombeo e infraestructuras hídricas.
+
+Cada registro representa el consumo energético de **un punto de suministro (CUPS) en una hora concreta**, sin exponer información operativa sensible.
+
+---
+
+## Formato del Dataset
+
+El dataset sigue un **formato tabular fijo**, común al resto de datasets del ecosistema.
+
+### Estructura del Dataset
+
+| Campo | Descripción |
+| ----- | ----- |
+| `cups_id` | Identificador del punto de suministro (anonimizado si aplica) |
+| `timestamp` | Fecha y hora del registro (resolución horaria) |
+| `energy_consumed_kwh` | Energía consumida en esa hora (kWh) |
+| `energy_generated_kwh` | Energía generada en esa hora (kWh, si existe) |
+| `energy_exported_kwh` | Energía exportada a red en esa hora (kWh, si existe) |
+
+En la mayoría de estaciones de bombeo, los campos de generación y exportación pueden ser nulos.
+
+---
+
+## Qué Representa Cada Campo
+
+* **cups\_id**  
+   Identificador del punto de suministro asociado a una estación de bombeo o infraestructura hídrica, anonimizando la localización y el activo concreto.
+
+* **timestamp**  
+   Permite analizar patrones horarios, ciclos operativos y correlaciones temporales relevantes para la eficiencia energética y el mantenimiento.
+
+* **energy\_consumed\_kwh**  
+   Energía eléctrica consumida por la estación de bombeo durante la hora indicada.
+
+* **energy\_generated\_kwh**  
+   Energía generada localmente (por ejemplo, autoconsumo en instalaciones con generación propia), si aplica.
+
+* **energy\_exported\_kwh**  
+   Energía exportada a red, cuando exista generación asociada.
+
+---
+
+## Relación con los Algoritmos
+
+Este dataset alimenta algoritmos orientados a:
+
+* **Detección de anomalías energéticas**
+
+* **Predicción de mantenimiento**
+
+* **Análisis de eficiencia operativa**
+
+* **Identificación de patrones de consumo anómalos**
+
+* **Optimización de costes energéticos**
+
+* **Prevención de fallos en el suministro**
+
+Los algoritmos acceden únicamente a los datos energéticos necesarios.
+
+---
+
+## Seguridad, Gobernanza y Auditoría
+
+* Los datos **no abandonan el entorno seguro**
+
+* No se permite descarga del dataset
+
+* Accesos regulados por políticas de gobernanza municipales
+
+* Ejecuciones auditables
+
+* Resultados siempre agregados o derivados
+
+Este enfoque protege infraestructuras críticas y garantiza cumplimiento con normativas de seguridad y soberanía del dato.
+
+---
+
+## Resumen
+
+El dataset de estaciones de bombeo e infraestructura hídrica proporciona una **vista horaria, segura y gobernada** del consumo energético de activos críticos de agua potable y residual. Diseñado como un servicio de datos privado para Compute-to-Data, permite ejecutar algoritmos de detección de anomalías y mantenimiento predictivo, optimizando costes energéticos y mejorando la resiliencia del servicio sin exponer información sensible de la infraestructura.

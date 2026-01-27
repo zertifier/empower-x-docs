@@ -1,0 +1,134 @@
+---
+title: Alumbrado Público y Puntos de Luz
+description: Servicio de datos base para la gestión eficiente del alumbrado público y puntos de luz.
+slug: /dataset-energetico-horario-alumbrado-publico-puntos-luz
+---
+
+# Alumbrado Público y Puntos de Luz
+
+*(Public Lighting and Streetlights – Hourly Energy Dataset)*
+
+## Propósito del Dataset
+
+Este dataset actúa como **servicio de datos base** para los algoritmos orientados a la **gestión inteligente y eficiente del alumbrado público**, permitiendo transformar redes de iluminación urbana en sistemas adaptativos, seguros y energéticamente optimizados.
+
+El dataset permite analizar el consumo energético asociado a puntos de luz y cuadros de alumbrado, habilitando estrategias de atenuación dinámica, detección temprana de fallos y mantenimiento predictivo, todo ello dentro de un entorno **Compute-to-Data** que preserva la soberanía del dato municipal.
+
+---
+
+## Alcance y Consideraciones Técnicas
+
+Dado el carácter crítico del alumbrado público para la seguridad ciudadana, el dataset está diseñado para **minimizar riesgos operativos y de seguridad**:
+
+* Datos **filtrados por un periodo temporal concreto** (día, semana o mes)
+
+* Resolución **horaria**
+
+* Inclusión **exclusiva de los campos energéticos necesarios**
+
+* Sin exposición directa de datos de localización precisa ni estado individual de luminarias
+
+Este enfoque permite optimizar el servicio sin comprometer la seguridad ni la continuidad operativa.
+
+---
+
+## Tipo de Dataset
+
+* **Dataset privado**
+
+* **No descargable**
+
+* **Accesible únicamente por algoritmos autorizados**
+
+* Gobernado bajo políticas municipales de acceso y operación
+
+* Ejecutado mediante **Compute-to-Data sobre Empower-X**
+
+Los usuarios no acceden directamente a los datos brutos.
+
+---
+
+## Contenido del Dataset
+
+El dataset contiene **datos energéticos por hora** asociados a puntos de suministro eléctricos que alimentan redes de alumbrado público y conjuntos de luminarias urbanas.
+
+Cada registro representa el consumo energético de **un punto de suministro (CUPS) en una hora concreta**, sin revelar información sensible sobre la infraestructura.
+
+---
+
+## Formato del Dataset
+
+El dataset sigue un **formato tabular fijo**, común al resto de datasets del ecosistema.
+
+### Estructura del Dataset
+
+| Campo | Descripción |
+| ----- | ----- |
+| `cups_id` | Identificador del punto de suministro (anonimizado si aplica) |
+| `timestamp` | Fecha y hora del registro (resolución horaria) |
+| `energy_consumed_kwh` | Energía consumida en esa hora (kWh) |
+| `energy_generated_kwh` | Energía generada en esa hora (kWh, si existe) |
+| `energy_exported_kwh` | Energía exportada a red en esa hora (kWh, si existe) |
+
+En redes de alumbrado, los campos de generación y exportación suelen ser nulos.
+
+---
+
+## Qué Representa Cada Campo
+
+* **cups\_id**  
+   Identificador del punto de suministro asociado a una red o cuadro de alumbrado público, anonimizando la ubicación exacta y el activo concreto.
+
+* **timestamp**  
+   Permite analizar patrones horarios de encendido, atenuación y consumo vinculados a la actividad urbana.
+
+* **energy\_consumed\_kwh**  
+   Energía eléctrica consumida por las luminarias y sistemas de control durante la hora indicada.
+
+* **energy\_generated\_kwh**  
+   Energía generada localmente (si existieran sistemas de autoconsumo asociados), cuando aplica.
+
+* **energy\_exported\_kwh**  
+   Energía exportada a red, en caso de existir generación local.
+
+---
+
+## Relación con los Algoritmos
+
+Este dataset alimenta algoritmos orientados a:
+
+* **Optimización dinámica de la iluminación**
+
+* **Detección de consumos anómalos**
+
+* **Mantenimiento predictivo de luminarias**
+
+* **Planificación de rutas de reparación**
+
+* **Reducción de costes operativos y huella de carbono**
+
+* **Mejora de la seguridad ciudadana**
+
+Los algoritmos acceden únicamente a los campos necesarios para cada análisis.
+
+---
+
+## Seguridad, Gobernanza y Auditoría
+
+* Los datos **no abandonan el entorno seguro**
+
+* No se permite descarga del dataset
+
+* Accesos regulados por políticas municipales
+
+* Ejecuciones auditables
+
+* Resultados siempre agregados o derivados
+
+Este diseño garantiza la soberanía del dato urbano y la protección de infraestructuras críticas.
+
+---
+
+## Resumen
+
+El dataset de alumbrado público y puntos de luz proporciona una **vista horaria, segura y gobernada** del consumo energético de redes de iluminación urbana. Diseñado como un servicio de datos privado para Compute-to-Data, permite ejecutar algoritmos de optimización, mantenimiento predictivo y gestión eficiente del alumbrado, reduciendo costes y emisiones mientras se mejora la calidad del servicio y la seguridad ciudadana.

@@ -1,0 +1,118 @@
+---
+title: Sistemes de Contenidors de Residus Subterranis
+description: Servei de dades base per optimitzar el consum energètic en sistemes de contenidors de residus subterranis.
+slug: /dataset-energetico-horario-contenedores-residuos-subterraneos
+---
+
+# Sistemes de Contenidors de Residus Subterranis
+
+*(Underground Waste Container Systems – Hourly Energy Dataset)*
+
+## Propòsit del Dataset
+
+Aquest dataset actua com a **servei de dades base** per als algoritmes aplicats a la gestió energèticament eficient de **sistemes de contenidors de residus subterranis**, integrant el consum elèctric associat a mecanismes de compactació, elevació i sensorització.
+
+El dataset permet analitzar el consum energètic d'aquests sistemes de forma segura i agregada, donant suport a l'optimització operativa, la planificació de rutes de recollida i la reducció del consum energètic i de combustible, tot això dins d'un entorn **Compute-to-Data** que preserva la sobirania de la dada municipal.
+
+---
+
+## Abast i Consideracions Tècniques
+
+Atès que els sistemes de residus formen part d'infraestructures urbanes crítiques, el dataset està dissenyat per **minimitzar l'exposició d'informació sensible**:
+
+*   Dades **filtrades per un període temporal concret** (dia, setmana o mes)
+*   Resolució **horària**
+*   Inclusió **exclusiva dels camps energètics necessaris**
+*   Sense exposició directa de dades de localització exacta ni estat operatiu detallat
+
+Aquest enfocament permet executar anàlisis energètiques i d'eficiència sense comprometre la seguretat del servei.
+
+---
+
+## Tipus de Dataset
+
+*   **Dataset privat**
+*   **No descarregable**
+*   **Accessible únicament per algoritmes autoritzats**
+*   Governat sota polítiques d'accés granular definides per l'ajuntament
+*   Executat mitjançant **Compute-to-Data sobre Empower-X**
+
+Els usuaris humans no accedeixen directament a les dades brutes.
+
+---
+
+## Contingut del Dataset
+
+El dataset conté **dades energètiques per hora** associades a punts de subministrament elèctrics que alimenten sistemes de contenidors de residus subterranis i els seus mecanismes associats.
+
+Cada registre representa el consum energètic d'**un punt de subministrament (CUPS) en una hora concreta**.
+
+---
+
+## Format del Dataset
+
+El dataset segueix un **format tabular fix**, comú a tots els casos d'ús de l'ecosistema.
+
+### Estructura del Dataset
+
+| Camp | Descripció |
+| ----- | ----- |
+| `cups_id` | Identificador del punt de subministrament (anonimitzat si aplica) |
+| `timestamp` | Data i hora del registre (resolució horària) |
+| `energy_consumed_kwh` | Energia consumida en aquesta hora (kWh) |
+| `energy_generated_kwh` | Energia generada en aquesta hora (kWh, si existeix) |
+| `energy_exported_kwh` | Energia exportada a la xarxa en aquesta hora (kWh, si existeix) |
+
+En la majoria dels sistemes de contenidors, els camps de generació i exportació seran nuls.
+
+---
+
+## Què Representa Cada Camp
+
+*   **cups\_id**
+    Identificador del punt de subministrament associat al sistema de contenidors subterranis, anonimitzant la ubicació i l'actiu específic.
+
+*   **timestamp**
+    Permet analitzar patrons horaris d'ús, activació de compactadors i correlació amb operacions de recollida.
+
+*   **energy\_consumed\_kwh**
+    Energia elèctrica consumida pels sistemes de compactació, elevació i control durant l'hora indicada.
+
+*   **energy\_generated\_kwh**
+    Energia generada localment (si existís autoconsum associat), quan aplica.
+
+*   **energy\_exported\_kwh**
+    Energia exportada a la xarxa, en cas d'existir generació local.
+
+---
+
+## Relació amb els Algoritmes
+
+Aquest dataset alimenta algoritmes orientats a:
+
+*   **Anàlisi d'eficiència energètica**
+*   **Detecció de patrons anòmals de consum**
+*   **Optimització de l'operació de compactació**
+*   **Suport a la planificació de rutes de recollida**
+*   **Reducció del consum energètic i de combustible**
+*   **Avaluació de sostenibilitat dels serveis urbans**
+
+Els algoritmes accedeixen únicament als camps energètics necessaris.
+
+---
+
+## Seguretat, Governança i Auditoria
+
+*   Les dades **no abandonen l'entorn segur**
+*   No es permet la descàrrega del dataset
+*   Accessos regulats mitjançant polítiques d'accés granular
+*   Execucions auditables
+*   Resultats sempre agregats o derivats
+
+Aquest disseny garanteix la sobirania de la dada municipal i el compliment de requisits de seguretat urbana.
+
+---
+
+## Resum
+
+El dataset de sistemes de contenidors de residus subterranis proporciona una **vista horària, segura i governada** del consum energètic associat a infraestructures de recollida de residus. Dissenyat com un servei de dades privat per a Compute-to-Data, permet executar algoritmes d'optimització energètica i eficiència operativa, donant suport a serveis municipals de neteja més sostenibles sense exposar informació sensible ni operativa.

@@ -1,0 +1,118 @@
+---
+title: Pumping Stations and Water Infrastructure
+description: Base data service for algorithms for monitoring and optimizing energy consumption in pumping stations.
+slug: /dataset-energetico-horario-estaciones-bombeo-infraestructura-hidrica
+---
+
+# Pumping Stations and Water Infrastructure
+
+*(Water Pumping Infrastructure Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms applied to the monitoring and optimization of energy consumption in **drinking water and wastewater pumping stations**, as well as other municipal water infrastructures.
+
+The dataset allows for the analysis of the energy behavior of pumping assets securely, enabling algorithms for anomaly detection, maintenance prediction, and operational efficiency evaluation, all within a **Compute-to-Data** environment that protects critical infrastructure information.
+
+---
+
+## Scope and Technical Considerations
+
+Given the critical nature of water infrastructure, the dataset is designed to **minimize the exposure of sensitive data** and comply with operational security requirements:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No detailed technical information about the infrastructure is returned
+
+This approach allows for advanced analysis without compromising security or data sovereignty.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under municipal data policies
+*   Executed via **Compute-to-Data on Empower-X**
+
+Direct human access to raw data is not permitted.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering pumping stations and water infrastructures.
+
+Each record represents the energy consumption of **one supply point (CUPS) at a specific hour**, without exposing sensitive operational information.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the rest of the ecosystem datasets.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+In most pumping stations, generation and export fields may be null.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with a pumping station or water infrastructure, anonymizing the location and the specific asset.
+
+*   **timestamp**
+    Allows for analysis of hourly patterns, operating cycles, and temporal correlations relevant to energy efficiency and maintenance.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by the pumping station during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (e.g., self-consumption in facilities with own generation), if applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, when associated generation exists.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Energy anomaly detection**
+*   **Maintenance prediction**
+*   **Operational efficiency analysis**
+*   **Identification of anomalous consumption patterns**
+*   **Energy cost optimization**
+*   **Supply failure prevention**
+
+Algorithms access only the necessary energy data.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access regulated by municipal governance policies
+*   Auditable executions
+*   Results always aggregated or derived
+
+This approach protects critical infrastructures and guarantees compliance with security and data sovereignty regulations.
+
+---
+
+## Summary
+
+The pumping stations and water infrastructure dataset provides a **secure, governed, and hourly view** of the energy consumption of critical drinking water and wastewater assets. Designed as a private data service for Compute-to-Data, it enables the execution of anomaly detection and predictive maintenance algorithms, optimizing energy costs and improving service resilience without exposing sensitive infrastructure information.

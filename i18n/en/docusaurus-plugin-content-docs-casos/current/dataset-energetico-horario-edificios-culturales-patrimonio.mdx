@@ -1,0 +1,117 @@
+---
+title: Cultural and Heritage Buildings
+description: Base data service for algorithms oriented towards intelligent energy management of museums and heritage buildings.
+slug: /dataset-energetico-horario-edificios-culturales-patrimonio
+---
+
+# Cultural and Heritage Buildings
+
+*(Cultural and Heritage Buildings – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms oriented towards the **intelligent energy management of museums and heritage buildings**, where energy efficiency must be balanced with strict conservation requirements.
+
+The dataset allows for the analysis of energy consumption associated with HVAC, lighting, and environmental control systems, enabling optimization algorithms that reduce consumption without compromising the conditions necessary for the preservation of artworks and historical structures, all within a **Compute-to-Data** environment that protects sensitive information.
+
+---
+
+## Scope and Technical Considerations
+
+Due to the sensitive nature of cultural buildings, the dataset is designed to **minimize exposure risks** and preserve heritage security:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No direct exposure of detailed environmental data or security information
+
+This approach enables energy consumption optimization while maintaining confidentiality.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under granular access policies defined by cultural managers
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users do not access the raw data directly.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering museums, historical buildings, and cultural facilities.
+
+Each record represents the energy consumption of **one supply point (CUPS) at a specific hour**, without revealing sensitive information about the infrastructure.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the entire ecosystem.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+In most heritage buildings, generation and export fields may be null.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with a cultural or heritage building, anonymizing its identity and specific location.
+
+*   **timestamp**
+    Allows for analysis of hourly consumption patterns linked to HVAC, lighting, and building operation.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by HVAC systems, lighting, and environmental control during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (if self-consumption compatible with the heritage environment exists), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, in case of local generation.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Energy optimization based on conservation constraints**
+*   **HVAC system efficiency analysis**
+*   **Detection of anomalous consumption**
+*   **Energy prediction respecting conservation ranges**
+*   **Support for energy rehabilitation decisions**
+
+Each algorithm accesses only the data necessary for its function.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access controlled via granular access policies
+*   Auditable executions
+*   Results always aggregated or derived
+
+This design protects the security of cultural heritage and complies with confidentiality requirements.
+
+---
+
+## Summary
+
+The cultural and heritage buildings dataset provides a **secure, governed, and hourly view** of energy consumption associated with museums and historical buildings. Designed as a private data service for Compute-to-Data, it enables the execution of energy optimization algorithms that balance efficiency and conservation, supporting heritage sustainability without exposing sensitive information or compromising its protection.

@@ -1,0 +1,118 @@
+---
+title: Office and Administrative Buildings
+description: Base data service for algorithms oriented towards the efficient energy management of office buildings and administrative spaces.
+slug: /dataset-energetico-horario-edificios-oficinas-espacios-administrativos
+---
+
+# Office and Administrative Buildings
+
+*(Office and Administrative Buildings – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms oriented towards the **efficient energy management of office buildings and administrative spaces**, such as town halls, municipal headquarters, and public administrative centers.
+
+The dataset allows for monitoring and analyzing energy consumption associated with HVAC, lighting, and IT equipment, enabling algorithms for inefficiency detection, comparative analysis, and tracking of sustainability goals, all within a **Compute-to-Data** environment that guarantees data sovereignty and institutional control.
+
+---
+
+## Scope and Technical Considerations
+
+Given the institutional nature of these buildings and the need for transparency and control, the dataset is designed to offer useful analysis without exposing sensitive information:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No direct exposure of internal operational or security information
+
+This approach allows for data-driven energy management, compatible with public governance requirements.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under public administration data policies
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users do not access the raw data directly; only derived results.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering administrative buildings and public offices.
+
+Each record represents the energy consumption of **one supply point (CUPS) at a specific hour**, without revealing sensitive information about the internal operation of the building.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the rest of the ecosystem datasets.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+In many administrative buildings, generation and export fields may be null.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with an administrative building or public office, anonymizing the identity of the specific asset if necessary.
+
+*   **timestamp**
+    Allows for analysis of hourly patterns linked to working hours, equipment usage, and inactivity periods.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by HVAC systems, lighting, and IT equipment during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (e.g., photovoltaic in public buildings), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, in case of existing local generation.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Detection of energy inefficiencies**
+*   **Analysis of anomalous patterns via AI**
+*   **Optimization of operating schedules**
+*   **Tracking of sustainability goals**
+*   **Comparative analysis between administrative buildings**
+*   **Support for public energy management dashboards**
+
+Algorithms access only the fields necessary for each analysis.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access regulated by institutional policies
+*   Auditable executions
+*   Results always aggregated or derived
+
+This design guarantees public control, traceability, and compliance with good governance principles.
+
+---
+
+## Summary
+
+The office and administrative buildings dataset provides a **secure, governed, and hourly view** of energy consumption in public headquarters and administrative centers. Designed as a private data service for Compute-to-Data, it enables the execution of algorithms for optimization, inefficiency detection, and sustainability tracking, reducing operational costs and reinforcing the exemplary role of public administration in environmental responsibility.

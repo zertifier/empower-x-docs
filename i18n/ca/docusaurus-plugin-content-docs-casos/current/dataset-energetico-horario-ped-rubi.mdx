@@ -1,0 +1,118 @@
+---
+title: Flexibilitat i PED – Rubí
+description: Servei de dades base per als algoritmes utilitzats en el cas d'ús PED Rubí.
+slug: /dataset-energetico-horario-ped-rubi
+---
+
+# Flexibilitat i PED – Rubí
+
+*(PED Rubí Hourly Energy Dataset)*
+
+## Propòsit del Dataset
+
+Aquest dataset actua com a **servei de dades base** per als algoritmes utilitzats en el cas d'ús **PED Rubí**, orientat a la planificació i operació de **Districtes d'Energia Positiva (PEDs)**, autoconsum compartit, gestió de flexibilitat i càrrega 100% renovable.
+
+El dataset proporciona una visió horària i governada del comportament energètic dels punts de subministrament urbans, permetent l'execució d'algoritmes de predicció, optimització d'excedents, simulació i certificació energètica dins d'un entorn **Compute-to-Data**, sense exposar dades brutes.
+
+---
+
+## Abast i Consideracions Tècniques
+
+Donat el volum i la criticitat de les dades energètiques urbanes, el dataset **no retorna històrics complets ni informació innecessària**. En el seu lloc:
+
+*   Les dades estan **filtrades per un període temporal concret** (dia, setmana o mes)
+*   La resolució és **horària**
+*   Només s'inclouen els **camps estrictament necessaris** per als algoritmes habilitats
+*   L'accés està limitat a execucions algorítmiques autoritzades
+
+Aquest disseny permet operar de forma eficient i conforme als requisits regulatoris de dades energètiques.
+
+---
+
+## Tipus de Dataset
+
+*   **Dataset privat**
+*   **No descarregable**
+*   **Accessible únicament per algoritmes autoritzats**
+*   Governat sota les regles comunes de l'ecosistema PED Rubí
+*   Executat mitjançant **Compute-to-Data sobre Empower-X**
+
+Els usuaris no accedeixen directament a les dades; només a resultats derivats i agregats.
+
+---
+
+## Contingut del Dataset
+
+El dataset conté **dades energètiques per hora** associades a punts de subministrament elèctrics urbans, incloent-hi edificis públics, actius municipals, comunitats energètiques i punts amb generació distribuïda.
+
+Cada registre representa el comportament energètic d'**un punt de subministrament (CUPS) en una hora concreta**.
+
+---
+
+## Format del Dataset
+
+El dataset segueix un **format tabular fix**, comú i reutilitzable en tot l'ecosistema.
+
+### Estructura del Dataset
+
+| Camp | Descripció |
+| ----- | ----- |
+| `cups_id` | Identificador del punt de subministrament (anonimitzat si aplica) |
+| `timestamp` | Data i hora del registre (resolució horària) |
+| `energy_consumed_kwh` | Energia consumida en aquesta hora (kWh) |
+| `energy_generated_kwh` | Energia generada en aquesta hora (kWh, si existeix) |
+| `energy_exported_kwh` | Energia exportada a la xarxa en aquesta hora (kWh, si existeix) |
+
+Els camps de generació i exportació poden ser nuls segons el tipus d'actiu.
+
+---
+
+## Què Representa Cada Camp
+
+*   **cups\_id**
+    Identifica de forma única un punt de subministrament dins de l'entorn urbà, sense permetre la identificació directa de titulars o actius crítics.
+
+*   **timestamp**
+    Permet anàlisis temporals, predicció de demanda, simulació d'escenaris i coordinació de flexibilitat.
+
+*   **energy\_consumed\_kwh**
+    Energia demandada pel punt de subministrament durant l'hora indicada.
+
+*   **energy\_generated\_kwh**
+    Energia produïda localment (per exemple, fotovoltaica municipal o comunitària), quan aplica.
+
+*   **energy\_exported\_kwh**
+    Excedent energètic abocat a la xarxa, rellevant per a autoconsum compartit i optimització PED.
+
+---
+
+## Relació amb els Algoritmes
+
+Aquest dataset alimenta algoritmes orientats a:
+
+*   **Predicció energètica horària**
+*   **Gestió i agregació de flexibilitat**
+*   **Optimització d'autoconsum compartit**
+*   **Simulació d'escenaris PED**
+*   **Càlcul d'indicadors de sostenibilitat i certificació**
+*   **Auditoria energètica i traçabilitat**
+
+Cada algoritme accedeix únicament als camps necessaris per a la seva funció.
+
+---
+
+## Seguretat, Governança i Auditoria
+
+*   Les dades **no abandonen l'entorn segur**
+*   No es permet la descàrrega del dataset
+*   Accessos i execucions controlats per polítiques de governança
+*   Ús de mecanismes d'auditoria i traçabilitat
+*   Resultats sempre agregats o derivats
+
+Aquest enfocament és coherent amb els requisits europeus de sobirania de la dada, privadesa i regulació energètica.
+
+---
+
+## Resum
+
+El dataset PED Rubí proporciona una **vista horària, estructurada i governada** del consum, la generació i els excedents energètics associats a punts de subministrament urbans. Dissenyat com un servei de dades privat per a Compute-to-Data, permet executar algoritmes avançats de predicció, flexibilitat, simulació i certificació energètica en el context de Districtes d'Energia Positiva, sense exposar dades brutes ni comprometre la confidencialitat.

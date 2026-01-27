@@ -1,0 +1,118 @@
+---
+title: Educational Facilities
+description: Base data service for algorithms oriented towards boosting sustainability and energy efficiency in educational facilities.
+slug: /dataset-energetico-horario-instalaciones-educativas
+---
+
+# Educational Facilities
+
+*(Educational Facilities – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms oriented towards boosting **sustainability and energy efficiency in educational facilities**, such as schools, institutes, and training centers.
+
+The dataset allows for monitoring and analyzing energy consumption associated with HVAC, lighting, and general operation of educational buildings, facilitating the optimization of operating schedules, detection of energy waste, and support for energy management decisions, all within a **Compute-to-Data** environment that preserves data sovereignty.
+
+---
+
+## Scope and Technical Considerations
+
+To balance operational efficiency, privacy, and educational reuse, the dataset is designed with the following criteria:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   Possibility of generating **anonymized and aggregated** views for educational purposes
+
+This approach enables both operational optimization and pedagogical use of data without compromising privacy.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset** for operational and algorithmic use
+*   **Anonymized derived views** potentially publishable as open data
+*   **Non-downloadable** in its raw form
+*   **Accessible only by authorized algorithms**
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users access only derived results or anonymized datasets.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering educational facilities.
+
+Each record represents the energy behavior of **one supply point (CUPS) at a specific hour**, without including personal or sensitive information.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the rest of the ecosystem datasets.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+In most educational facilities, generation and export fields may be null.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with an educational facility, anonymizing the identity of the center if necessary.
+
+*   **timestamp**
+    Allows for analysis of hourly patterns linked to teaching activity, facility usage, and non-teaching periods.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by HVAC, lighting, and educational equipment during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (e.g., educational photovoltaic installations), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, in case of existing local generation.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Optimization of operating schedules**
+*   **Detection of inefficient or anomalous consumption**
+*   **Comparative analysis between educational centers**
+*   **Tracking of sustainability goals**
+*   **Generation of anonymized educational datasets**
+*   **Support for training projects in energy efficiency and STEM**
+
+Algorithms access only the fields necessary for each analysis.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Download of raw dataset is not permitted
+*   Access regulated via governance policies
+*   Possibility to publish **derived and anonymized datasets**
+*   Auditable executions and uses
+
+This approach protects institutional privacy and enables responsible educational reuse.
+
+---
+
+## Summary
+
+The educational facilities dataset provides a **secure, governed, and hourly view** of energy consumption in schools and training centers. Designed as a private data service for Compute-to-Data, it allows for optimizing energy efficiency, detecting waste, and supporting operational decision-making, while enabling the creation of anonymized datasets for real educational projects, fostering environmental awareness and STEM learning without compromising confidentiality.

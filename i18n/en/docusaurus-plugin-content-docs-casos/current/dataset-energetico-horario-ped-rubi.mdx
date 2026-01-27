@@ -1,0 +1,118 @@
+---
+title: Flexibility and PED – Rubí
+description: Base data service for algorithms used in the PED Rubí use case.
+slug: /dataset-energetico-horario-ped-rubi
+---
+
+# Flexibility and PED – Rubí
+
+*(PED Rubí Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms used in the **PED Rubí** use case, aimed at the planning and operation of **Positive Energy Districts (PEDs)**, shared self-consumption, flexibility management, and 100% renewable charging.
+
+The dataset provides an hourly and governed view of the energy behavior of urban supply points, enabling the execution of prediction algorithms, surplus optimization, simulation, and energy certification within a **Compute-to-Data** environment, without exposing raw data.
+
+---
+
+## Scope and Technical Considerations
+
+Given the volume and criticality of urban energy data, the dataset **does not return complete historical records or unnecessary information**. Instead:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary fields** for authorized algorithms are included
+*   Access is limited to authorized algorithmic executions
+
+This design allows for efficient operation while complying with regulatory requirements for energy data.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under the common rules of the PED Rubí ecosystem
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users do not access the data directly; only derived and aggregated results.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with urban electrical supply points, including public buildings, municipal assets, energy communities, and points with distributed generation.
+
+Each record represents the energy behavior of **one supply point (CUPS) at a specific hour**.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common and reusable throughout the ecosystem.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+Generation and export fields may be null depending on the asset type.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Uniquely identifies a supply point within the urban environment, preventing direct identification of holders or critical assets.
+
+*   **timestamp**
+    Allows for temporal analysis, demand prediction, scenario simulation, and flexibility coordination.
+
+*   **energy\_consumed\_kwh**
+    Energy demanded by the supply point during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy produced locally (e.g., municipal or community photovoltaic), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy surplus fed into the grid, relevant for shared self-consumption and PED optimization.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Hourly energy prediction**
+*   **Flexibility management and aggregation**
+*   **Optimization of shared self-consumption**
+*   **PED scenario simulation**
+*   **Calculation of sustainability indicators and certification**
+*   **Energy audit and traceability**
+
+Each algorithm accesses only the fields necessary for its function.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access and executions controlled by governance policies
+*   Use of audit and traceability mechanisms
+*   Results always aggregated or derived
+
+This approach is consistent with European requirements for data sovereignty, privacy, and energy regulation.
+
+---
+
+## Summary
+
+The PED Rubí dataset provides a **structured, governed, and hourly view** of consumption, generation, and energy surpluses associated with urban supply points. Designed as a private data service for Compute-to-Data, it enables the execution of advanced algorithms for prediction, flexibility, simulation, and energy certification in the context of Positive Energy Districts, without exposing raw data or compromising confidentiality.

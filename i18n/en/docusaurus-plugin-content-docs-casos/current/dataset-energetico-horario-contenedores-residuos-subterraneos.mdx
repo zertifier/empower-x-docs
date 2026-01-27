@@ -1,0 +1,118 @@
+---
+title: Underground Waste Container Systems
+description: Base data service for optimizing energy consumption in underground waste container systems.
+slug: /dataset-energetico-horario-contenedores-residuos-subterraneos
+---
+
+# Underground Waste Container Systems
+
+*(Underground Waste Container Systems – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms applied to the energy-efficient management of **underground waste container systems**, integrating electrical consumption associated with compaction, lifting, and sensor mechanisms.
+
+The dataset allows for the analysis of the energy consumption of these systems securely and in aggregate, supporting operational optimization, collection route planning, and reduction of energy and fuel consumption, all within a **Compute-to-Data** environment that preserves municipal data sovereignty.
+
+---
+
+## Scope and Technical Considerations
+
+Since waste systems are part of critical urban infrastructure, the dataset is designed to **minimize the exposure of sensitive information**:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No direct exposure of exact location data or detailed operational status
+
+This approach enables energy and efficiency analysis without compromising service security.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under granular access policies defined by the city council
+*   Executed via **Compute-to-Data on Empower-X**
+
+Human users do not access the raw data directly.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering underground waste container systems and their associated mechanisms.
+
+Each record represents the energy consumption of **one supply point (CUPS) at a specific hour**.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to all use cases in the ecosystem.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+In most container systems, generation and export fields will be null.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with the underground container system, anonymizing the location and specific asset.
+
+*   **timestamp**
+    Allows for analysis of hourly usage patterns, compactor activation, and correlation with collection operations.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by compaction, lifting, and control systems during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (if associated self-consumption exists), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, in case of local generation.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Energy efficiency analysis**
+*   **Detection of anomalous consumption patterns**
+*   **Optimization of compaction operation**
+*   **Support for collection route planning**
+*   **Reduction of energy and fuel consumption**
+*   **Sustainability evaluation of urban services**
+
+Algorithms access only the necessary energy fields.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access regulated via granular access policies
+*   Auditable executions
+*   Results always aggregated or derived
+
+This design guarantees municipal data sovereignty and compliance with urban security requirements.
+
+---
+
+## Summary
+
+The underground waste container systems dataset provides a **secure, governed, and hourly view** of energy consumption associated with waste collection infrastructure. Designed as a private data service for Compute-to-Data, it allows for the execution of energy optimization and operational efficiency algorithms, supporting more sustainable municipal cleaning services without exposing sensitive or operational information.

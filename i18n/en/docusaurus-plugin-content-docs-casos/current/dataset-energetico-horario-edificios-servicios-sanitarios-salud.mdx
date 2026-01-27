@@ -1,0 +1,118 @@
+---
+title: Healthcare and Health Services Buildings
+description: Base data service for algorithms oriented towards ensuring energy reliability and efficiency in critical healthcare infrastructures.
+slug: /dataset-energetico-horario-edificios-servicios-sanitarios-salud
+---
+
+# Healthcare and Health Services Buildings
+
+*(Healthcare and Health Services Buildings – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms oriented towards ensuring **energy reliability and efficiency in critical healthcare infrastructures**, such as health centers, outpatient clinics, and emergency services, which require continuous 24/7 electrical supply.
+
+The dataset allows for analyzing energy consumption associated with sensitive medical equipment, precise climatization, and energy backup systems, enabling algorithms for operational audit, base load optimization, and preventive maintenance, all within a **Compute-to-Data** environment that preserves privacy and health data sovereignty.
+
+---
+
+## Scope and Technical Considerations
+
+Given the healthcare criticality and regulatory requirements of the health sector, the dataset is designed to **maximize operational reliability without exposing sensitive information**:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No direct exposure of clinical data, internal operational data, or security data
+
+This approach allows for improving energy efficiency without compromising service continuity.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under health sector data policies
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users do not access the raw data directly; only derived results.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering healthcare buildings and services.
+
+Each record represents the energy consumption of **one supply point (CUPS) at a specific hour**, without revealing sensitive information about the center's operation.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the rest of the ecosystem datasets.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+In most healthcare buildings, generation and export fields may be null.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with a healthcare building or facility, anonymizing the identity and location of the critical asset.
+
+*   **timestamp**
+    Allows for analysis of continuous consumption patterns, base loads, and variations relevant to supply reliability.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by medical equipment, HVAC, critical systems, and auxiliary services during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (e.g., backup systems or self-consumption), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, in case of existing surplus local generation.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Energy audit of critical infrastructures**
+*   **Optimization of continuous base loads**
+*   **Detection of anomalous consumption**
+*   **Support for preventive maintenance of UPS and generators**
+*   **Improvement of energy efficiency without healthcare risk**
+*   **Tracking of healthcare energy resilience**
+
+Algorithms access only the fields necessary for each analysis.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access regulated by specific health sector policies
+*   Auditable executions
+*   Results always aggregated or derived
+
+This design guarantees compliance with privacy, security, and healthcare continuity requirements.
+
+---
+
+## Summary
+
+The healthcare and health services buildings dataset provides a **secure, governed, and hourly view** of energy consumption in critical healthcare infrastructures. Designed as a private data service for Compute-to-Data, it enables the execution of audit, optimization, and preventive maintenance algorithms that improve energy efficiency and supply resilience, without compromising the privacy of health data or service continuity.

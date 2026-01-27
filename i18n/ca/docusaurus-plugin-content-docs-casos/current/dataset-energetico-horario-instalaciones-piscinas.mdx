@@ -1,0 +1,118 @@
+---
+title: Instal·lacions de Piscines
+description: Servei de dades base per a algoritmes orientats a l'optimització energètica d'instal·lacions de piscines cobertes i a l'aire lliure.
+slug: /dataset-energetico-horario-instalaciones-piscinas
+---
+
+# Instal·lacions de Piscines
+
+*(Swimming Pool Facilities – Hourly Energy Dataset)*
+
+## Propòsit del Dataset
+
+Aquest dataset actua com a **servei de dades base** per als algoritmes orientats a l'**optimització energètica d'instal·lacions de piscines cobertes i a l'aire lliure**, que es troben entre els majors consumidors energètics municipals.
+
+El dataset permet analitzar el consum energètic associat a calefacció de l'aigua, climatització del recinte, deshumidificació, filtratge i sistemes auxiliars, habilitant algoritmes d'optimització de cicles tèrmics, gestió d'horaris i coordinació amb fonts renovables, tot això dins d'un entorn **Compute-to-Data** que preserva la sobirania de la dada.
+
+---
+
+## Abast i Consideracions Tècniques
+
+Donada la criticitat sanitària i operativa d'aquestes instal·lacions, el dataset està dissenyat per **maximitzar eficiència sense comprometre seguretat ni qualitat del servei**:
+
+*   Dades **filtrades per un període temporal concret** (dia, setmana o mes)
+*   Resolució **horària**
+*   Inclusió **exclusiva dels camps energètics necessaris**
+*   Sense exposició directa de dades sanitàries, d'ocupació o de control operatiu fi
+
+Aquest enfocament permet optimitzar el consum mantenint les condicions reglamentàries d'ús.
+
+---
+
+## Tipus de Dataset
+
+*   **Dataset privat**
+*   **No descarregable**
+*   **Accessible únicament per algoritmes autoritzats**
+*   Governat sota polítiques municipals de gestió energètica i sanitària
+*   Executat mitjançant **Compute-to-Data sobre Empower-X**
+
+Els usuaris no accedeixen directament a les dades brutes.
+
+---
+
+## Contingut del Dataset
+
+El dataset conté **dades energètiques per hora** associades a punts de subministrament elèctrics que alimenten instal·lacions de piscines municipals, tant cobertes com a l'aire lliure.
+
+Cada registre representa el consum energètic d'**un punt de subministrament (CUPS) en una hora concreta**, sense revelar informació sensible sobre l'operació interna.
+
+---
+
+## Format del Dataset
+
+El dataset segueix un **format tabular fix**, comú a la resta de datasets de l'ecosistema.
+
+### Estructura del Dataset
+
+| Camp | Descripció |
+| ----- | ----- |
+| `cups_id` | Identificador del punt de subministrament (anonimitzat si aplica) |
+| `timestamp` | Data i hora del registre (resolució horària) |
+| `energy_consumed_kwh` | Energia consumida en aquesta hora (kWh) |
+| `energy_generated_kwh` | Energia generada en aquesta hora (kWh, si existeix) |
+| `energy_exported_kwh` | Energia exportada a la xarxa en aquesta hora (kWh, si existeix) |
+
+Els camps de generació i exportació poden ser nuls si no existeix autoconsum associat.
+
+---
+
+## Què Representa Cada Camp
+
+*   **cups\_id**
+    Identificador del punt de subministrament associat a la instal·lació de piscina, anonimitzant la identitat i localització específica de l'actiu.
+
+*   **timestamp**
+    Permet analitzar patrons horaris vinculats a escalfament de l'aigua, funcionament de sistemes de filtratge i ús de les instal·lacions.
+
+*   **energy\_consumed\_kwh**
+    Energia elèctrica consumida per sistemes tèrmics, bombes, filtratge, climatització i deshumidificació durant l'hora indicada.
+
+*   **energy\_generated\_kwh**
+    Energia generada localment (per exemple, solar tèrmica o fotovoltaica associada), quan aplica.
+
+*   **energy\_exported\_kwh**
+    Energia exportada a la xarxa, en cas d'existir generació local excedentària.
+
+---
+
+## Relació amb els Algoritmes
+
+Aquest dataset alimenta algoritmes orientats a:
+
+*   **Optimització de cicles d'escalfament de l'aigua**
+*   **Programació eficient de filtratge**
+*   **Gestió energètica tèrmica integrada**
+*   **Reducció de pics de demanda elèctrica**
+*   **Coordinació amb energia renovable local**
+*   **Anàlisi d'eficiència energètica d'instal·lacions aquàtiques**
+
+Els algoritmes accedeixen únicament als camps necessaris per a cada anàlisi.
+
+---
+
+## Seguretat, Governança i Auditoria
+
+*   Les dades **no abandonen l'entorn segur**
+*   No es permet la descàrrega del dataset
+*   Accessos regulats per polítiques municipals
+*   Execucions auditables
+*   Resultats sempre agregats o derivats
+
+Aquest disseny garanteix la confidencialitat operativa i el compliment de requisits sanitaris i energètics.
+
+---
+
+## Resum
+
+El dataset d'instal·lacions de piscines proporciona una **vista horària, segura i governada** del consum energètic associat a piscines cobertes i a l'aire lliure. Dissenyat com un servei de dades privat per a Compute-to-Data, permet executar algoritmes d'optimització tèrmica, programació eficient i coordinació amb renovables, aconseguint estalvis energètics significatius sense comprometre la qualitat del servei ni la seguretat sanitària.

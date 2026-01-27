@@ -1,0 +1,134 @@
+---
+title: Edificios de Servicios Sanitarios y de Salud
+description: Servicio de datos base para fiabilidad y eficiencia en edificios de servicios sanitarios.
+slug: /dataset-energetico-horario-edificios-servicios-sanitarios-salud
+---
+
+# Edificios de Servicios Sanitarios y de Salud
+
+*(Healthcare and Health Services Buildings – Hourly Energy Dataset)*
+
+## Propósito del Dataset
+
+Este dataset actúa como **servicio de datos base** para los algoritmos orientados a garantizar la **fiabilidad y eficiencia energética en infraestructuras sanitarias críticas**, como centros de salud, ambulatorios y servicios de emergencia, que requieren suministro eléctrico continuo 24/7.
+
+El dataset permite analizar el consumo energético asociado a equipamiento médico sensible, climatización precisa y sistemas de respaldo energético, habilitando algoritmos de auditoría operativa, optimización de cargas base y mantenimiento preventivo, todo ello dentro de un entorno **Compute-to-Data** que preserva la privacidad y la soberanía del dato sanitario.
+
+---
+
+## Alcance y Consideraciones Técnicas
+
+Dada la criticidad asistencial y los requisitos regulatorios del sector salud, el dataset está diseñado para **maximizar la fiabilidad operativa sin exponer información sensible**:
+
+* Datos **filtrados por un periodo temporal concreto** (día, semana o mes)
+
+* Resolución **horaria**
+
+* Inclusión **exclusiva de los campos energéticos necesarios**
+
+* Sin exposición directa de datos clínicos, operativos internos o de seguridad
+
+Este enfoque permite mejorar la eficiencia energética sin comprometer la continuidad del servicio.
+
+---
+
+## Tipo de Dataset
+
+* **Dataset privado**
+
+* **No descargable**
+
+* **Accesible únicamente por algoritmos autorizados**
+
+* Gobernado bajo políticas de datos del ámbito sanitario
+
+* Ejecutado mediante **Compute-to-Data sobre Empower-X**
+
+Los usuarios no acceden directamente a los datos brutos; solo a resultados derivados.
+
+---
+
+## Contenido del Dataset
+
+El dataset contiene **datos energéticos por hora** asociados a puntos de suministro eléctricos que alimentan edificios y servicios sanitarios.
+
+Cada registro representa el consumo energético de **un punto de suministro (CUPS) en una hora concreta**, sin revelar información sensible sobre la operación del centro.
+
+---
+
+## Formato del Dataset
+
+El dataset sigue un **formato tabular fijo**, común al resto de datasets del ecosistema.
+
+### Estructura del Dataset
+
+| Campo | Descripción |
+| ----- | ----- |
+| `cups_id` | Identificador del punto de suministro (anonimizado si aplica) |
+| `timestamp` | Fecha y hora del registro (resolución horaria) |
+| `energy_consumed_kwh` | Energía consumida en esa hora (kWh) |
+| `energy_generated_kwh` | Energía generada en esa hora (kWh, si existe) |
+| `energy_exported_kwh` | Energía exportada a red en esa hora (kWh, si existe) |
+
+En la mayoría de edificios sanitarios, los campos de generación y exportación pueden ser nulos.
+
+---
+
+## Qué Representa Cada Campo
+
+* **cups\_id**  
+   Identificador del punto de suministro asociado a un edificio o instalación sanitaria, anonimizando la identidad y localización del activo crítico.
+
+* **timestamp**  
+   Permite analizar patrones horarios de consumo continuo, cargas base y variaciones relevantes para la fiabilidad del suministro.
+
+* **energy\_consumed\_kwh**  
+   Energía eléctrica consumida por equipamiento médico, climatización, sistemas críticos y servicios auxiliares durante la hora indicada.
+
+* **energy\_generated\_kwh**  
+   Energía generada localmente (por ejemplo, sistemas de respaldo o autoconsumo), cuando aplica.
+
+* **energy\_exported\_kwh**  
+   Energía exportada a red, en caso de existir generación local excedentaria.
+
+---
+
+## Relación con los Algoritmos
+
+Este dataset alimenta algoritmos orientados a:
+
+* **Auditoría energética de infraestructuras críticas**
+
+* **Optimización de cargas base continuas**
+
+* **Detección de consumos anómalos**
+
+* **Soporte a mantenimiento preventivo de SAIs y generadores**
+
+* **Mejora de la eficiencia energética sin riesgo asistencial**
+
+* **Seguimiento de resiliencia energética sanitaria**
+
+Los algoritmos acceden únicamente a los campos necesarios para cada análisis.
+
+---
+
+## Seguridad, Gobernanza y Auditoría
+
+* Los datos **no abandonan el entorno seguro**
+
+* No se permite descarga del dataset
+
+* Accesos regulados por políticas específicas del sector sanitario
+
+* Ejecuciones auditables
+
+* Resultados siempre agregados o derivados
+
+Este diseño garantiza cumplimiento con requisitos de privacidad, seguridad y continuidad asistencial.
+
+---
+
+## Resumen
+
+El dataset de edificios de servicios sanitarios y de salud proporciona una **vista horaria, segura y gobernada** del consumo energético en infraestructuras sanitarias críticas. Diseñado como un servicio de datos privado para Compute-to-Data, permite ejecutar algoritmos de auditoría, optimización y mantenimiento preventivo que mejoran la eficiencia energética y la resiliencia del suministro eléctrico, sin comprometer la privacidad de los datos sanitarios ni la continuidad del servicio.

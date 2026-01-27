@@ -1,0 +1,134 @@
+---
+title: Instalaciones Educativas
+description: Servicio de datos base para impulsar eficiencia energética en instalaciones educativas.
+slug: /dataset-energetico-horario-instalaciones-educativas
+---
+
+# Instalaciones Educativas
+
+*(Educational Facilities – Hourly Energy Dataset)*
+
+## Propósito del Dataset
+
+Este dataset actúa como **servicio de datos base** para los algoritmos orientados a impulsar la **sostenibilidad y la eficiencia energética en instalaciones educativas**, como escuelas, institutos y centros de formación.
+
+El dataset permite monitorizar y analizar el consumo energético asociado a climatización, iluminación y operación general de los edificios educativos, facilitando la optimización de horarios de funcionamiento, la detección de derroches energéticos y el apoyo a decisiones de gestión energética, todo ello dentro de un entorno **Compute-to-Data** que preserva la soberanía del dato.
+
+---
+
+## Alcance y Consideraciones Técnicas
+
+Para equilibrar eficiencia operativa, privacidad y reutilización educativa, el dataset está diseñado con los siguientes criterios:
+
+* Datos **filtrados por un periodo temporal concreto** (día, semana o mes)
+
+* Resolución **horaria**
+
+* Inclusión **exclusiva de los campos energéticos necesarios**
+
+* Posibilidad de generar vistas **anonimizadas y agregadas** para fines educativos
+
+Este enfoque permite tanto la optimización operativa como el uso pedagógico de los datos sin comprometer la privacidad.
+
+---
+
+## Tipo de Dataset
+
+* **Dataset privado** para uso operativo y algorítmico
+
+* **Vistas derivadas anonimizadas** potencialmente publicables como datos abiertos
+
+* **No descargable** en su forma bruta
+
+* **Accesible únicamente por algoritmos autorizados**
+
+* Ejecutado mediante **Compute-to-Data sobre Empower-X**
+
+Los usuarios acceden solo a resultados derivados o datasets anonimizados.
+
+---
+
+## Contenido del Dataset
+
+El dataset contiene **datos energéticos por hora** asociados a puntos de suministro eléctricos que alimentan instalaciones educativas.
+
+Cada registro representa el comportamiento energético de **un punto de suministro (CUPS) en una hora concreta**, sin incluir información personal ni sensible.
+
+---
+
+## Formato del Dataset
+
+El dataset sigue un **formato tabular fijo**, común al resto de datasets del ecosistema.
+
+### Estructura del Dataset
+
+| Campo | Descripción |
+| ----- | ----- |
+| `cups_id` | Identificador del punto de suministro (anonimizado si aplica) |
+| `timestamp` | Fecha y hora del registro (resolución horaria) |
+| `energy_consumed_kwh` | Energía consumida en esa hora (kWh) |
+| `energy_generated_kwh` | Energía generada en esa hora (kWh, si existe) |
+| `energy_exported_kwh` | Energía exportada a red en esa hora (kWh, si existe) |
+
+En la mayoría de instalaciones educativas, los campos de generación y exportación pueden ser nulos.
+
+---
+
+## Qué Representa Cada Campo
+
+* **cups\_id**  
+   Identificador del punto de suministro asociado a una instalación educativa, anonimizando la identidad del centro si es necesario.
+
+* **timestamp**  
+   Permite analizar patrones horarios vinculados a actividad lectiva, uso de instalaciones y periodos no lectivos.
+
+* **energy\_consumed\_kwh**  
+   Energía eléctrica consumida por climatización, iluminación y equipamiento educativo durante la hora indicada.
+
+* **energy\_generated\_kwh**  
+   Energía generada localmente (por ejemplo, instalaciones fotovoltaicas educativas), cuando aplica.
+
+* **energy\_exported\_kwh**  
+   Energía exportada a red, en caso de existir generación local.
+
+---
+
+## Relación con los Algoritmos
+
+Este dataset alimenta algoritmos orientados a:
+
+* **Optimización de horarios de funcionamiento**
+
+* **Detección de consumos ineficientes o anómalos**
+
+* **Análisis comparativo entre centros educativos**
+
+* **Seguimiento de objetivos de sostenibilidad**
+
+* **Generación de datasets educativos anonimizados**
+
+* **Apoyo a proyectos formativos en eficiencia energética y STEM**
+
+Los algoritmos acceden únicamente a los campos necesarios para cada análisis.
+
+---
+
+## Seguridad, Gobernanza y Auditoría
+
+* Los datos **no abandonan el entorno seguro**
+
+* No se permite descarga del dataset bruto
+
+* Accesos regulados mediante políticas de gobernanza
+
+* Posibilidad de publicar **datasets derivados y anonimizados**
+
+* Ejecuciones y usos auditables
+
+Este enfoque protege la privacidad institucional y habilita la reutilización educativa responsable.
+
+---
+
+## Resumen
+
+El dataset de instalaciones educativas proporciona una **vista horaria, segura y gobernada** del consumo energético en escuelas y centros de formación. Diseñado como un servicio de datos privado para Compute-to-Data, permite optimizar la eficiencia energética, detectar derroches y apoyar la toma de decisiones operativas, al tiempo que habilita la creación de datasets anonimizados para proyectos educativos reales, fomentando la conciencia ambiental y el aprendizaje STEM sin comprometer la confidencialidad.

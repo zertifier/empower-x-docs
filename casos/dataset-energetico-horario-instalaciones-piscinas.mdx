@@ -1,0 +1,134 @@
+---
+title: Instalaciones de Piscinas
+description: Servicio de datos base para optimización energética en instalaciones de piscinas.
+slug: /dataset-energetico-horario-instalaciones-piscinas
+---
+
+# Instalaciones de Piscinas
+
+*(Swimming Pool Facilities – Hourly Energy Dataset)*
+
+## Propósito del Dataset
+
+Este dataset actúa como **servicio de datos base** para los algoritmos orientados a la **optimización energética de instalaciones de piscinas cubiertas y al aire libre**, que se encuentran entre los mayores consumidores energéticos municipales.
+
+El dataset permite analizar el consumo energético asociado a calefacción del agua, climatización del recinto, deshumidificación, filtrado y sistemas auxiliares, habilitando algoritmos de optimización de ciclos térmicos, gestión de horarios y coordinación con fuentes renovables, todo ello dentro de un entorno **Compute-to-Data** que preserva la soberanía del dato.
+
+---
+
+## Alcance y Consideraciones Técnicas
+
+Dada la criticidad sanitaria y operativa de estas instalaciones, el dataset está diseñado para **maximizar eficiencia sin comprometer seguridad ni calidad del servicio**:
+
+* Datos **filtrados por un periodo temporal concreto** (día, semana o mes)
+
+* Resolución **horaria**
+
+* Inclusión **exclusiva de los campos energéticos necesarios**
+
+* Sin exposición directa de datos sanitarios, de ocupación o de control operativo fino
+
+Este enfoque permite optimizar el consumo manteniendo las condiciones reglamentarias de uso.
+
+---
+
+## Tipo de Dataset
+
+* **Dataset privado**
+
+* **No descargable**
+
+* **Accesible únicamente por algoritmos autorizados**
+
+* Gobernado bajo políticas municipales de gestión energética y sanitaria
+
+* Ejecutado mediante **Compute-to-Data sobre Empower-X**
+
+Los usuarios no acceden directamente a los datos brutos.
+
+---
+
+## Contenido del Dataset
+
+El dataset contiene **datos energéticos por hora** asociados a puntos de suministro eléctricos que alimentan instalaciones de piscinas municipales, tanto cubiertas como al aire libre.
+
+Cada registro representa el consumo energético de **un punto de suministro (CUPS) en una hora concreta**, sin revelar información sensible sobre la operación interna.
+
+---
+
+## Formato del Dataset
+
+El dataset sigue un **formato tabular fijo**, común al resto de datasets del ecosistema.
+
+### Estructura del Dataset
+
+| Campo | Descripción |
+| ----- | ----- |
+| `cups_id` | Identificador del punto de suministro (anonimizado si aplica) |
+| `timestamp` | Fecha y hora del registro (resolución horaria) |
+| `energy_consumed_kwh` | Energía consumida en esa hora (kWh) |
+| `energy_generated_kwh` | Energía generada en esa hora (kWh, si existe) |
+| `energy_exported_kwh` | Energía exportada a red en esa hora (kWh, si existe) |
+
+Los campos de generación y exportación pueden ser nulos si no existe autoconsumo asociado.
+
+---
+
+## Qué Representa Cada Campo
+
+* **cups\_id**  
+   Identificador del punto de suministro asociado a la instalación de piscina, anonimizando la identidad y localización específica del activo.
+
+* **timestamp**  
+   Permite analizar patrones horarios vinculados a calentamiento del agua, funcionamiento de sistemas de filtrado y uso de las instalaciones.
+
+* **energy\_consumed\_kwh**  
+   Energía eléctrica consumida por sistemas térmicos, bombas, filtrado, climatización y deshumidificación durante la hora indicada.
+
+* **energy\_generated\_kwh**  
+   Energía generada localmente (por ejemplo, solar térmica o fotovoltaica asociada), cuando aplica.
+
+* **energy\_exported\_kwh**  
+   Energía exportada a red, en caso de existir generación local excedentaria.
+
+---
+
+## Relación con los Algoritmos
+
+Este dataset alimenta algoritmos orientados a:
+
+* **Optimización de ciclos de calentamiento del agua**
+
+* **Programación eficiente de filtrado**
+
+* **Gestión energética térmica integrada**
+
+* **Reducción de picos de demanda eléctrica**
+
+* **Coordinación con energía renovable local**
+
+* **Análisis de eficiencia energética de instalaciones acuáticas**
+
+Los algoritmos acceden únicamente a los campos necesarios para cada análisis.
+
+---
+
+## Seguridad, Gobernanza y Auditoría
+
+* Los datos **no abandonan el entorno seguro**
+
+* No se permite descarga del dataset
+
+* Accesos regulados por políticas municipales
+
+* Ejecuciones auditables
+
+* Resultados siempre agregados o derivados
+
+Este diseño garantiza la confidencialidad operativa y el cumplimiento de requisitos sanitarios y energéticos.
+
+---
+
+## Resumen
+
+El dataset de instalaciones de piscinas proporciona una **vista horaria, segura y gobernada** del consumo energético asociado a piscinas cubiertas y al aire libre. Diseñado como un servicio de datos privado para Compute-to-Data, permite ejecutar algoritmos de optimización térmica, programación eficiente y coordinación con renovables, logrando ahorros energéticos significativos sin comprometer la calidad del servicio ni la seguridad sanitaria.

@@ -1,0 +1,134 @@
+---
+title: Instalaciones Deportivas
+description: Servicio de datos base para optimizar consumo energético en instalaciones deportivas.
+slug: /dataset-energetico-horario-instalaciones-deportivas
+---
+
+# Instalaciones Deportivas
+
+*(Sports Facilities – Hourly Energy Dataset)*
+
+## Propósito del Dataset
+
+Este dataset actúa como **servicio de datos base** para los algoritmos orientados a la **gestión energética de alto rendimiento en instalaciones deportivas**, caracterizadas por demandas intensivas y altamente variables.
+
+El dataset permite analizar el consumo energético asociado a iluminación de alta potencia, climatización de grandes espacios, piscinas climatizadas y equipamiento deportivo especializado, habilitando algoritmos de optimización operativa, gestión de picos de carga y coordinación con generación renovable local, todo ello dentro de un entorno **Compute-to-Data** que preserva la soberanía del dato.
+
+---
+
+## Alcance y Consideraciones Técnicas
+
+Dada la variabilidad de uso y la intensidad energética de estas instalaciones, el dataset está diseñado para ofrecer análisis precisos sin exponer información sensible:
+
+* Datos **filtrados por un periodo temporal concreto** (día, semana o mes)
+
+* Resolución **horaria**
+
+* Inclusión **exclusiva de los campos energéticos necesarios**
+
+* Sin exposición directa de datos de ocupación, eventos o seguridad
+
+Este enfoque permite optimizar el consumo manteniendo la calidad del servicio deportivo.
+
+---
+
+## Tipo de Dataset
+
+* **Dataset privado**
+
+* **No descargable**
+
+* **Accesible únicamente por algoritmos autorizados**
+
+* Gobernado bajo políticas de gestión energética municipales o del operador
+
+* Ejecutado mediante **Compute-to-Data sobre Empower-X**
+
+Los usuarios no acceden directamente a los datos brutos.
+
+---
+
+## Contenido del Dataset
+
+El dataset contiene **datos energéticos por hora** asociados a puntos de suministro eléctricos que alimentan instalaciones deportivas como gimnasios, polideportivos, piscinas y campos deportivos.
+
+Cada registro representa el consumo energético de **un punto de suministro (CUPS) en una hora concreta**, sin revelar información operativa sensible.
+
+---
+
+## Formato del Dataset
+
+El dataset sigue un **formato tabular fijo**, común al resto de datasets del ecosistema.
+
+### Estructura del Dataset
+
+| Campo | Descripción |
+| ----- | ----- |
+| `cups_id` | Identificador del punto de suministro (anonimizado si aplica) |
+| `timestamp` | Fecha y hora del registro (resolución horaria) |
+| `energy_consumed_kwh` | Energía consumida en esa hora (kWh) |
+| `energy_generated_kwh` | Energía generada en esa hora (kWh, si existe) |
+| `energy_exported_kwh` | Energía exportada a red en esa hora (kWh, si existe) |
+
+En muchas instalaciones deportivas, los campos de generación y exportación pueden ser nulos.
+
+---
+
+## Qué Representa Cada Campo
+
+* **cups\_id**  
+   Identificador del punto de suministro asociado a una instalación deportiva, anonimizando la identidad y localización del activo.
+
+* **timestamp**  
+   Permite analizar patrones horarios de consumo vinculados a entrenamientos, eventos deportivos y uso intensivo de instalaciones.
+
+* **energy\_consumed\_kwh**  
+   Energía eléctrica consumida por iluminación, climatización, piscinas y equipamiento deportivo durante la hora indicada.
+
+* **energy\_generated\_kwh**  
+   Energía generada localmente (por ejemplo, fotovoltaica en cubiertas deportivas), cuando aplica.
+
+* **energy\_exported\_kwh**  
+   Energía exportada a red, en caso de existir generación local.
+
+---
+
+## Relación con los Algoritmos
+
+Este dataset alimenta algoritmos orientados a:
+
+* **Optimización de operación según horarios y demanda**
+
+* **Gestión y suavizado de picos de carga eléctrica**
+
+* **Optimización del uso de energía renovable local**
+
+* **Detección de consumos anómalos**
+
+* **Análisis de eficiencia energética por tipo de instalación**
+
+* **Soporte a decisiones de inversión y mejora operativa**
+
+Los algoritmos acceden únicamente a los campos necesarios para cada análisis.
+
+---
+
+## Seguridad, Gobernanza y Auditoría
+
+* Los datos **no abandonan el entorno seguro**
+
+* No se permite descarga del dataset
+
+* Accesos regulados por políticas de gobernanza
+
+* Ejecuciones auditables
+
+* Resultados siempre agregados o derivados
+
+Este diseño garantiza la protección de información operativa y el cumplimiento de principios de soberanía del dato.
+
+---
+
+## Resumen
+
+El dataset de instalaciones deportivas proporciona una **vista horaria, segura y gobernada** del consumo energético de gimnasios, polideportivos y campos deportivos. Diseñado como un servicio de datos privado para Compute-to-Data, permite ejecutar algoritmos de optimización energética, gestión de picos y coordinación con renovables, reduciendo costes operativos y emisiones sin comprometer la calidad del servicio deportivo.

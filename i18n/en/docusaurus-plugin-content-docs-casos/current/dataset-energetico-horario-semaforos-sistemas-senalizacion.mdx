@@ -1,0 +1,118 @@
+---
+title: Traffic Lights and Signalling Systems
+description: Base data service for algorithms oriented towards the efficient energy management of traffic lights and road signalling systems.
+slug: /dataset-energetico-horario-semaforos-sistemas-senalizacion
+---
+
+# Traffic Lights and Signalling Systems
+
+*(Traffic Lights and Signalling Systems – Hourly Energy Dataset)*
+
+## Dataset Purpose
+
+This dataset acts as a **base data service** for algorithms oriented towards the **efficient energy management of traffic lights and road signalling systems**, urban infrastructures that operate continuously and are critical for mobility and citizen safety.
+
+The dataset allows for analyzing the constant energy consumption associated with traffic lights, dynamic signalling, and control systems, enabling algorithms to evaluate technological modernization opportunities (e.g., migration to LED), return on investment analysis, and operational optimization, all within a **Compute-to-Data** environment that preserves municipal data sovereignty.
+
+---
+
+## Scope and Technical Considerations
+
+Given the continuous and critical nature of these systems for urban circulation, the dataset is designed to **allow energy analysis without compromising road safety**:
+
+*   Data is **filtered by a specific time period** (day, week, or month)
+*   The resolution is **hourly**
+*   Only **strictly necessary energy fields** are included
+*   No direct exposure of traffic control data or operational configurations
+
+This approach allows for identifying efficiency improvements while maintaining service reliability.
+
+---
+
+## Dataset Type
+
+*   **Private Dataset**
+*   **Non-downloadable**
+*   **Accessible only by authorized algorithms**
+*   Governed under municipal mobility and energy policies
+*   Executed via **Compute-to-Data on Empower-X**
+
+Users do not access the raw data directly.
+
+---
+
+## Dataset Content
+
+The dataset contains **hourly energy data** associated with electrical supply points powering traffic light networks and road signalling systems.
+
+Each record represents the energy consumption of **one supply point (CUPS) at a specific hour**, without revealing sensitive information about the system's operation.
+
+---
+
+## Dataset Format
+
+The dataset follows a **fixed tabular format**, common to the rest of the ecosystem datasets.
+
+### Dataset Structure
+
+| Field | Description |
+| ----- | ----- |
+| `cups_id` | Supply point identifier (anonymized if applicable) |
+| `timestamp` | Date and time of the record (hourly resolution) |
+| `energy_consumed_kwh` | Energy consumed in that hour (kWh) |
+| `energy_generated_kwh` | Energy generated in that hour (kWh, if exists) |
+| `energy_exported_kwh` | Energy exported to the grid in that hour (kWh, if exists) |
+
+In most signalling systems, generation and export fields will be null.
+
+---
+
+## What Each Field Represents
+
+*   **cups\_id**
+    Identifier of the supply point associated with traffic lights or signalling systems, anonymizing the exact location and specific asset.
+
+*   **timestamp**
+    Allows for analysis of continuous consumption patterns, identifying base loads and evaluating the energy impact of technological upgrades.
+
+*   **energy\_consumed\_kwh**
+    Electrical energy consumed by traffic lights, controllers, and signalling systems during the indicated hour.
+
+*   **energy\_generated\_kwh**
+    Energy generated locally (if associated self-consumption solutions exist), when applicable.
+
+*   **energy\_exported\_kwh**
+    Energy exported to the grid, in case of local generation.
+
+---
+
+## Relation to Algorithms
+
+This dataset feeds algorithms oriented towards:
+
+*   **Analysis of continuous consumption and base loads**
+*   **Evaluation of technological upgrades (LED, intelligent control)**
+*   **Return on investment (ROI) calculation**
+*   **Detection of anomalous consumption**
+*   **Support for sustainable urban mobility planning**
+*   **Energy coordination with other urban systems**
+
+Algorithms access only the fields necessary for each analysis.
+
+---
+
+## Security, Governance, and Audit
+
+*   The data **does not leave the secure environment**
+*   Dataset download is not permitted
+*   Access regulated by municipal policies
+*   Auditable executions
+*   Results always aggregated or derived
+
+This design guarantees urban data sovereignty and the protection of critical mobility infrastructures.
+
+---
+
+## Summary
+
+The traffic lights and signalling systems dataset provides a **secure, governed, and hourly view** of the energy consumption of key infrastructures for urban mobility. Designed as a private data service for Compute-to-Data, it enables the execution of energy efficiency, investment evaluation, and operational optimization algorithms, supporting smart city strategies and emissions reduction without compromising road safety.

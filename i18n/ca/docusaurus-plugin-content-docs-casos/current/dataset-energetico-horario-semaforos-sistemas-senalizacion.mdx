@@ -1,0 +1,118 @@
+---
+title: Semàfors i Sistemes de Senyalització
+description: Servei de dades base per a algoritmes orientats a la gestió energètica eficient de semàfors i sistemes de senyalització viària.
+slug: /dataset-energetico-horario-semaforos-sistemas-senalizacion
+---
+
+# Semàfors i Sistemes de Senyalització
+
+*(Traffic Lights and Signalling Systems – Hourly Energy Dataset)*
+
+## Propòsit del Dataset
+
+Aquest dataset actua com a **servei de dades base** per als algoritmes orientats a la **gestió energètica eficient de semàfors i sistemes de senyalització viària**, infraestructures urbanes que operen de forma contínua i resulten crítiques per a la mobilitat i la seguretat ciutadana.
+
+El dataset permet analitzar el consum energètic constant associat a semàfors, senyalització dinàmica i sistemes de control, habilitant algoritmes per avaluar oportunitats de modernització tecnològica (per exemple, migració a LED), anàlisi de retorn d'inversió i optimització operativa, tot això dins d'un entorn **Compute-to-Data** que preserva la sobirania de la dada municipal.
+
+---
+
+## Abast i Consideracions Tècniques
+
+Donat el caràcter continu i crític d'aquests sistemes per a la circulació urbana, el dataset està dissenyat per **permetre anàlisis energètiques sense comprometre la seguretat viària**:
+
+*   Dades **filtrades per un període temporal concret** (dia, setmana o mes)
+*   Resolució **horària**
+*   Inclusió **exclusiva dels camps energètics necessaris**
+*   Sense exposició directa de dades de control de trànsit ni configuracions operatives
+
+Aquest enfocament permet identificar millores d'eficiència mantenint la fiabilitat del servei.
+
+---
+
+## Tipus de Dataset
+
+*   **Dataset privat**
+*   **No descarregable**
+*   **Accessible únicament per algoritmes autoritzats**
+*   Governat sota polítiques municipals de mobilitat i energia
+*   Executat mitjançant **Compute-to-Data sobre Empower-X**
+
+Els usuaris no accedeixen directament a les dades brutes.
+
+---
+
+## Contingut del Dataset
+
+El dataset conté **dades energètiques per hora** associades a punts de subministrament elèctrics que alimenten xarxes de semàfors i sistemes de senyalització viària.
+
+Cada registre representa el consum energètic d'**un punt de subministrament (CUPS) en una hora concreta**, sense revelar informació sensible sobre l'operació del sistema.
+
+---
+
+## Format del Dataset
+
+El dataset segueix un **format tabular fix**, comú a la resta de datasets de l'ecosistema.
+
+### Estructura del Dataset
+
+| Camp | Descripció |
+| ----- | ----- |
+| `cups_id` | Identificador del punt de subministrament (anonimitzat si aplica) |
+| `timestamp` | Data i hora del registre (resolució horària) |
+| `energy_consumed_kwh` | Energia consumida en aquesta hora (kWh) |
+| `energy_generated_kwh` | Energia generada en aquesta hora (kWh, si existeix) |
+| `energy_exported_kwh` | Energia exportada a la xarxa en aquesta hora (kWh, si existeix) |
+
+En la majoria de sistemes de senyalització, els camps de generació i exportació seran nuls.
+
+---
+
+## Què Representa Cada Camp
+
+*   **cups\_id**
+    Identificador del punt de subministrament associat a semàfors o sistemes de senyalització, anonimitzant la ubicació exacta i l'actiu específic.
+
+*   **timestamp**
+    Permet analitzar patrons de consum continu, identificar càrregues base i avaluar l'impacte energètic de millores tecnològiques.
+
+*   **energy\_consumed\_kwh**
+    Energia elèctrica consumida per semàfors, controladors i sistemes de senyalització durant l'hora indicada.
+
+*   **energy\_generated\_kwh**
+    Energia generada localment (si existissin solucions d'autoconsum associades), quan aplica.
+
+*   **energy\_exported\_kwh**
+    Energia exportada a la xarxa, en cas d'existir generació local.
+
+---
+
+## Relació amb els Algoritmes
+
+Aquest dataset alimenta algoritmes orientats a:
+
+*   **Anàlisi de consum continu i càrregues base**
+*   **Avaluació d'actualització tecnològica (LED, control intel·ligent)**
+*   **Càlcul de retorn d'inversió (ROI)**
+*   **Detecció de consums anòmals**
+*   **Suport a planificació de mobilitat urbana sostenible**
+*   **Coordinació energètica amb altres sistemes urbans**
+
+Els algoritmes accedeixen únicament als camps necessaris per a cada anàlisi.
+
+---
+
+## Seguretat, Governança i Auditoria
+
+*   Les dades **no abandonen l'entorn segur**
+*   No es permet la descàrrega del dataset
+*   Accessos regulats per polítiques municipals
+*   Execucions auditables
+*   Resultats sempre agregats o derivats
+
+Aquest disseny garanteix la sobirania de la dada urbana i la protecció d'infraestructures crítiques de mobilitat.
+
+---
+
+## Resum
+
+El dataset de semàfors i sistemes de senyalització proporciona una **vista horària, segura i governada** del consum energètic d'infraestructures clau per a la mobilitat urbana. Dissenyat com un servei de dades privat per a Compute-to-Data, permet executar algoritmes d'eficiència energètica, avaluació d'inversions i optimització operativa, donant suport a estratègies de smart city i reducció d'emissions sense comprometre la seguretat viària.

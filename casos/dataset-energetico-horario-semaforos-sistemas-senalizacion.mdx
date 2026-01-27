@@ -1,0 +1,134 @@
+---
+title: Semáforos y Sistemas de Señalización
+description: Servicio de datos base para eficiencia energética en semáforos y sistemas de señalización.
+slug: /dataset-energetico-horario-semaforos-sistemas-senalizacion
+---
+
+# Semáforos y Sistemas de Señalización
+
+*(Traffic Lights and Signalling Systems – Hourly Energy Dataset)*
+
+## Propósito del Dataset
+
+Este dataset actúa como **servicio de datos base** para los algoritmos orientados a la **gestión energética eficiente de semáforos y sistemas de señalización vial**, infraestructuras urbanas que operan de forma continua y resultan críticas para la movilidad y la seguridad ciudadana.
+
+El dataset permite analizar el consumo energético constante asociado a semáforos, señalización dinámica y sistemas de control, habilitando algoritmos para evaluar oportunidades de modernización tecnológica (por ejemplo, migración a LED), análisis de retorno de inversión y optimización operativa, todo ello dentro de un entorno **Compute-to-Data** que preserva la soberanía del dato municipal.
+
+---
+
+## Alcance y Consideraciones Técnicas
+
+Dado el carácter continuo y crítico de estos sistemas para la circulación urbana, el dataset está diseñado para **permitir análisis energéticos sin comprometer la seguridad vial**:
+
+* Datos **filtrados por un periodo temporal concreto** (día, semana o mes)
+
+* Resolución **horaria**
+
+* Inclusión **exclusiva de los campos energéticos necesarios**
+
+* Sin exposición directa de datos de control de tráfico ni configuraciones operativas
+
+Este enfoque permite identificar mejoras de eficiencia manteniendo la fiabilidad del servicio.
+
+---
+
+## Tipo de Dataset
+
+* **Dataset privado**
+
+* **No descargable**
+
+* **Accesible únicamente por algoritmos autorizados**
+
+* Gobernado bajo políticas municipales de movilidad y energía
+
+* Ejecutado mediante **Compute-to-Data sobre Empower-X**
+
+Los usuarios no acceden directamente a los datos brutos.
+
+---
+
+## Contenido del Dataset
+
+El dataset contiene **datos energéticos por hora** asociados a puntos de suministro eléctricos que alimentan redes de semáforos y sistemas de señalización vial.
+
+Cada registro representa el consumo energético de **un punto de suministro (CUPS) en una hora concreta**, sin revelar información sensible sobre la operación del sistema.
+
+---
+
+## Formato del Dataset
+
+El dataset sigue un **formato tabular fijo**, común al resto de datasets del ecosistema.
+
+### Estructura del Dataset
+
+| Campo | Descripción |
+| ----- | ----- |
+| `cups_id` | Identificador del punto de suministro (anonimizado si aplica) |
+| `timestamp` | Fecha y hora del registro (resolución horaria) |
+| `energy_consumed_kwh` | Energía consumida en esa hora (kWh) |
+| `energy_generated_kwh` | Energía generada en esa hora (kWh, si existe) |
+| `energy_exported_kwh` | Energía exportada a red en esa hora (kWh, si existe) |
+
+En la mayoría de sistemas de señalización, los campos de generación y exportación serán nulos.
+
+---
+
+## Qué Representa Cada Campo
+
+* **cups\_id**  
+   Identificador del punto de suministro asociado a semáforos o sistemas de señalización, anonimizando la ubicación exacta y el activo específico.
+
+* **timestamp**  
+   Permite analizar patrones de consumo continuo, identificar cargas base y evaluar el impacto energético de mejoras tecnológicas.
+
+* **energy\_consumed\_kwh**  
+   Energía eléctrica consumida por semáforos, controladores y sistemas de señalización durante la hora indicada.
+
+* **energy\_generated\_kwh**  
+   Energía generada localmente (si existieran soluciones de autoconsumo asociadas), cuando aplica.
+
+* **energy\_exported\_kwh**  
+   Energía exportada a red, en caso de existir generación local.
+
+---
+
+## Relación con los Algoritmos
+
+Este dataset alimenta algoritmos orientados a:
+
+* **Análisis de consumo continuo y cargas base**
+
+* **Evaluación de actualización tecnológica (LED, control inteligente)**
+
+* **Cálculo de retorno de inversión (ROI)**
+
+* **Detección de consumos anómalos**
+
+* **Soporte a planificación de movilidad urbana sostenible**
+
+* **Coordinación energética con otros sistemas urbanos**
+
+Los algoritmos acceden únicamente a los campos necesarios para cada análisis.
+
+---
+
+## Seguridad, Gobernanza y Auditoría
+
+* Los datos **no abandonan el entorno seguro**
+
+* No se permite descarga del dataset
+
+* Accesos regulados por políticas municipales
+
+* Ejecuciones auditables
+
+* Resultados siempre agregados o derivados
+
+Este diseño garantiza la soberanía del dato urbano y la protección de infraestructuras críticas de movilidad.
+
+---
+
+## Resumen
+
+El dataset de semáforos y sistemas de señalización proporciona una **vista horaria, segura y gobernada** del consumo energético de infraestructuras clave para la movilidad urbana. Diseñado como un servicio de datos privado para Compute-to-Data, permite ejecutar algoritmos de eficiencia energética, evaluación de inversiones y optimización operativa, apoyando estrategias de smart city y reducción de emisiones sin comprometer la seguridad vial.

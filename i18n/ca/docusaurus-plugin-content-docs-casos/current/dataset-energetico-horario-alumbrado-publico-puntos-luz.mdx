@@ -1,0 +1,118 @@
+---
+title: Enllumenat Públic i Punts de Llum
+description: Servei de dades base per a algoritmes orientats a la gestió intel·ligent i eficient de l'enllumenat públic.
+slug: /dataset-energetico-horario-alumbrado-publico-puntos-luz
+---
+
+# Enllumenat Públic i Punts de Llum
+
+*(Public Lighting and Streetlights – Hourly Energy Dataset)*
+
+## Propòsit del Dataset
+
+Aquest dataset actua com a **servei de dades base** per als algoritmes orientats a la **gestió intel·ligent i eficient de l'enllumenat públic**, permetent transformar xarxes d'il·luminació urbana en sistemes adaptatius, segurs i energèticament optimitzats.
+
+El dataset permet analitzar el consum energètic associat a punts de llum i quadres d'enllumenat, habilitant estratègies d'atenuació dinàmica, detecció primerenca de fallades i manteniment predictiu, tot això dins d'un entorn **Compute-to-Data** que preserva la sobirania de la dada municipal.
+
+---
+
+## Abast i Consideracions Tècniques
+
+Donat el caràcter crític de l'enllumenat públic per a la seguretat ciutadana, el dataset està dissenyat per **minimitzar riscos operatius i de seguretat**:
+
+*   Dades **filtrades per un període temporal concret** (dia, setmana o mes)
+*   Resolució **horària**
+*   Inclusió **exclusiva dels camps energètics necessaris**
+*   Sense exposició directa de dades de localització precisa ni estat individual de lluminàries
+
+Aquest enfocament permet optimitzar el servei sense comprometre la seguretat ni la continuïtat operativa.
+
+---
+
+## Tipus de Dataset
+
+*   **Dataset privat**
+*   **No descarregable**
+*   **Accessible únicament per algoritmes autoritzats**
+*   Governat sota polítiques municipals d'accés i operació
+*   Executat mitjançant **Compute-to-Data sobre Empower-X**
+
+Els usuaris no accedeixen directament a les dades brutes.
+
+---
+
+## Contingut del Dataset
+
+El dataset conté **dades energètiques per hora** associades a punts de subministrament elèctrics que alimenten xarxes d'enllumenat públic i conjunts de lluminàries urbanes.
+
+Cada registre representa el consum energètic d'**un punt de subministrament (CUPS) en una hora concreta**, sense revelar informació sensible sobre la infraestructura.
+
+---
+
+## Format del Dataset
+
+El dataset segueix un **format tabular fix**, comú a la resta de datasets de l'ecosistema.
+
+### Estructura del Dataset
+
+| Camp | Descripció |
+| ----- | ----- |
+| `cups_id` | Identificador del punt de subministrament (anonimitzat si aplica) |
+| `timestamp` | Data i hora del registre (resolució horària) |
+| `energy_consumed_kwh` | Energia consumida en aquesta hora (kWh) |
+| `energy_generated_kwh` | Energia generada en aquesta hora (kWh, si existeix) |
+| `energy_exported_kwh` | Energia exportada a la xarxa en aquesta hora (kWh, si existeix) |
+
+En xarxes d'enllumenat, els camps de generació i exportació solen ser nuls.
+
+---
+
+## Què Representa Cada Camp
+
+*   **cups\_id**
+    Identificador del punt de subministrament associat a una xarxa o quadre d'enllumenat públic, anonimitzant la ubicació exacta i l'actiu concret.
+
+*   **timestamp**
+    Permet analitzar patrons horaris d'encesa, atenuació i consum vinculats a l'activitat urbana.
+
+*   **energy\_consumed\_kwh**
+    Energia elèctrica consumida per les lluminàries i sistemes de control durant l'hora indicada.
+
+*   **energy\_generated\_kwh**
+    Energia generada localment (si existissin sistemes d'autoconsum associats), quan aplica.
+
+*   **energy\_exported\_kwh**
+    Energia exportada a la xarxa, en cas d'existir generació local.
+
+---
+
+## Relació amb els Algoritmes
+
+Aquest dataset alimenta algoritmes orientats a:
+
+*   **Optimització dinàmica de la il·luminació**
+*   **Detecció de consums anòmals**
+*   **Manteniment predictiu de lluminàries**
+*   **Planificació de rutes de reparació**
+*   **Reducció de costos operatius i petjada de carboni**
+*   **Millora de la seguretat ciutadana**
+
+Els algoritmes accedeixen únicament als camps necessaris per a cada anàlisi.
+
+---
+
+## Seguretat, Governança i Auditoria
+
+*   Les dades **no abandonen l'entorn segur**
+*   No es permet la descàrrega del dataset
+*   Accessos regulats per polítiques municipals
+*   Execucions auditables
+*   Resultats sempre agregats o derivats
+
+Aquest disseny garanteix la sobirania de la dada urbana i la protecció d'infraestructures crítiques.
+
+---
+
+## Resum
+
+El dataset d'enllumenat públic i punts de llum proporciona una **vista horària, segura i governada** del consum energètic de xarxes d'il·luminació urbana. Dissenyat com un servei de dades privat per a Compute-to-Data, permet executar algoritmes d'optimització, manteniment predictiu i gestió eficient de l'enllumenat, reduint costos i emissions mentre es millora la qualitat del servei i la seguretat ciutadana.

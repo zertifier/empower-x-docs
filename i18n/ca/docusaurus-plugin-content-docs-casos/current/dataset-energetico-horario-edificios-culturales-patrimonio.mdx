@@ -1,0 +1,117 @@
+---
+title: Edificis Culturals i Patrimoni
+description: Servei de dades base per a algoritmes orientats a la gestió energètica intel·ligent de museus i edificis patrimonials.
+slug: /dataset-energetico-horario-edificios-culturales-patrimonio
+---
+
+# Edificis Culturals i Patrimoni
+
+*(Cultural and Heritage Buildings – Hourly Energy Dataset)*
+
+## Propòsit del Dataset
+
+Aquest dataset actua com a **servei de dades base** per als algoritmes orientats a la **gestió energètica intel·ligent de museus i edificis patrimonials**, on l'eficiència energètica s'ha d'equilibrar amb estrictes requisits de conservació.
+
+El dataset permet analitzar el consum energètic associat a sistemes de climatització, il·luminació i control ambiental, habilitant algoritmes d'optimització que redueixen el consum sense comprometre les condicions necessàries per a la preservació d'obres d'art i estructures històriques, tot això dins d'un entorn **Compute-to-Data** que protegeix la informació sensible.
+
+---
+
+## Abast i Consideracions Tècniques
+
+A causa del caràcter sensible dels edificis culturals, el dataset està dissenyat per **minimitzar riscos d'exposició** i preservar la seguretat patrimonial:
+
+*   Dades **filtrades per un període temporal concret** (dia, setmana o mes)
+*   Resolució **horària**
+*   Inclusió **exclusiva dels camps energètics necessaris**
+*   Sense exposició directa de dades ambientals detallades ni informació de seguretat
+
+Aquest enfocament permet optimitzar el consum energètic mantenint la confidencialitat.
+
+---
+
+## Tipus de Dataset
+
+*   **Dataset privat**
+*   **No descarregable**
+*   **Accessible únicament per algoritmes autoritzats**
+*   Governat sota polítiques d'accés granular definides pels gestors culturals
+*   Executat mitjançant **Compute-to-Data sobre Empower-X**
+
+Els usuaris no accedeixen directament a les dades brutes.
+
+---
+
+## Contingut del Dataset
+
+El dataset conté **dades energètiques per hora** associades a punts de subministrament elèctrics que alimenten museus, edificis històrics i equipaments culturals.
+
+Cada registre representa el consum energètic d'**un punt de subministrament (CUPS) en una hora concreta**, sense revelar informació sensible sobre la infraestructura.
+
+---
+
+## Format del Dataset
+
+El dataset segueix un **format tabular fix**, comú a tot l'ecosistema.
+
+### Estructura del Dataset
+
+| Camp | Descripció |
+| ----- | ----- |
+| `cups_id` | Identificador del punt de subministrament (anonimitzat si aplica) |
+| `timestamp` | Data i hora del registre (resolució horària) |
+| `energy_consumed_kwh` | Energia consumida en aquesta hora (kWh) |
+| `energy_generated_kwh` | Energia generada en aquesta hora (kWh, si existeix) |
+| `energy_exported_kwh` | Energia exportada a la xarxa en aquesta hora (kWh, si existeix) |
+
+En la majoria d'edificis patrimonials, els camps de generació i exportació poden ser nuls.
+
+---
+
+## Què Representa Cada Camp
+
+*   **cups\_id**
+    Identificador del punt de subministrament associat a un edifici cultural o patrimonial, anonimitzant la seva identitat i ubicació específica.
+
+*   **timestamp**
+    Permet analitzar patrons horaris de consum vinculats a climatització, il·luminació i operació de l'edifici.
+
+*   **energy\_consumed\_kwh**
+    Energia elèctrica consumida per sistemes HVAC, il·luminació i control ambiental durant l'hora indicada.
+
+*   **energy\_generated\_kwh**
+    Energia generada localment (si existís autoconsum compatible amb l'entorn patrimonial), quan aplica.
+
+*   **energy\_exported\_kwh**
+    Energia exportada a la xarxa, en cas d'existir generació local.
+
+---
+
+## Relació amb els Algoritmes
+
+Aquest dataset alimenta algoritmes orientats a:
+
+*   **Optimització energètica basada en restriccions de conservació**
+*   **Anàlisi d'eficiència de sistemes HVAC**
+*   **Detecció de consums anòmals**
+*   **Predicció energètica respectant rangs de conservació**
+*   **Suport a decisions de rehabilitació energètica**
+
+Cada algoritme accedeix únicament a les dades necessàries per a la seva funció.
+
+---
+
+## Seguretat, Governança i Auditoria
+
+*   Les dades **no abandonen l'entorn segur**
+*   No es permet la descàrrega del dataset
+*   Accessos controlats mitjançant polítiques d'accés granular
+*   Execucions auditables
+*   Resultats sempre agregats o derivats
+
+Aquest disseny protegeix la seguretat del patrimoni cultural i compleix amb requisits de confidencialitat.
+
+---
+
+## Resum
+
+El dataset d'edificis culturals i patrimonials proporciona una **vista horària, segura i governada** del consum energètic associat a museus i edificis històrics. Dissenyat com un servei de dades privat per a Compute-to-Data, permet executar algoritmes d'optimització energètica que equilibren eficiència i conservació, donant suport a la sostenibilitat del patrimoni sense exposar informació sensible ni comprometre la seva protecció.
