@@ -31,10 +31,6 @@ const sidebars = {
         },
         {
           type: 'doc',
-          id: 'dataset-energetico-horario-ped-rubi',
-        },
-        {
-          type: 'doc',
           id: 'dataset-energetico-horario-estaciones-bombeo-infraestructura-hidrica',
         },
         {
