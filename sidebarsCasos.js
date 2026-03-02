@@ -11,6 +11,20 @@ const detailsLabels = {
 };
 const detailsLabel = detailsLabels[locale] ?? detailsLabels.en;
 
+const bettergyLabels = {
+  en: 'Bettergy',
+  es: 'Bettergy',
+  ca: 'Bettergy',
+};
+const bettergyLabel = bettergyLabels[locale] ?? bettergyLabels.en;
+
+const soyEficienteLabels = {
+  en: 'Soy Eficiente',
+  es: 'Soy Eficiente',
+  ca: 'Soy Eficiente',
+};
+const soyEficienteLabel = soyEficienteLabels[locale] ?? soyEficienteLabels.en;
+
 /**
  * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
@@ -72,6 +86,28 @@ const sidebars = {
         {
           type: 'doc',
           id: 'dataset-energetico-horario-semaforos-sistemas-senalizacion',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: bettergyLabel,
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'dataset-inversores-solares-bettergy',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: soyEficienteLabel,
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'dataset-precios-horarios-energia-soy-eficiente',
         },
       ],
     },
