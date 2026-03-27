@@ -25,6 +25,13 @@ const soyEficienteLabels = {
 };
 const soyEficienteLabel = soyEficienteLabels[locale] ?? soyEficienteLabels.en;
 
+const biyiudLabels = {
+  en: 'Biyiud',
+  es: 'Biyiud',
+  ca: 'Biyiud',
+};
+const biyiudLabel = biyiudLabels[locale] ?? biyiudLabels.en;
+
 /**
  * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
@@ -108,6 +115,17 @@ const sidebars = {
         {
           type: 'doc',
           id: 'dataset-precios-horarios-energia-soy-eficiente',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: biyiudLabel,
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'variacion-porcentual-interanual-consumo-energia',
         },
       ],
     },
