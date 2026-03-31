@@ -53,6 +53,7 @@ const sidebars = {
                 {type: 'doc', id: 'market-policy'},
                 {type: 'doc', id: 'ocean-protocol-market'},
                 {type: 'doc', id: 'ontologies'},
+                {type: 'doc', id: 'service-offering'},
                 {type: 'doc', id: 'verifiable-credentials'},
             ]
         }
