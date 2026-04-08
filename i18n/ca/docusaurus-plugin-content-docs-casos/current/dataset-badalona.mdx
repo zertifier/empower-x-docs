@@ -1,0 +1,66 @@
+---
+title: Dataset d'Anàlisi de Producció i Consum Energètic amb Generació Solar
+description: Servei de dades base per a l'execució d'algorismes d'anàlisi energètica avançada.
+slug: /dataset-badalona
+---
+
+# Dataset d'Anàlisi de Producció i Consum Energètic amb Generació Solar
+
+## Propòsit del Dataset
+
+Aquest dataset actua com un **servei de dades base** per a l'execució d'algorismes d'anàlisi energètica avançada. El seu objectiu principal és proporcionar una imatge precisa i operativament eficient del comportament de punts de subministrament, permetent el **monitoratge tècnic**, l'avaluació de l'eficiència energètica i l'optimització de l'ús d'energia renovable.
+
+## Abast i Consideracions Tècniques
+
+El dataset ofereix una vista optimitzada i filtrada de les mesures energètiques dels actius.
+
+* **Resolució temporal:** Granularitat d'alta resolució de **15 minuts**.
+* **Referència temporal:** Estampat de temps seguint l'estàndard **ISO 8601**.
+* **Utilitat:** Permet la reconstrucció de corbes de càrrega, l'anàlisi de patrons de generació fotovoltaica i l'avaluació de la dependència de la xarxa elèctrica.
+
+## Tipus de Dataset
+
+* **Dataset privat:** Integrat a l'espai de dades sectorial **EMPOWER-X**.
+* **Format d'accés:** Conjunt de dades **descarregable** en brut (*as-is*) per a usuaris autoritzats.
+* **Model d'ús:** Tot i que permet la descàrrega, està preparat per a mecanismes de **Compute-to-Data (C2D)**, on els algorismes poden processar la informació en un entorn segur.
+
+## Contingut del Dataset
+
+El dataset inclou mètriques precises associades a l'activitat d'instal·lacions d'autoconsum.
+
+* **Identificació tècnica:** S'utilitzen identificadors de punt de subministrament (**CUPS**) o codis alfanumèrics anonimitzats per garantir la privacitat.
+* **Privacitat per disseny:** No s'inclouen dades personals, comercials sensibles ni ubicacions físiques directes que permetin identificar als titulars.
+
+## Què Representa Cada Camp
+
+Les dades s'entreguen en format **JSON estructurat** sota una ontologia pública.
+
+| Camp | Descripció |
+| ----- | ----- |
+| `startingDt` | Data i hora d'inici de l'interval de mesura (format ISO 8601). |
+| `productionWh` | Energia total generada (producció solar) en watts-hora. |
+| `totalConsumptionWh` | Energia total consumida per la instal·lació en watts-hora. |
+| `networkConsumptionWh` | Energia consumida provinent de la xarxa elèctrica externa. |
+| `selfConsumptionWh` | Energia generada consumida directament en el lloc (autoconsum). |
+
+## Relació amb els Algorismes
+
+Aquest producte de dades està dissenyat per alimentar serveis digitals avançats en l'ecosistema energètic:
+
+* **Anàlisi de Comunitats Energètiques:** Agregació comunitària i balanços de consum-generació.
+* **Detecció d'Anomalies:** Identificació de pics de consum o inactivitat tècnica.
+* **Manteniment Predictiu:** Avaluació de l'eficiència i optimització d'actius energètics distribuïts.
+
+## Seguretat i Govern de la Dada
+
+* **Infraestructura segura:** El servei opera sobre arquitectura de microserveis (Docker) amb comunicacions xifrades mitjançant **SSL/HTTPS**.
+* **Control d'accés:** Implementació de polítiques basades en **carteres Web3** i **Credencials Verificables (VC)** per assegurar que només participants autoritzats accedeixin al recurs.
+* **Compliment Normatiu:** Alineat amb el RGPD, la LOPDGDD i la norma **UNE 0087:2025** d'espais de dades.
+
+## Resum
+
+Aquest dataset constitueix un servei de **Data as a Service (DaaS)** que ofereix mètriques de generació i demanda estandarditzades. La seva estructura permet a tercers autoritzats obtenir valor tècnic i operatiu de forma ràpida i segura, fomentant la transició energètica mitjançant l'ús compartit de dades operatives reals sota estàndards de sobirania europeus.
+
+---
+
+<a href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:57faa605004cf42ed6eeeebb5541945f3622b6cadfbb3f2ad7627feae2e6f235" target="_blank" className="button button--secondary">Veure Dataset</a>

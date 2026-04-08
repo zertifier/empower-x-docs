@@ -32,6 +32,20 @@ const biyiudLabels = {
 };
 const biyiudLabel = biyiudLabels[locale] ?? biyiudLabels.en;
 
+const badalonaLabels = {
+  en: 'Badalona',
+  es: 'Badalona',
+  ca: 'Badalona',
+};
+const badalonaLabel = badalonaLabels[locale] ?? badalonaLabels.en;
+
+const naturelekLabels = {
+  en: 'Naturelek Consulting',
+  es: 'Naturelek Consulting',
+  ca: 'Naturelek Consulting',
+};
+const naturelekLabel = naturelekLabels[locale] ?? naturelekLabels.en;
+
 /**
  * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
@@ -126,6 +140,28 @@ const sidebars = {
         {
           type: 'doc',
           id: 'variacion-porcentual-interanual-consumo-energia',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: badalonaLabel,
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'dataset-badalona',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: naturelekLabel,
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'dataset-rendimiento-fotovoltaico-anual',
         },
       ],
     },

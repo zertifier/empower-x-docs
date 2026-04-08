@@ -1,0 +1,70 @@
+---
+title: Análisis del Rendimiento Fotovoltaico Anual
+description: Producción energética anual horaria de cinco plantas de autoconsumo fotovoltaico.
+slug: /dataset-rendimiento-fotovoltaico-anual
+---
+
+# Dataset de Análisis del Rendimiento Fotovoltaico Anual
+
+## Propósito del Dataset
+
+Este dataset tiene como objetivo detallar la **producción energética anual horaria de cinco plantas de autoconsumo fotovoltaico**. Actúa como una fuente de información estructurada para facilitar la **monitorización técnica**, el análisis del rendimiento real frente al teórico y la optimización de estrategias de mantenimiento y operación basadas en datos operativos históricos.
+
+## Alcance y Consideraciones Técnicas
+
+El dataset proporciona una vista granular y técnica del comportamiento de los activos energéticos bajo los siguientes criterios:
+
+* **Resolución temporal:** Granularidad horaria (formato ISO 8601).
+* **Alcance:** Cinco plantas de autoconsumo monitorizadas.
+* **Frecuencia de actualización:** Mensual.
+* **Origen de datos:** Telemetría técnica procedente de inversores fotovoltaicos y dispositivos de monitorización (*loggers*).
+
+## Tipo de Dataset
+
+* **Dataset privado:** Integrado en el espacio de datos sectorial **EMPOWER-X** (Lighthouse Project de Gaia-X).
+* **Accesibilidad:** Disponible para usuarios autorizados mediante descarga directa a través del Marquetplace.
+
+## Contenido del Dataset
+
+El dataset incluye métricas de generación y rendimiento asociadas a activos específicos de autoconsumo.
+
+**Identificación de los activos:**
+
+* **Identificadores técnicos:** Se utilizan códigos alfanuméricos para la entidad gestora (company) y el equipo de monitorización (deviceName).
+* **Privacidad por diseño:** No se incluyen datos personales, comerciales sensibles ni ubicaciones físicas directas, garantizando el anonimato de los clientes finales.
+
+## Formato del Dataset
+
+Los datos se estructuran en formato **JSON optimizado** e interoperable, siguiendo una ontología pública definida mediante JSON-Schema.
+
+**Estructura del Dataset (Ejemplo Conceptual):**
+
+| Campo | Descripción | Ejemplo |
+| ----- | ----- | ----- |
+| company | Identificador técnico de la entidad gestora (anonimizado). | "E00001" |
+| deviceName | Identificador único del equipo de monitorización. | "Logger-10235593..." |
+| startTime | Marca temporal de inicio de la lectura (ISO 8601). | "2025-01-02 15:00:00" |
+| totalPvPerformanceKWh | Valor del rendimiento fotovoltaico total acumulado en kWh. | 2179.71 |
+| pvGenerationData | Valor de la generación fotovoltaica horaria en kWh. | 11.99 |
+
+## Relación con los Algoritmos
+
+Este producto de datos está diseñado para alimentar servicios digitales avanzados en el ecosistema energético, tales como:
+
+* **Optimización para Comunidades Energéticas:** Equilibrado de carga y toma de decisiones estratégicas basadas en generación real.
+* **Mantenimiento Predictivo y Benchmarking:** Detección temprana de anomalías y validación de modelos de predicción fotovoltaica.
+* **Gestión de la Demanda (Smart Grids):** Creación de algoritmos para la optimización de activos energéticos distribuidos.
+
+## Seguridad y Gobierno del Dato
+
+* **Infraestructura segura:** Despliegue en arquitectura de microservicios (Docker) con comunicaciones cifradas mediante **SSL/HTTPS**.
+* **Control de acceso:** Implementación de políticas basadas en **Credenciales Verificables (VC)** y carteras Web3, alineadas con el marco de confianza de Gaia-X.
+* **Cumplimiento Normativo:** Alineado con el RGPD y la LOPDGDD, así como con la norma **UNE 0087:2025** para espacios de datos.
+
+## Resumen
+
+Este dataset constituye un servicio de **Data as a Service (DaaS)** que posiciona a Naturelek Consulting SLL como un proveedor de datos de confianza dentro del mercado europeo. Ofrece métricas de generación solar estandarizadas y de alta fiabilidad, facilitando la transición energética mediante el uso compartido y seguro de datos operativos de plantas renovables.
+
+---
+
+<a href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:c1e3311cc026d2d2261c6cd9aae7a08ccb46cb32197aba97494d8f570e241acb" target="_blank" className="button button--secondary">Ver Dataset</a>

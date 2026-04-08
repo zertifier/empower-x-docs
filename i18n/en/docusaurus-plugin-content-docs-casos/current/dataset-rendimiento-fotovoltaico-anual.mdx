@@ -1,0 +1,70 @@
+---
+title: Annual Photovoltaic Performance Analysis
+description: Hourly annual energy production of five photovoltaic self-consumption plants.
+slug: /dataset-rendimiento-fotovoltaico-anual
+---
+
+# Annual Photovoltaic Performance Analysis Dataset
+
+## Purpose of the Dataset
+
+This dataset aims to detail the **hourly annual energy production of five photovoltaic self-consumption plants**. It acts as a structured information source to facilitate **technical monitoring**, the analysis of real versus theoretical performance, and the optimization of maintenance and operation strategies based on historical operational data.
+
+## Scope and Technical Considerations
+
+The dataset provides a granular and technical view of the energy assets' behavior under the following criteria:
+
+* **Temporal resolution:** Hourly granularity (ISO 8601 format).
+* **Scope:** Five monitored self-consumption plants.
+* **Update frequency:** Monthly.
+* **Data origin:** Technical telemetry from photovoltaic inverters and monitoring devices (*loggers*).
+
+## Type of Dataset
+
+* **Private dataset:** Integrated into the **EMPOWER-X** sectoral data space (Gaia-X Lighthouse Project).
+* **Accessibility:** Available to authorized users via direct download through the Marketplace.
+
+## Content of the Dataset
+
+The dataset includes generation and performance metrics associated with specific self-consumption assets.
+
+**Asset identification:**
+
+* **Technical identifiers:** Alphanumeric codes are used for the managing entity (company) and the monitoring equipment (deviceName).
+* **Privacy by design:** Personal data, sensitive commercial information, and direct physical locations are not included, ensuring end-customer anonymity.
+
+## Format of the Dataset
+
+Data is structured in an **optimized and interoperable JSON** format, following a public ontology defined using JSON-Schema.
+
+**Dataset Structure (Conceptual Example):**
+
+| Field | Description | Example |
+| ----- | ----- | ----- |
+| company | Technical identifier of the managing entity (anonymized). | "E00001" |
+| deviceName | Unique identifier of the monitoring equipment. | "Logger-10235593..." |
+| startTime | Start timestamp of the reading (ISO 8601). | "2025-01-02 15:00:00" |
+| totalPvPerformanceKWh | Value of total accumulated photovoltaic performance in kWh. | 2179.71 |
+| pvGenerationData | Value of hourly photovoltaic generation in kWh. | 11.99 |
+
+## Relationship with Algorithms
+
+This data product is designed to power advanced digital services within the energy ecosystem, such as:
+
+* **Optimization for Energy Communities:** Load balancing and strategic decision-making based on real generation.
+* **Predictive Maintenance and Benchmarking:** Early detection of anomalies and validation of photovoltaic prediction models.
+* **Demand Management (Smart Grids):** Creation of algorithms for the optimization of distributed energy assets.
+
+## Data Security and Governance
+
+* **Secure infrastructure:** Deployed on a microservices architecture (Docker) with encrypted communications via **SSL/HTTPS**.
+* **Access control:** Implementation of policies based on **Verifiable Credentials (VC)** and Web3 wallets, aligned with the Gaia-X trust framework.
+* **Regulatory Compliance:** Aligned with GDPR and LOPDGDD, as well as the **UNE 0087:2025** standard for data spaces.
+
+## Summary
+
+This dataset constitutes a **Data as a Service (DaaS)** that positions Naturelek Consulting SLL as a trusted data provider within the European market. It offers standardized and highly reliable solar generation metrics, facilitating the energy transition through the secure sharing of operational data from renewable plants.
+
+---
+
+<a href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:c1e3311cc026d2d2261c6cd9aae7a08ccb46cb32197aba97494d8f570e241acb" target="_blank" className="button button--secondary">View Dataset</a>

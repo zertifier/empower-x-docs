@@ -1,0 +1,66 @@
+---
+title: Energy Production and Consumption Analysis Dataset with Solar Generation
+description: Base data service for executing advanced energy analysis algorithms.
+slug: /dataset-badalona
+---
+
+# Energy Production and Consumption Analysis Dataset with Solar Generation
+
+## Purpose of the Dataset
+
+This dataset acts as a **base data service** for the execution of advanced energy analysis algorithms. Its main objective is to provide an accurate and operationally efficient snapshot of the behavior of supply points, allowing for **technical monitoring**, energy efficiency assessment, and the optimization of renewable energy usage.
+
+## Scope and Technical Considerations
+
+The dataset offers an optimized and filtered view of energy measurements from assets.
+
+* **Temporal resolution:** High-resolution granularity of **15 minutes**.
+* **Temporal reference:** Timestamp following the **ISO 8601** standard.
+* **Utility:** Allows for the reconstruction of load curves, analysis of photovoltaic generation patterns, and assessment of reliance on the electrical grid.
+
+## Type of Dataset
+
+* **Private dataset:** Integrated into the **EMPOWER-X** sectoral data space.
+* **Access format:** Downloadable raw dataset (*as-is*) for authorized users.
+* **Usage model:** Although downloading is permitted, it is prepared for **Compute-to-Data (C2D)** mechanisms, where algorithms can process the information in a secure environment.
+
+## Content of the Dataset
+
+The dataset includes accurate metrics associated with the activity of self-consumption facilities.
+
+* **Technical identification:** Supply point identifiers (**CUPS**) or anonymized alphanumeric codes are used to ensure privacy.
+* **Privacy by design:** Personal, sensitive commercial data, or direct physical locations that would allow identification of owners are not included.
+
+## What Each Field Represents
+
+Data is delivered in structured **JSON format** under a public ontology.
+
+| Field | Description |
+| ----- | ----- |
+| `startingDt` | Start date and time of the measurement interval (ISO 8601 format). |
+| `productionWh` | Total energy generated (solar production) in watt-hours. |
+| `totalConsumptionWh` | Total energy consumed by the facility in watt-hours. |
+| `networkConsumptionWh` | Energy consumed from the external electrical grid. |
+| `selfConsumptionWh` | Generated energy directly consumed on-site (self-consumption). |
+
+## Relationship with Algorithms
+
+This data product is designed to power advanced digital services in the energy ecosystem:
+
+* **Energy Communities Analysis:** Community aggregation and consumption-generation balances.
+* **Anomaly Detection:** Identification of consumption peaks or technical inactivity.
+* **Predictive Maintenance:** Efficiency assessment and optimization of distributed energy assets.
+
+## Data Security and Governance
+
+* **Secure infrastructure:** The service operates on a microservices architecture (Docker) with encrypted communications via **SSL/HTTPS**.
+* **Access control:** Implementation of policies based on **Web3 wallets** and **Verifiable Credentials (VCs)** to ensure that only authorized participants access the resource.
+* **Regulatory Compliance:** Aligned with the GDPR, LOPDGDD, and the **UNE 0087:2025** data spaces standard.
+
+## Summary
+
+This dataset constitutes a **Data as a Service (DaaS)** that offers standardized generation and demand metrics. Its structure allows authorized third parties to extract technical and operational value quickly and securely, promoting the energy transition through the secure sharing of real operational data under European data sovereignty standards.
+
+---
+
+<a href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:57faa605004cf42ed6eeeebb5541945f3622b6cadfbb3f2ad7627feae2e6f235" target="_blank" className="button button--secondary">View Dataset</a>

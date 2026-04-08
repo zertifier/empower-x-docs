@@ -1,0 +1,66 @@
+---
+title: Dataset de Análisis de Producción y Consumo Energético con Generación Solar
+description: Servicio de datos base para la ejecución de algoritmos de análisis energético avanzado.
+slug: /dataset-badalona
+---
+
+# Dataset de Análisis de Producción y Consumo Energético con Generación Solar
+
+## Propósito del Dataset
+
+Este dataset actúa como un **servicio de datos base** para la ejecución de algoritmos de análisis energético avanzado. Su objetivo principal es proporcionar una imagen precisa y operativamente eficiente del comportamiento de puntos de suministro, permitiendo la **monitorización técnica**, la evaluación de la eficiencia energética y la optimización del uso de energía renovable.
+
+## Alcance y Consideraciones Técnicas
+
+El dataset ofrece una vista optimizada y filtrada de las mediciones energéticas de los activos.
+
+* **Resolución temporal:** Granularidad de alta resolución de **15 minutos**.
+* **Referencia temporal:** Estampado de tiempo siguiendo el estándar **ISO 8601**.
+* **Utilidad:** Permite la reconstrucción de curvas de carga, el análisis de patrones de generación fotovoltaica y la evaluación de la dependencia de la red eléctrica.
+
+## Tipo de Dataset
+
+* **Dataset privado:** Integrado en el espacio de datos sectorial **EMPOWER-X**.
+* **Formato de acceso:** Conjunto de datos **descargable** en bruto (*as-is*) para usuarios autorizados.
+* **Modelo de uso:** Aunque permite la descarga, está preparado para mecanismos de **Compute-to-Data (C2D)**, donde los algoritmos pueden procesar la información en un entorno seguro.
+
+## Contenido del Dataset
+
+El dataset incluye métricas precisas asociadas a la actividad de instalaciones de autoconsumo.
+
+* **Identificación técnica:** Se utilizan identificadores de punto de suministro (**CUPS**) o códigos alfanuméricos anonimizados para garantizar la privacidad.
+* **Privacidad por diseño:** No se incluyen datos personales, comerciales sensibles ni ubicaciones físicas directas que permitan identificar a los titulares.
+
+## Qué Representa Cada Campo
+
+Los datos se entregan en formato **JSON estructurado** bajo una ontología pública.
+
+| Campo | Descripción |
+| ----- | ----- |
+| `startingDt` | Fecha y hora de inicio del intervalo de medición (formato ISO 8601). |
+| `productionWh` | Energía total generada (producción solar) en vatios-hora. |
+| `totalConsumptionWh` | Energía total consumida por la instalación en vatios-hora. |
+| `networkConsumptionWh` | Energía consumida proveniente de la red eléctrica externa. |
+| `selfConsumptionWh` | Energía generada consumida directamente en el lugar (autoconsumo). |
+
+## Relación con los Algoritmos
+
+Este producto de datos está diseñado para alimentar servicios digitales avanzados en el ecosistema energético:
+
+* **Análisis de Comunidades Energéticas:** Agregación comunitaria y balances de consumo-generación.
+* **Detección de Anomalías:** Identificación de picos de consumo o inactividad técnica.
+* **Mantenimiento Predictivo:** Evaluación de la eficiencia y optimización de activos energéticos distribuidos.
+
+## Seguridad y Gobierno del Dato
+
+* **Infraestructura segura:** El servicio opera sobre arquitectura de microservicios (Docker) con comunicaciones cifradas mediante **SSL/HTTPS**.
+* **Control de acceso:** Implementación de políticas basadas en **carteras Web3** y **Credenciales Verificables (VC)** para asegurar que solo participantes autorizados accedan al recurso.
+* **Cumplimiento Normativo:** Alineado con el RGPD, la LOPDGDD y la norma **UNE 0087:2025** de espacios de datos.
+
+## Resumen
+
+Este dataset constituye un servicio de **Data as a Service (DaaS)** que ofrece métricas de generación y demanda estandarizadas. Su estructura permite a terceros autorizados obtener valor técnico y operativo de forma rápida y segura, fomentando la transición energética mediante el uso compartido de datos operativos reales bajo estándares de soberanía europeos.
+
+---
+
+<a href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:57faa605004cf42ed6eeeebb5541945f3622b6cadfbb3f2ad7627feae2e6f235" target="_blank" className="button button--secondary">Ver Dataset</a>

@@ -1,0 +1,70 @@
+---
+title: Anàlisi del Rendiment Fotovoltaic Anual
+description: Producció energètica anual horària de cinc plantes d'autoconsum fotovoltaic.
+slug: /dataset-rendimiento-fotovoltaico-anual
+---
+
+# Dataset d'Anàlisi del Rendiment Fotovoltaic Anual
+
+## Propòsit del Dataset
+
+Aquest dataset té com a objectiu detallar la **producció energètica anual horària de cinc plantes d'autoconsum fotovoltaic**. Actua com una font d'informació estructurada per facilitar el **monitoratge tècnic**, l'anàlisi del rendiment real davant del teòric i l'optimització d'estratègies de manteniment i operació basades en dades operatives històriques.
+
+## Abast i Consideracions Tècniques
+
+El dataset proporciona una vista granular i tècnica del comportament dels actius energètics sota els següents criteris:
+
+* **Resolució temporal:** Granularitat horària (format ISO 8601).
+* **Abast:** Cinc plantes d'autoconsum monitoritzades.
+* **Freqüència d'actualització:** Mensual.
+* **Origen de les dades:** Telemetria tècnica procedent d'inversors fotovoltaics i dispositius de monitoratge (*loggers*).
+
+## Tipus de Dataset
+
+* **Dataset privat:** Integrat a l'espai de dades sectorial **EMPOWER-X** (Lighthouse Project de Gaia-X).
+* **Accessibilitat:** Disponible per a usuaris autoritzats mitjançant descàrrega directa a través del Marketplace.
+
+## Contingut del Dataset
+
+El dataset inclou mètriques de generació i rendiment associades a actius específics d'autoconsum.
+
+**Identificació dels actius:**
+
+* **Identificadors tècnics:** S'utilitzen codis alfanumèrics per a l'entitat gestora (company) i l'equip de monitoratge (deviceName).
+* **Privacitat per disseny:** No s'inclouen dades personals, comercials sensibles ni ubicacions físiques directes, garantint l'anonimat dels clients finals.
+
+## Format del Dataset
+
+Les dades s'estructuren en format **JSON optimitzat** i interoperable, seguint una ontologia pública definida mitjançant JSON-Schema.
+
+**Estructura del Dataset (Exemple Conceptual):**
+
+| Camp | Descripció | Exemple |
+| ----- | ----- | ----- |
+| company | Identificador tècnic de l'entitat gestora (anonimitzat). | "E00001" |
+| deviceName | Identificador únic de l'equip de monitoratge. | "Logger-10235593..." |
+| startTime | Marca temporal d'inici de la lectura (ISO 8601). | "2025-01-02 15:00:00" |
+| totalPvPerformanceKWh | Valor del rendiment fotovoltaic total acumulat en kWh. | 2179.71 |
+| pvGenerationData | Valor de la generació fotovoltaica horària en kWh. | 11.99 |
+
+## Relació amb els Algorismes
+
+Aquest producte de dades està dissenyat per alimentar serveis digitals avançats en l'ecosistema energètic, tals com:
+
+* **Optimització per a Comunitats Energètiques:** Equilibrat de càrrega i presa de decisions estratègiques basades en generació real.
+* **Manteniment Predictiu i Benchmarking:** Detecció primerenca d'anomalies i validació de models de predicció fotovoltaica.
+* **Gestió de la Demanda (Smart Grids):** Creació d'algorismes per a l'optimització d'actius energètics distribuïts.
+
+## Seguretat i Govern de la Dada
+
+* **Infraestructura segura:** Desplegament en arquitectura de microserveis (Docker) amb comunicacions xifrades mitjançant **SSL/HTTPS**.
+* **Control d'accés:** Implementació de polítiques basades en **Credencials Verificables (VC)** i carteres Web3, alineades amb el marc de confiança de Gaia-X.
+* **Compliment Normatiu:** Alineat amb el RGPD i la LOPDGDD, així com amb la norma **UNE 0087:2025** per a espais de dades.
+
+## Resum
+
+Aquest dataset constitueix un servei de **Data as a Service (DaaS)** que posiciona Naturelek Consulting SLL com un proveïdor de dades de confiança dins del mercat europeu. Ofereix mètriques de generació solar estandarditzades i d'alta fiabilitat, facilitant la transició energètica mitjançant l'ús compartit i segur de dades operatives de plantes renovables.
+
+---
+
+<a href="https://market-git-feat-stage-ocean-enterprise.vercel.app/asset/did:ope:c1e3311cc026d2d2261c6cd9aae7a08ccb46cb32197aba97494d8f570e241acb" target="_blank" className="button button--secondary">Veure Dataset</a>
