@@ -131,7 +131,7 @@ const config = {
           { type: 'doc', docId: 'index', docsPluginId: 'algoritmos', label: 'Algoritmos', position: 'left' },
           { to: 'videos', label: 'Vídeos', position: 'left' },
           { to: 'contacto', label: 'Contacto', position: 'left' },
-          { href: 'https://market-git-feat-stage-ocean-enterprise.vercel.app/search?sort=indexedMetadata.event.block&sortOrder=desc&text=empower', label: 'Portal', position: 'left' },
+          { href: 'https://portal.empower-x.io', label: 'Portal', position: 'left' },
           {
             type: 'localeDropdown',
             position: 'right',
