@@ -12,7 +12,7 @@ Discover the project through short walkthroughs, in‑depth talks, and real demo
 
 <div className="video-wrapper">
   <iframe
-    src="https://www.youtube.com/embed/K1szhWs3U54"
+    src="https://www.youtube.com/embed/vv-IYmedNi8"
     title="Discover Empower‑X"
     className="video-iframe"
     frameBorder="0"

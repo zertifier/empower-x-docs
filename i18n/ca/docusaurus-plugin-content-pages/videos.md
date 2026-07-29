@@ -12,7 +12,7 @@ Descobreix el projecte amb walkthroughs curts, xerrades en profunditat i demos r
 
 <div className="video-wrapper">
   <iframe
-    src="https://www.youtube.com/embed/K1szhWs3U54"
+    src="https://www.youtube.com/embed/vv-IYmedNi8"
     title="Descobreix Empower‑X"
     className="video-iframe"
     frameBorder="0"

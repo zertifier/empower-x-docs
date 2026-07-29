@@ -12,7 +12,7 @@ Descubre el proyecto a través de recorridos breves, charlas en profundidad y de
 
 <div className="video-wrapper">
   <iframe
-    src="https://www.youtube.com/embed/K1szhWs3U54"
+    src="https://www.youtube.com/embed/vv-IYmedNi8"
     title="Descubre Empower‑X"
     className="video-iframe"
     frameBorder="0"
