@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkempowerx_docs=globalThis.webpackChunkempowerx_docs||[]).push([[5673],{6219:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"algoritmos"}')}}]);

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ca" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-use-cases" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Desenvolupament de casos d’ús en espais de dades energètics | Mi Sitio</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://zertifier.github.io/ca/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://zertifier.github.io/ca/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://zertifier.github.io/ca/documentacion/use-cases/"><meta data-rh="true" property="og:locale" content="ca"><meta data-rh="true" property="og:locale:alternate" content="es"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="ca"><meta data-rh="true" name="docsearch:language" content="ca"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Desenvolupament de casos d’ús en espais de dades energètics | Mi Sitio"><meta data-rh="true" name="description" content="Els espais de dades permeten construir solucions col·laboratives on diferents actors de l’ecosistema energètic, urbà i de mobilitat poden combinar dades, algoritmes i serveis dins d’un marc compartit de confiança. Aquest apartat descriu com es dissenyen i es despleguen casos d’ús dins de l’ecosistema Empower-X, seguint una metodologia pràctica i orientada a resultats, coherent amb els principis europeus d’interoperabilitat, sobirania del dada i federació entre territoris."><meta data-rh="true" property="og:description" content="Els espais de dades permeten construir solucions col·laboratives on diferents actors de l’ecosistema energètic, urbà i de mobilitat poden combinar dades, algoritmes i serveis dins d’un marc compartit de confiança. Aquest apartat descriu com es dissenyen i es despleguen casos d’ús dins de l’ecosistema Empower-X, seguint una metodologia pràctica i orientada a resultats, coherent amb els principis europeus d’interoperabilitat, sobirania del dada i federació entre territoris."><link data-rh="true" rel="icon" href="/ca/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://zertifier.github.io/ca/documentacion/use-cases/"><link data-rh="true" rel="alternate" href="https://zertifier.github.io/es/documentacion/use-cases/" hreflang="es"><link data-rh="true" rel="alternate" href="https://zertifier.github.io/documentacion/use-cases/" hreflang="en"><link data-rh="true" rel="alternate" href="https://zertifier.github.io/ca/documentacion/use-cases/" hreflang="ca"><link data-rh="true" rel="alternate" href="https://zertifier.github.io/documentacion/use-cases/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Casos d'Ús","item":"https://zertifier.github.io/ca/documentacion/use-cases"}]}</script><link rel="stylesheet" href="/ca/assets/css/styles.b43751fa.css">
+<script src="/ca/assets/js/runtime~main.eaaaf36f.js" defer="defer"></script>
+<script src="/ca/assets/js/main.06d2ef29.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/ca/img/logo_empowerX.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" target="_self" href="/ca/documentacion/about/"><div class="navbar__logo"><img src="/ca/img/logo_empowerX.png" alt="Logotip" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/ca/img/logo_empowerX.png" alt="Logotip" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ca/documentacion/about/">Documentació</a><a class="navbar__item navbar__link" href="/ca/casos/">Casos</a><a class="navbar__item navbar__link" href="/ca/algoritmos/">Algoritmes</a><a class="navbar__item navbar__link" href="/ca/videos/">Vídeos</a><a class="navbar__item navbar__link" href="/ca/contacto/">Contacte</a><a href="https://portal.empower-x.io" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Portal<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>Català</a><ul class="dropdown__menu"><li><a href="/es/documentacion/use-cases/" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="es">Español</a></li><li><a href="/documentacion/use-cases/" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li><li><a href="/ca/documentacion/use-cases/" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="ca">Català</a></li></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ca/documentacion/about/"><span title="Sobre Empower-X" class="linkLabel_WmDU">Sobre Empower-X</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ca/documentacion/agriculture-landing/"><span title="Introducció" class="linkLabel_WmDU">Introducció</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/ca/documentacion/governance/"><span title="Governança" class="linkLabel_WmDU">Governança</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" href="/ca/documentacion/use-cases/"><span title="Casos d&#x27;Ús" class="linkLabel_WmDU">Casos d&#x27;Ús</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ca/documentacion/compute-to-data/"><span title="Recursos tècnics" class="categoryLinkLabel_W154">Recursos tècnics</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ca/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Casos d&#x27;Ús</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Desenvolupament de casos d’ús en espais de dades energètics</h1></header>
+<p>Els espais de dades permeten construir solucions col·laboratives on diferents actors de l’ecosistema energètic, urbà i de mobilitat poden combinar dades, algoritmes i serveis dins d’un marc compartit de confiança. Aquest apartat descriu com es dissenyen i es despleguen casos d’ús dins de l’ecosistema Empower-X, seguint una metodologia pràctica i orientada a resultats, coherent amb els principis europeus d’interoperabilitat, sobirania del dada i federació entre territoris.</p>
+<p>Empower-X opera com a demostrador del <strong>Data Space for Positive Energy Districts (DS4PED)</strong>, vinculat al projecte europeu DS4SSCC-DEP.<br>
+<!-- -->En el pilot de Rubí, els sistemes municipals, les plantes solars públiques, els punts de recàrrega, les comunitats energètiques, la mobilitat elèctrica i la plataforma ZertiPower comparteixen dades mitjançant un espai de dades federat que garanteix traçabilitat, sobirania i computació segura.</p>
+<p>Els casos d’ús són el mecanisme principal per resoldre reptes energètics i urbans mitjançant l’intercanvi federat de dades. Es basen en:</p>
+<ul>
+<li class=""><strong>una infraestructura tècnica comuna</strong> (identitats Web3, catàlegs semàntics, connectors EDC/IDS, Data Rooms, Compute-to-Data, marketplace),</li>
+<li class=""><strong>un model de governança compartit</strong>,</li>
+<li class=""><strong>polítiques d’ús verificables</strong> que garanteixen sobirania del dada, privadesa i interoperabilitat.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="metodologia-per-desenvolupar-un-cas-dús-a-empower-x">Metodologia per desenvolupar un cas d’ús a Empower-X<a href="#metodologia-per-desenvolupar-un-cas-dús-a-empower-x" class="hash-link" aria-label="Direct link to Metodologia per desenvolupar un cas d’ús a Empower-X" title="Direct link to Metodologia per desenvolupar un cas d’ús a Empower-X" translate="no">​</a></h2>
+<p>El desenvolupament d’un cas d’ús en un espai de dades energètic segueix un cicle estructurat en vuit fases. Aquest cicle garanteix una solució factible, segura, interoperable i escalable dins d’un ecosistema federat i multiactor.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-identificació-del-repte-i-de-loportunitat">1. Identificació del repte i de l’oportunitat<a href="#1-identificació-del-repte-i-de-loportunitat" class="hash-link" aria-label="Direct link to 1. Identificació del repte i de l’oportunitat" title="Direct link to 1. Identificació del repte i de l’oportunitat" translate="no">​</a></h3>
+<p>Els participants detecten una necessitat compartida relacionada amb:</p>
+<ul>
+<li class="">integració de renovables distribuïdes,</li>
+<li class="">traçabilitat energètica en temps real,</li>
+<li class="">gestió de flexibilitat,</li>
+<li class="">mobilitat elèctrica i planificació d’infraestructures,</li>
+<li class="">eficiència energètica urbana,</li>
+<li class="">optimització de xarxes de recàrrega,</li>
+<li class="">coordinació entre actors (municipis, DSOs, comunitats energètiques, operadors de mobilitat).</li>
+</ul>
+<p>Exemples del pilot de Rubí:<br>
+<!-- -->– garantir recàrrega 100% renovable amb ZEAC i traçabilitat en temps real;<br>
+<!-- -->– tokenitzar excedents fotovoltaics municipals per equilibrar el consum nocturn.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-comprensió-i-estructuració-de-les-dades-disponibles">2. Comprensió i estructuració de les dades disponibles<a href="#2-comprensió-i-estructuració-de-les-dades-disponibles" class="hash-link" aria-label="Direct link to 2. Comprensió i estructuració de les dades disponibles" title="Direct link to 2. Comprensió i estructuració de les dades disponibles" translate="no">​</a></h3>
+<p>S’analitza:</p>
+<ul>
+<li class="">quines dades existeixen i qui en té la titularitat,</li>
+<li class="">la seva qualitat, granularitat i freqüència,</li>
+<li class="">els models semàntics aplicables (SAREF, Smart Data Models, NGSI-LD, CEEDS Blueprint),</li>
+<li class="">quines dades requereixen execució Compute-to-Data (p. ex. consums elèctrics individuals o mobilitat personal).</li>
+</ul>
+<p>Es defineix el model de dades i si cal aplicar:</p>
+<ul>
+<li class="">predicció energètica o de mobilitat,</li>
+<li class="">simulació urbana,</li>
+<li class="">agregació de flexibilitat,</li>
+<li class="">algoritmes d’optimització.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-alineament-entre-participants">3. Alineament entre participants<a href="#3-alineament-entre-participants" class="hash-link" aria-label="Direct link to 3. Alineament entre participants" title="Direct link to 3. Alineament entre participants" translate="no">​</a></h3>
+<p>Els actors del cas d’ús estableixen un marc compartit:</p>
+<ul>
+<li class="">condicions de participació,</li>
+<li class="">polítiques d’accés i permisos,</li>
+<li class="">valor esperat,</li>
+<li class="">rols i responsabilitats,</li>
+<li class="">mecanismes de governança i control.</li>
+</ul>
+<p>Aquest pas estableix una base comuna de confiança abans d’iniciar la integració tècnica.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-disseny-funcional-i-tècnic">4. Disseny funcional i tècnic<a href="#4-disseny-funcional-i-tècnic" class="hash-link" aria-label="Direct link to 4. Disseny funcional i tècnic" title="Direct link to 4. Disseny funcional i tècnic" translate="no">​</a></h3>
+<p>El document de disseny defineix:</p>
+<ul>
+<li class="">la lògica funcional del cas d’ús,</li>
+<li class="">les fonts de dades i els fluxos d’intercanvi,</li>
+<li class="">els components a utilitzar (Compute-to-Data, Data Rooms, marketplace, catàlegs federats, connectivitat EDC/IDS),</li>
+<li class="">els requisits legals (GDPR, DGA, Data Act),</li>
+<li class="">els requisits semàntics i d’integració.</li>
+</ul>
+<p>Aquest disseny es basa en patrons del <strong>CEEDS Blueprint</strong> i en els requisits dels pilots DS4PED.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-desenvolupament-de-la-solució">5. Desenvolupament de la solució<a href="#5-desenvolupament-de-la-solució" class="hash-link" aria-label="Direct link to 5. Desenvolupament de la solució" title="Direct link to 5. Desenvolupament de la solució" translate="no">​</a></h3>
+<p>Es construeix la solució:</p>
+<ul>
+<li class="">desenvolupament o adaptació d’algoritmes (flexibilitat, forecasting, certificació),</li>
+<li class="">creació de pipelines de dades en temps real,</li>
+<li class="">integració amb sistemes municipals, CPOs o comunitats energètiques,</li>
+<li class="">definició de mètriques (energia renovable, eficiència, KPIs de mobilitat).</li>
+</ul>
+<p>Exemples:</p>
+<ul>
+<li class="">algoritme de generació de ZEAC a partir de producció solar municipal;</li>
+<li class="">predicció combinada de demanda de recàrrega i disponibilitat solar.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-integració-de-tecnologies-i-serveis">6. Integració de tecnologies i serveis<a href="#6-integració-de-tecnologies-i-serveis" class="hash-link" aria-label="Direct link to 6. Integració de tecnologies i serveis" title="Direct link to 6. Integració de tecnologies i serveis" translate="no">​</a></h3>
+<p>S’integren:</p>
+<ul>
+<li class="">connectors EDC/IDS,</li>
+<li class="">identitats verificables i wallets Web3,</li>
+<li class="">catàlegs federats amb metadades FAIR,</li>
+<li class="">serveis de governança i auditoria,</li>
+<li class="">Data Rooms i Compute-to-Data,</li>
+<li class="">infraestructura DLT per a ZEAC, EKW i certificació energètica.</li>
+</ul>
+<p>L’objectiu és garantir el cicle complet del dada dins del data space sense perdre sobirania.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-desplegament-i-validació">7. Desplegament i validació<a href="#7-desplegament-i-validació" class="hash-link" aria-label="Direct link to 7. Desplegament i validació" title="Direct link to 7. Desplegament i validació" translate="no">​</a></h3>
+<p>Cada cas d’ús es valida dins d’Empower-X mitjançant:</p>
+<ul>
+<li class="">proves funcionals i d’integració,</li>
+<li class="">proves d’accés amb polítiques reals,</li>
+<li class="">validació Compute-to-Data,</li>
+<li class="">comprovacions de conformitat i traçabilitat,</li>
+<li class="">validació final per part de tots els participants.</li>
+</ul>
+<p>Exemples validats a Rubí:</p>
+<ul>
+<li class="">traçabilitat 100% renovable en recàrrega EV amb ZEAC;</li>
+<li class="">simulació operativa del PED integrant energia, mobilitat i clima.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-operació-escalat-i-millora-contínua">8. Operació, escalat i millora contínua<a href="#8-operació-escalat-i-millora-contínua" class="hash-link" aria-label="Direct link to 8. Operació, escalat i millora contínua" title="Direct link to 8. Operació, escalat i millora contínua" translate="no">​</a></h3>
+<p>Quan el cas entra en operació:</p>
+<ul>
+<li class="">se’n mesura el valor energètic, econòmic i ambiental,</li>
+<li class="">s’incorporen noves fonts de dades i nous actors,</li>
+<li class="">s’integra amb altres data spaces (CEEDS, Mobilitat, Edificació),</li>
+<li class="">es replica en nous territoris.</li>
+</ul>
+<p>Aquest cicle permet fer créixer l’espai de dades mantenint sempre sobirania, traçabilitat i federació.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="eines-metodològiques-per-a-lavaluació-i-disseny-de-casos-dús">Eines metodològiques per a l’avaluació i disseny de casos d’ús<a href="#eines-metodològiques-per-a-lavaluació-i-disseny-de-casos-dús" class="hash-link" aria-label="Direct link to Eines metodològiques per a l’avaluació i disseny de casos d’ús" title="Direct link to Eines metodològiques per a l’avaluació i disseny de casos d’ús" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-avaluació-de-viabilitat">1. Avaluació de viabilitat<a href="#1-avaluació-de-viabilitat" class="hash-link" aria-label="Direct link to 1. Avaluació de viabilitat" title="Direct link to 1. Avaluació de viabilitat" translate="no">​</a></h3>
+<p>Analitza:</p>
+<ul>
+<li class="">el repte i la hipòtesi de valor,</li>
+<li class="">el potencial energètic i urbà,</li>
+<li class="">els beneficis econòmics o socials,</li>
+<li class="">els requisits de col·laboració,</li>
+<li class="">riscos i complexitat,</li>
+<li class="">decisió d’avançar (go/no-go).</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-disseny-detallat">2. Disseny detallat<a href="#2-disseny-detallat" class="hash-link" aria-label="Direct link to 2. Disseny detallat" title="Direct link to 2. Disseny detallat" translate="no">​</a></h3>
+<p>Si és viable, es defineix:</p>
+<ul>
+<li class="">l’abast precís,</li>
+<li class="">els rols energètics (DSO, CPO, municipi, prosumidors),</li>
+<li class="">requisits tècnics, legals i organitzatius,</li>
+<li class="">arquitectura d’integració,</li>
+<li class="">polítiques d’accés i d’ús,</li>
+<li class="">roadmap i recursos necessaris.</li>
+</ul>
+<p>Aquest procés transforma una idea inicial en un cas d’ús implementable i escalable dins d’Empower-X i replicable en altres territoris.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/use-cases.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ca/documentacion/governance/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Governança</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ca/documentacion/compute-to-data/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Compute-to-Data</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#metodologia-per-desenvolupar-un-cas-dús-a-empower-x" class="table-of-contents__link toc-highlight">Metodologia per desenvolupar un cas d’ús a Empower-X</a><ul><li><a href="#1-identificació-del-repte-i-de-loportunitat" class="table-of-contents__link toc-highlight">1. Identificació del repte i de l’oportunitat</a></li><li><a href="#2-comprensió-i-estructuració-de-les-dades-disponibles" class="table-of-contents__link toc-highlight">2. Comprensió i estructuració de les dades disponibles</a></li><li><a href="#3-alineament-entre-participants" class="table-of-contents__link toc-highlight">3. Alineament entre participants</a></li><li><a href="#4-disseny-funcional-i-tècnic" class="table-of-contents__link toc-highlight">4. Disseny funcional i tècnic</a></li><li><a href="#5-desenvolupament-de-la-solució" class="table-of-contents__link toc-highlight">5. Desenvolupament de la solució</a></li><li><a href="#6-integració-de-tecnologies-i-serveis" class="table-of-contents__link toc-highlight">6. Integració de tecnologies i serveis</a></li><li><a href="#7-desplegament-i-validació" class="table-of-contents__link toc-highlight">7. Desplegament i validació</a></li><li><a href="#8-operació-escalat-i-millora-contínua" class="table-of-contents__link toc-highlight">8. Operació, escalat i millora contínua</a></li></ul></li><li><a href="#eines-metodològiques-per-a-lavaluació-i-disseny-de-casos-dús" class="table-of-contents__link toc-highlight">Eines metodològiques per a l’avaluació i disseny de casos d’ús</a><ul><li><a href="#1-avaluació-de-viabilitat" class="table-of-contents__link toc-highlight">1. Avaluació de viabilitat</a></li><li><a href="#2-disseny-detallat" class="table-of-contents__link toc-highlight">2. Disseny detallat</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentación</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ca/documentacion/about/">Documentación</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Explorar</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ca/casos/">Casos</a></li><li class="footer__item"><a class="footer__link-item" href="/ca/videos/">Vídeos</a></li><li class="footer__item"><a class="footer__link-item" href="/ca/algoritmos/">Algoritmos</a></li><li class="footer__item"><a class="footer__link-item" href="/ca/contacto/">Contacto</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© Zertifier 2026</div></div></div></footer></div>
+</body>
+</html>
